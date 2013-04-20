@@ -9,3 +9,4 @@ from flask.ext.wtf import Required
 class LoginForm(Form):
     nomUsr = TextField('openid', validators = [Required()])
     passWord = PasswordField('password', validators = [Required()])
+    
