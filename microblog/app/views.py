@@ -36,8 +36,23 @@ def login():
         return redirect('/admin')
     return render_template('login.html',title = 'Iniciar Sesion',form = form)
     
-
-
 @app.route('/admin')
 def admin():
-    return render_template("admin.html")
+    return render_template("admin.html", title = 'Administrador General')
+
+@app.route('/usuario')
+def usuario():
+    return render_template("usuario.html", title = 'Administracion de usuario')
+
+@app.route('/usr_crear')
+def usr_crear():
+    return render_template("usr_crear.html", title = 'Crear usuario')
+
+@app.route('/usr_modificar')
+def usr_modificar():
+    return render_template("usr_modificar.html", title = 'Modificar usuario')
+
+@app.route('/usr_eliminar')
+def usr_eliminar():
+    return render_template("usr_eliminar.html", title = 'Eliminar usuario')
+
