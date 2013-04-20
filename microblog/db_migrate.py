@@ -3,7 +3,7 @@ Created on 19/04/2013
 
 @author: cristian
 '''
-#!flask/bin/python
+#!usr/bin/python
 import imp
 from migrate.versioning import api
 from app import db
