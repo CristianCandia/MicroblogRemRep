@@ -16,5 +16,5 @@ exec old_model in tmp_module.__dict__
 script = api.make_update_script_for_model(SQLALCHEMY_DATABASE_URI, SQLALCHEMY_MIGRATE_REPO, tmp_module.meta, db.metadata)
 open(migration, "wt").write(script)
 a = api.upgrade(SQLALCHEMY_DATABASE_URI, SQLALCHEMY_MIGRATE_REPO)
-print 'New migration saved as ' + migration
-print 'Current database version: ' + str(api.db_version(SQLALCHEMY_DATABASE_URI, SQLALCHEMY_MIGRATE_REPO))
+print 'Una nueva migracion ha sido guardada como ' + migration
+print 'Actual version de la base de datos: ' + str(api.db_version(SQLALCHEMY_DATABASE_URI, SQLALCHEMY_MIGRATE_REPO))
