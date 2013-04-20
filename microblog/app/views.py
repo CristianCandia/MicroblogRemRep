@@ -6,7 +6,7 @@ Created on 14/04/2013
 from flask import render_template, flash, redirect
 from forms import LoginForm
 from flask.ext.login import login_user, logout_user, current_user, login_required
-from app import app, db, lm, oid
+from app import app, db, lm#, oid
 from models import User, ROLE_USER, ROLE_ADMIN
 
 @lm.user_loader
