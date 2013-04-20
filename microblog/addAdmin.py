@@ -5,6 +5,8 @@ Created on 20/04/2013
 '''
 #!usr/lib/python
 
+#u = models.User.query.get(2)
+
 from app import db, models
 
 u = models.User(name='admin', passWord='admin', role=models.ROLE_ADMIN)

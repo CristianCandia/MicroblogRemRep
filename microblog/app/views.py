@@ -3,10 +3,10 @@ Created on 14/04/2013
 
 @author: cristian
 '''
-from flask import render_template, flash, redirect
+from flask import render_template, flash, redirect, session
 from forms import LoginForm
 from flask.ext.login import login_user, logout_user, current_user, login_required
-from app import app, db, lm#, oid
+from app import app, db, lm, models#, oid
 from models import User, ROLE_USER, ROLE_ADMIN
 
 @lm.user_loader
@@ -38,8 +38,23 @@ def index():
 def login():
     form = LoginForm()
     if form.validate_on_submit():
-        return redirect('/admin')
-    return render_template('login.html',title = 'Iniciar Sesion',form = form)
+        users = models.User.query.all()
+        ban = 0
+        for u in users:
+            if u.name == form.nomUsr.data:
+                ban = 1
+                if u.passWord == form.passWord.data:
+                    session['logged_in'] = True
+                    flash('Has iniciado sesion')
+                    return redirect('/admin')
+                else:
+                    err = 'Ingrese correctamente su contraseña'
+        if ban == 0:
+            err = 'No existe nombre de usuario'
+            return render_template('login.html',title = 'Iniciar Sesion',form = form, err=err)
+    else:
+        err = 'Complete correctamente los campos'                    
+        return render_template('login.html',title = 'Iniciar Sesion',form = form, err=err)
     
 @app.route('/admin')
 def admin():
