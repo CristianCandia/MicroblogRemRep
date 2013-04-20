@@ -4,7 +4,7 @@ Created on 14/04/2013
 @author: cristian
 '''
 from flask import render_template, flash, redirect, session
-from forms import LoginForm
+from forms import LoginForm, usr_CrearForm
 from flask.ext.login import login_user, logout_user, current_user, login_required
 from app import app, db, lm, models#, oid
 from models import User, ROLE_USER, ROLE_ADMIN
@@ -32,11 +32,10 @@ def index():
         user = user,
         posts = posts)
 
-
-
 @app.route('/login', methods = ['GET', 'POST'])
 def login():
     form = LoginForm()
+    
     if form.validate_on_submit():
         users = models.User.query.all()
         ban = 0
@@ -48,25 +47,46 @@ def login():
                     flash('Has iniciado sesion')
                     return redirect('/admin')
                 else:
-                    err = 'Ingrese correctamente su contraseña'
+                    err = 'Ingrese correctamente su contrasenha'
         if ban == 0:
-            err = 'No existe nombre de usuario'
-            return render_template('login.html',title = 'Iniciar Sesion',form = form, err=err)
+            flash('No existe nombre de usuario')
+            return render_template('login.html',title = 'Iniciar Sesion',form = form)
     else:
-        err = 'Complete correctamente los campos'                    
-        return render_template('login.html',title = 'Iniciar Sesion',form = form, err=err)
+        flash('Complete correctamente los campos')                    
+        return render_template('login.html',title = 'Iniciar Sesion',form = form)
+    return render_template('login.html',title = 'Iniciar Sesion',form = form)
     
+
 @app.route('/admin')
 def admin():
     return render_template("admin.html", title = 'Administrador General')
+
 
 @app.route('/usuario')
 def usuario():
     return render_template("usuario.html", title = 'Administracion de usuario')
 
-@app.route('/usr_crear')
+
+
+
+@app.route('/usr_crear', methods = ['GET', 'POST'])
+
 def usr_crear():
-    return render_template("usr_crear.html", title = 'Crear usuario')
+    form = usr_CrearForm()
+    if form.validate_on_submit():
+            if form.nomUsr.data != '':
+                if form.passWord.data != '':
+                    if buscar_str(form.nomUsr.data) != True:
+                        u = models.User(name=form.nomUsr.data, passWord=form.passWord.data, role=models.ROLE_ADMIN)
+                        db.session.add(u)
+                        db.session.commit()
+                        flash('Se ha creado un nuevo usuario')
+                    else:
+                        return redirect('/usuario')
+                else:
+                    return redirect('/usuario')    
+    flash('Ingrese correctamente los datos')                    
+    return render_template("usr_crear.html", title = 'Crear usuario', form = form)
 
 @app.route('/usr_modificar')
 def usr_modificar():
@@ -76,3 +96,15 @@ def usr_modificar():
 def usr_eliminar():
     return render_template("usr_eliminar.html", title = 'Eliminar usuario')
 
+def buscar_str(nom):
+    users = models.User.query.all()
+    ban = 0
+    for u in users:
+        if u.name == nom:
+            ban = 1
+    if ban == 1:
+        return True
+    return False
+                
+                
+    

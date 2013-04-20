@@ -3,11 +3,13 @@
 
 {% block content %}
 <h1>Iniciar Sesion</h1>
-{% if err %}
-	<div>{{error}}</div>
-{% endif %}
 <form action="" method="post" name="login">
+    <p>
     {{form.hidden_tag()}}
+    {% if err %}
+	<div>{{error}}</div>
+	{% endif %}
+	</p>
     <p>
         Nombre de usuario:<br>
         {{form.nomUsr(size=20)}}<br>
