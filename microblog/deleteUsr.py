@@ -1,8 +1,12 @@
-'''
-Created on 20/04/2013
+"""
+Sygma_System
+:organization:CRF_Proyect
+:author:Cristian Candia
+:author:Ruth Centurion
+:author:Fernando Saucedo
 
-@author: cristian
-'''
+deleteUsr.py
+"""
 
 #!usr/lib/python
 from app import db, models

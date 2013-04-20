@@ -35,7 +35,6 @@ def index():
 @app.route('/login', methods = ['GET', 'POST'])
 def login():
     form = LoginForm()
-    
     if form.validate_on_submit():
         users = models.User.query.all()
         ban = 0
@@ -106,5 +105,9 @@ def buscar_str(nom):
         return True
     return False
                 
+@app.route('/usr_listar')
+def usr_listar():
+    users = models.User.query.all()
+    return render_template("usr_listar.html", title = 'Listado usuario',User = users)
                 
     

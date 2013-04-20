@@ -1,22 +1,28 @@
-'''
-Created on 19/04/2013
+"""
+Sygma_System
+:organization:CRF_Proyect
+:author:Cristian Candia
+:author:Ruth Centurion
+:author:Fernando Saucedo
 
-@author: cristian
-'''
+models.py
+"""
 from app import db
+__docformat__ = 'restructuredtext'
 ROLE_USER = 0
 ROLE_ADMIN = 1
-
+""":note: Clase que representa al usuario"""
 class User(db.Model):
-    """Clase que representa a User"""
+
+    """Id que se le asigna al usuario"""
     id = db.Column(db.Integer, primary_key = True)
-    """:var id: Id que se le asigna al usuario"""
+    """Define el nickname del usuario"""
     name = db.Column(db.String(64), index = True, unique = True)
-    """:var name: Define el nickname del usuario"""
+    """almacena el password del user"""
     passWord = db.Column(db.String(120), index = True, unique = True)
-    """:var passWord: almacena el password del user"""
+    """registra el rol asociado al usuario"""
     role = db.Column(db.SmallInteger, default = ROLE_USER)
-    """:var role: registra el rol asociado al usuario"""
+
     
     def is_authenticated(self):
         return True
