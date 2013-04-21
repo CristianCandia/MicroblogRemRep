@@ -8,5 +8,5 @@ from config import SQLALCHEMY_DATABASE_URI
 from config import SQLALCHEMY_MIGRATE_REPO
 print SQLALCHEMY_MIGRATE_REPO
 print SQLALCHEMY_DATABASE_URI
-
+print "Hola mundo"
 app.run(debug = True)
