@@ -4,4 +4,9 @@ Created on 14/04/2013
 '''
 #!usr/lib/python
 from app import app
+from config import SQLALCHEMY_DATABASE_URI
+from config import SQLALCHEMY_MIGRATE_REPO
+print SQLALCHEMY_MIGRATE_REPO
+print SQLALCHEMY_DATABASE_URI
+
 app.run(debug = True)
