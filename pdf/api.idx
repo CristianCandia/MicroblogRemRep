@@ -1,0 +1,8 @@
+\indexentry{app \textit{(package)}!app.models \textit{(module)}|(hyperpage}{2}
+\indexentry{app \textit{(package)}!app.models \textit{(module)}!app.models.User \textit{(class)}|(hyperpage}{2}
+\indexentry{app \textit{(package)}!app.models \textit{(module)}!app.models.User \textit{(class)}!app.models.User.is\_authenticated \textit{(method)}|hyperpage}{2}
+\indexentry{app \textit{(package)}!app.models \textit{(module)}!app.models.User \textit{(class)}!app.models.User.is\_active \textit{(method)}|hyperpage}{2}
+\indexentry{app \textit{(package)}!app.models \textit{(module)}!app.models.User \textit{(class)}!app.models.User.is\_anonymous \textit{(method)}|hyperpage}{2}
+\indexentry{app \textit{(package)}!app.models \textit{(module)}!app.models.User \textit{(class)}!app.models.User.get\_id \textit{(method)}|hyperpage}{2}
+\indexentry{app \textit{(package)}!app.models \textit{(module)}!app.models.User \textit{(class)}|)}{4}
+\indexentry{app \textit{(package)}!app.models \textit{(module)}|)}{4}
