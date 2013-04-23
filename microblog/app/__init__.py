@@ -4,7 +4,7 @@ Created on 14/04/2013
 @author: cristian
 '''
 from flask import Flask
-from flask.ext.sqlalchemy import SQLAlchemy
+from flask.ext.sqlalchemy import SQLAlchemy #estoy en master
 from flask.ext.login import LoginManager
 from config import basedir
 
