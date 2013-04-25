@@ -35,10 +35,8 @@ def index():
 
 @app.route('/login', methods = ['GET', 'POST'])
 def login():
-    #prueba 
     if g.user is not None and g.user.is_authenticated():
         return redirect(url_for('index'))
-    #/prueba
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(name = form.nomUsr.data).first()
@@ -50,25 +48,7 @@ def login():
                 return redirect(url_for('admin'))
         flash('Fallo en el logueo. Por favor, intente de nuevo.')       
     return render_template('login.html',title = 'Iniciar Sesion',form = form)           
-    '''
-        users = models.User.query.all()
-        ban = 0
-        for u in users:
-            if u.name == form.nomUsr.data:
-                ban = 1
-                if u.passWord == form.passWord.data:
-                    session['logged_in'] = True
-                    flash('Has iniciado sesion')
-                    return redirect('/admin')
-                else:
-                    err = 'Ingrese correctamente su contrasenha'
-        if ban == 0:
-            flash('No existe nombre de usuario')
-            return render_template('login.html',title = 'Iniciar Sesion',form = form)
-    else:
-        flash('Complete correctamente los campos')                    
-        return render_template('login.html',title = 'Iniciar Sesion',form = form)
-'''    
+      
 @app.before_request
 def before_request():
     g.user = current_user    
@@ -101,7 +81,7 @@ def usr_crear():
             if form.nomUsr.data != '':
                 if form.passWord.data != '':
                     if buscar_str(form.nomUsr.data) != True:
-                        u = models.User(name=form.nomUsr.data, passWord=form.passWord.data, role=models.ROLE_ADMIN)
+                        u = User(name=form.nomUsr.data, passWord=form.passWord.data, role=ROLE_ADMIN)
                         db.session.add(u)
                         db.session.commit()
                         flash('Se ha creado un nuevo usuario')
@@ -123,7 +103,7 @@ def usr_eliminar():
     return render_template("usr_eliminar.html", title = 'Eliminar usuario')
 
 def buscar_str(nom):
-    users = models.User.query.all()
+    users = User.query.all()
     ban = 0
     for u in users:
         if u.name == nom:
