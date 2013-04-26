@@ -7,6 +7,7 @@ Sygma_System
 
 models.py
 """
+'''
 from app import db
 
 ROLE_USER = 0
@@ -38,3 +39,4 @@ class User(db.Model):
     
     def __repr__(self):
         return '<User %r>' % (self.name)
+'''
