@@ -18,4 +18,4 @@ lm.login_view = 'login'
 db = SQLAlchemy(app)
 
 from app import views, models
-from controlador import vistaPrueba
+from controlador import vistaProyecto
