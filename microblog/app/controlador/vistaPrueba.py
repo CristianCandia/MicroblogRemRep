@@ -8,4 +8,4 @@ from forms import LoginForm, usr_CrearForm
 from app import app, db, lm
 @app.route('/proyecto')
 def proyecto():
-    return 'Hello World!'
+    return render_template("proyecto.html", title = 'Administracion de proyecto')
