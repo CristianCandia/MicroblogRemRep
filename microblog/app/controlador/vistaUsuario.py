@@ -1,5 +1,5 @@
 '''
-Created on 25/04/2013
+Created on 26/04/2013
 
 @author: cristian
 '''
@@ -9,7 +9,6 @@ from flask.ext.login import login_user, logout_user, current_user, login_require
 from app import app, db, lm #models, oid
 from models import User, ROLE_USER, ROLE_ADMIN
 
-@app.route('/proyecto')
-@login_required
-def proyecto():
-    return render_template("proyecto.html", title = 'Administracion de proyecto')
+@lm.user_loader
+def load_user(id):
+    return User.query.get(int(id))
