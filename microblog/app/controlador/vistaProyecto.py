@@ -9,8 +9,6 @@ from flask.ext.login import login_user, logout_user, current_user, login_require
 from app import app, db, lm #models, oid
 
 
-
-
 @app.route('/proyecto')
 @login_required
 def proyecto():
