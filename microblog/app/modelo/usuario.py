@@ -12,7 +12,7 @@ from app import db
 ROLE_USER = 0
 ROLE_ADMIN = 1
 """:note: Clase que representa al usuario"""
-class User(db.Model):
+class User2(db.Model):
 
     """Id que se le asigna al usuario"""
     id = db.Column(db.Integer, primary_key = True)
