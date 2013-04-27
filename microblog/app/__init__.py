@@ -19,4 +19,3 @@ db = SQLAlchemy(app)
 
 from app import views, models
 from controlador import vistaPrueba
-jlkj
