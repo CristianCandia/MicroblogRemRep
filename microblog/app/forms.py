@@ -16,6 +16,6 @@ class LoginForm(Form):
     passWord = PasswordField('password', validators = [Required()])
 
 class usr_CrearForm(Form):
-    nomUsr = TextField('openid')
-    passWord = PasswordField('password')
+    nomUsr = TextField('nombre', validators = [Required()])
+    passWord = PasswordField('password', validators = [Required()])
     
