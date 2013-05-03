@@ -33,3 +33,7 @@ class fase_CrearForm(Form):
     cantidadItems = IntegerField('cantidadItems')
     cantidadLB = IntegerField ('cantidadLB')
     estado = TextField('estado')
+    
+class rol_CrearForm(Form):
+    nombre = TextField('nombre', validators = [Required()])
+    descripcion = TextField('descripcion')
