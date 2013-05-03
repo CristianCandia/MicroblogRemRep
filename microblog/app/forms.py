@@ -24,4 +24,12 @@ class proy_CrearForm(Form):
     descripcion = TextField('desc')
     fecha_creacion = DateField('fecha')
     complejidad = IntegerField('complejidad')
-    estado = TextField('estado')   
+    estado = TextField('estado')
+
+class fase_CrearForm(Form):
+    nombre = TextField('nombre', validators = [Required()])
+    posicion = IntegerField('posicion', validators = [Required()])
+    descripcion = TextField('descripcion')
+    cantidadItems = IntegerField('cantidadItems')
+    cantidadLB = IntegerField ('cantidadLB')
+    estado = TextField('estado')

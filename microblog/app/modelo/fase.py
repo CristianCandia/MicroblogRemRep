@@ -7,20 +7,24 @@ Sygma_System
 models.py
 """
 from app import db
-ROLE_USER = 0
-ROLE_ADMIN = 1
-""":note: Clase que representa al usuario"""
-class User2(db.Model):
-    """Id que se le asigna al usuario"""
+""":note: Clase que representa a la fase"""
+class Fase(db.Model):
+    """Id que se le asigna a la fase"""
     id = db.Column(db.Integer, primary_key = True)
-    """Define el nickname del usuario"""
-    name = db.Column(db.String(64), index = True, unique = True)
-    """almacena el password del user"""
-    passWord = db.Column(db.String(120), index = True, unique = True)
-    """registra el rol asociado al usuario"""
-    role = db.Column(db.SmallInteger, default = ROLE_USER)
+    """Define el nombre de la fase"""
+    nombre = db.Column(db.String(64))
+    """Registra la posicion de la fase en el proyecto"""
+    posicion = db.Column(db.Integer)
+    """Registra la descripcion de la fase"""
+    descripcion = db.Column(db.String(120))
+    """Registra la cantidad de items de la fase"""
+    cantidadItems = db.Column(db.Integer)
+    """Registra la cantidad de linea base de una base"""
+    cantidadLB = db.Column(db.Integer)
+    """Registra el estado de una fase"""
+    estado = db.Column(db.String(64))
     
-    def add_usr(self):
+    def add_fase(self):
         try:
             db.session.add(self)
             db.session.commit()
@@ -30,17 +34,5 @@ class User2(db.Model):
         return "Exito"
         
     
-    def is_authenticated(self):
-        return True
-    
-    def is_active(self):
-        return True
-    
-    def is_anonymous(self):
-        return False
-    
-    def get_id(self):
-        return unicode(self.id)
-    
     def __repr__(self):
-        return '<User %r>' % (self.name)
+        return '<Fase %r>' % (self.nombre)
