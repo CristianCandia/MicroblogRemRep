@@ -1,14 +1,14 @@
 """
 Sygma_System
 :organization:CRF_Proyect
-:author:Cristian Candia
-:author:Ruth Centurion
-:author:Fernando Saucedo
+@author: Cristian Candia
+@author: Ruth Centurion
+@author: Fernando Saucedo
 
 models.py
 """
 from app import db
-__docformat__ = 'restructuredtext'
+
 ROLE_USER = 0
 ROLE_ADMIN = 1
 """:note: Clase que representa al usuario"""
@@ -19,7 +19,7 @@ class User(db.Model):
     """Define el nickname del usuario"""
     name = db.Column(db.String(64), index = True, unique = True)
     """almacena el password del user"""
-    passWord = db.Column(db.String(120), index = True, unique = True)
+    passWord = db.Column(db.String(110), index = True, unique = True)
     """registra el rol asociado al usuario"""
     role = db.Column(db.SmallInteger, default = ROLE_USER)
 

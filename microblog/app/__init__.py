@@ -3,8 +3,13 @@ Created on 14/04/2013
 
 @author: cristian
 '''
+<<<<<<< HEAD
 from flask import Flask
 from flask.ext.sqlalchemy import SQLAlchemy #estoy en master
+=======
+from flask import Flask 
+from flask.ext.sqlalchemy import SQLAlchemy
+>>>>>>> refs/heads/Postgre
 from flask.ext.login import LoginManager
 from config import basedir
 
@@ -13,6 +18,10 @@ app.config.from_object('config')
 
 lm = LoginManager()
 lm.setup_app(app)
+lm.login_view = 'login'
 
 db = SQLAlchemy(app)
-from app import views
+
+from app import views, models
+from app.modelo import usuario
+from app.vista import vistaProyecto, vistaUsuario, vistaFase

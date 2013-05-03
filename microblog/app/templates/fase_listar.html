@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 align="center">Listado de fases registrados</h1>
+    {% for f in Fase %}
+    <p><b>ID:</b>{{f.id}} <b> Nombre:</b>{{f.nombre}} <b> Posicion:</b>{{f.posicion}}
+    	<b> Descripcion:</b>{{f.descripcion}}
+       	<b> Cantidad de items:</b>{{f.cantidadItems}}<b> Cantidad de lineas base:</b>{{f.cantidadLB}}
+       	<b> Estado:</b>{{f.estado}}		
+    </p>
+    {% endfor %}
+    </p>
+    <p align=center>
+    	<a href="/fase"><button>Aceptar</button></a>
+    </p>
+{% endblock %}
