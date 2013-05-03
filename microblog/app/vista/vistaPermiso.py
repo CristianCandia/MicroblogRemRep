@@ -35,4 +35,4 @@ def crearPermiso():
 @login_required
 def permiso_listar():
     permiso = c_permiso.traerPermisos()  
-    return render_template("permsisos_listar.html", title = 'Listado de permisos', Permiso = permiso)
+    return render_template("permiso_listar.html", title = 'Listado de permisos', Permiso = permiso)
