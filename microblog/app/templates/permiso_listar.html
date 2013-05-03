@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 align="center">Listado de permisos registrados</h1>
+    {% for p in Permiso %}
+    <p>
+    	<b>ID:</b>{{p.id}} <b> Nombre:</b>{{p.nombre}} <b> Codigo:</b>{{p.descripcion}}
+    </p>
+    {% endfor %}
+    </p>
+    <p align=center>
+    	<a href="/permiso"><button>Aceptar</button></a>
+    </p>
+{% endblock %}
