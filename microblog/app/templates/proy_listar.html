@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 align="center">Listado de proyectos registrados</h1>
+    {% for p in Proyecto %}
+    <p><b>ID:</b>{{p.id}} <b> Nombre:</b>{{p.nombre}} <b> Descripcion:</b>{{p.descripcion}}
+       <b> Fecha de creacion:</b>{{p.fecha_de_creacion}}<b> Complejidad total:</b>{{p.complejidad_total}}
+       <b> Estado:</b>{{p.estado}}		
+    
+    </p>
+    {% endfor %}
+    </p>
+    <p align=center>
+    	<a href="/proyecto"><button>Aceptar</button></a>
+    </p>
+{% endblock %}

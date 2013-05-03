@@ -19,4 +19,4 @@ db = SQLAlchemy(app)
 
 from app import views, models
 from app.modelo import usuario
-from vista import vistaProyecto, vistaUsuario
+from app.vista import vistaProyecto, vistaUsuario

@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
-<h1 align="center">Listado usuarios registrados</h1>
+<h1 align="center">Listado proyectos registrados</h1>
     {% for u in User %}
     <p><b>ID:</b>{{u.id}} <b>Nombre:</b>{{u.name}} <b>Password:</b>{{u.passWord}}</p>
     {% endfor %}
     </p>
     <p align=center>
-    	<a href="/usuario"><button>Aceptar</button></a>
+    	<a href="/proyecto"><button>Aceptar</button></a>
     </p>
 {% endblock %}

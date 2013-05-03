@@ -7,7 +7,7 @@ Sygma_System
 
 forms.py
 """
-from flask.ext.wtf import Form, TextField, PasswordField
+from flask.ext.wtf import Form, TextField, PasswordField, DateField, IntegerField
 from flask.ext.wtf import Required
 
 """:note: Clase de Formulario de Login"""
@@ -19,3 +19,9 @@ class usr_CrearForm(Form):
     nomUsr = TextField('nombre', validators = [Required()])
     passWord = PasswordField('password', validators = [Required()])
     
+class proy_CrearForm(Form):
+    nomProy = TextField('nombre', validators = [Required()])
+    descripcion = TextField('desc')
+    fecha_creacion = DateField('fecha')
+    complejidad = IntegerField('complejidad')
+    estado = TextField('estado')   

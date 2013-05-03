@@ -1,1 +1,2 @@
-from VistaUsuario import *
+from vistaUsuario import *
+from vistaProyecto import *
