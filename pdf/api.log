@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=latex 2013.4.20)  20 APR 2013 09:35
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=latex 2013.4.20)  4 MAY 2013 09:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -508,7 +508,7 @@ File: pdfmark.def 2012/05/13 v6.82q Hyperref definitions for pdfmark specials
 
 
 Writing index file api.idx
-(./api.aux (./app.models-module.aux))
+(./api.aux (./script-microdoc_txt-module.aux))
 \openout1 = `api.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
@@ -526,7 +526,8 @@ LaTeX Font Info:    ... okay on input line 82.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 82.
 LaTeX Font Info:    ... okay on input line 82.
 LaTeX Font Info:    Try loading font information for T1+lmr on input line 82.
- (/usr/share/texmf/tex/latex/lm/t1lmr.fd
+
+(/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 \AtBeginShipoutBox=\box31
@@ -584,63 +585,40 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 97.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
-) (./api.toc
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 3.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 3.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 3.
-)
+) (./api.toc)
 \tf@toc=\write5
 \openout5 = `api.toc'.
 
  [1
 
 ]
-\openout2 = `app.models-module.aux'.
+\openout2 = `script-microdoc_txt-module.aux'.
 
 
-(./app.models-module.tex
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 40.
- (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [2
+(./script-microdoc_txt-module.tex) [2
 
-]
-Overfull \hbox (3.93704pt too wide) in paragraph at lines 201--202
-[]\T1/lmr/m/n/12 __delattr__(), __for-mat__(), __getat-tribute__(), __hash__(),
- __new__(),
- []
-
-[3]) [4] (./api.ind [5
+] (./api.ind [3
 
 
 
 ])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 123.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 123.
- (./api.aux (./app.models-module.aux))
+ (./api.aux
+(./script-microdoc_txt-module.aux))
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 123.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 123.
-
-
-Package rerunfilecheck Warning: File `api.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `api.out':
-(rerunfilecheck)             Before: 0FD0B0EF86EAC534A4DE1D81A941A82A;422
-(rerunfilecheck)             After:  CDD8876362A1483F9AE240FD20264679;463.
+Package rerunfilecheck Info: File `api.out' has not changed.
+(rerunfilecheck)             Checksum: 450C30A4B33749922C08C9E850F0416A;149.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 123.
  ) 
 Here is how much of TeX's memory you used:
- 5907 strings out of 495060
- 84911 string characters out of 3182053
- 163126 words of memory out of 3000000
- 8971 multiletter control sequences out of 15000+200000
- 73406 words of font info for 61 fonts, out of 3000000 for 9000
+ 5816 strings out of 495060
+ 83733 string characters out of 3182053
+ 154126 words of memory out of 3000000
+ 8899 multiletter control sequences out of 15000+200000
+ 41947 words of font info for 39 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 34i,12n,43p,310b,431s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 32i,11n,43p,310b,366s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on api.dvi (5 pages, 18128 bytes).
+Output written on api.dvi (3 pages, 5708 bytes).

@@ -35,6 +35,7 @@ def index():
 
 @app.route('/login', methods = ['GET', 'POST'])
 def login():
+    print 'fer1'
     if g.user is not None and g.user.is_authenticated():
         return redirect(url_for('index'))
     form = LoginForm()

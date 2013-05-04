@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 align="center">Asignar un rol</h1>
+<form action="" method="post" name="asignar_rol">
+    <p>
+    {{form.hidden_tag()}}
+    {% if err %}
+	<div>{{error}}</div>
+	{% endif %}
+	</p>
+    <p align=center>
+        Id del usuario:<br>
+        {{form.id_usr(size=20)}}<br>
+        {% for error in form.errors.id_usr %}
+        <span style="color: red;">[{{error}}]</span>
+        {% endfor %}<br>
+    </p>
+    <p align=center>
+        Id del rol:<br>
+        {{form.id_rol(size=20)}}<br>
+        {% for error in form.errors.id_rol %}
+        <span style="color: red;">[{{error}}]</span>
+        {% endfor %}<br>
+    </p>
+    
+    <p align=center>
+    	<input type="submit" value="Asignar rol">
+    </p>
+</form>
+<p align=center><a href="/usuario"><button>Cancelar</button></a></p>
+{% endblock %}

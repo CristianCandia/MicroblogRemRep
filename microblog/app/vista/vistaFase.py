@@ -6,7 +6,7 @@ Created on 03/05/2013
 from flask import render_template, flash, redirect, session, url_for, request, g
 
 """Se importa el metodo fase_CrearForm para manipular el formulario"""
-from forms import fase_CrearForm
+from app.forms import fase_CrearForm
 
 from flask.ext.login import login_user, logout_user, current_user, login_required
 from app import app, db, lm #models, oid

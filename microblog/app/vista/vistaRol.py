@@ -6,7 +6,7 @@ Created on 03/05/2013
 from flask import render_template, flash, redirect, session, url_for, request, g
 
 """Se importa el metodo rol_CrearForm para manipular el formulario"""
-from forms import rol_CrearForm, asignar_Permisos
+from app.forms import rol_CrearForm, asignar_Permisos
 
 from flask.ext.login import login_user, logout_user, current_user, login_required
 from app import app, db, lm #models, oid
@@ -47,7 +47,8 @@ def asignarPermisos():
     if resp == 'Exito':
         flash('Se ha hecho la asignacion')
         redirect(url_for('rol'))
-    flash(resp)
+    if resp != None:
+        flash(resp)
     return render_template("rol_asignar_permisos.html",title = 'Asignar Permisos', form = form)
 
 

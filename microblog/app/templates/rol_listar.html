@@ -2,8 +2,16 @@
 {% block content %}
 <h1 align="center">Listado de roles registrados</h1>
     {% for r in Rol %}
+    <p>ROL</p>
     <p>
+    	
     	<b>ID:</b>{{r.id}} <b> Nombre:</b>{{r.nombre}} <b> Descripcion:</b>{{r.descripcion}}
+    	<p>PERMISOS</p>
+    	{% for p in r.permisos %}
+    		<p>
+	    		<b>ID:</b>{{p.id}} <b> Nombre:</b>{{p.nombre}} <b> Descripcion:</b>{{p.codigo}}
+	    	</p>
+    	{% endfor %}
     </p>
     {% endfor %}
     </p>

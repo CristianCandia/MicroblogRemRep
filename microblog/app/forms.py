@@ -50,3 +50,8 @@ class permiso_CrearForm(Form):
 class asignar_Permisos(Form):
     id_rol = IntegerField('id_rol')
     id_permiso = IntegerField ('id_permiso')
+    
+    
+class asignar_Roles(Form):
+    id_usr = IntegerField('id_usr')
+    id_rol = IntegerField ('id_rol')

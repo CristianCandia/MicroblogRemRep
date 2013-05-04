@@ -48,7 +48,14 @@ class User2(db.Model):
             return str(error)
         return "Exito"
         
-    
+    def delete_usr(self):
+        try:
+            db.session.delete(self)
+            db.session.commit()
+        except Exception, error :
+            db.session.rollback()
+            return str(error)
+        return "Exito"
     def is_authenticated(self):
         return True
     
