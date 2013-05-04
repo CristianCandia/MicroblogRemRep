@@ -16,9 +16,14 @@ class LoginForm(Form):
     passWord = PasswordField('password', validators = [Required()])
 
 class usr_CrearForm(Form):
-    nomUsr = TextField('nombre', validators = [Required()])
+    nomUsr = TextField('nick', validators = [Required()])
     passWord = PasswordField('password', validators = [Required()])
-    
+    nombre =  TextField('nombre', validators = [Required()])
+    apellido = TextField('apellido', validators = [Required()])
+    telefono = TextField('telefono', validators = [Required()])
+    ci = TextField('ci', validators = [Required()])
+    e_mail = TextField('e_mail', validators = [Required()])
+
 class proy_CrearForm(Form):
     nomProy = TextField('nombre', validators = [Required()])
     descripcion = TextField('desc')
@@ -41,3 +46,7 @@ class rol_CrearForm(Form):
 class permiso_CrearForm(Form):
     nombre = TextField('nombre', validators = [Required()])
     codigo = TextField('codigo', validators = [Required()])
+
+class asignar_Permisos(Form):
+    id_rol = IntegerField('id_rol')
+    id_permiso = IntegerField ('id_permiso')

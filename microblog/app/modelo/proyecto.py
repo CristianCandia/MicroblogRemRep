@@ -26,6 +26,9 @@ class Proyecto(db.Model):
     complejidad_total = db.Column(db.Integer)
     """Indica el estado actual del proyecto"""
     estado = db.Column(db.String(50))
+    
+    fases = db.relationship('Fase', backref='proyecto',lazy='dynamic')
+    
   
     def add_proy(self):
         try:

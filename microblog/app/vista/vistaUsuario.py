@@ -17,7 +17,9 @@ def crearUsuario():
     form = usr_CrearForm()
     resp = None
     if form.validate_on_submit():
-        resp = c_usr.regUsuario(nombre = form.nomUsr.data, passWord = form.passWord.data, role=1)
+        resp = c_usr.regUsuario(name = form.nomUsr.data, passWord = form.passWord.data, 
+                                nombre = form.nombre.data, apellido = form.apellido.data,
+                                telefono = form.telefono.data, ci = form.ci.data, e_mail = form.e_mail.data)
     if resp == 'Exito':
         redirect(url_for('usuario'))
     return render_template("usr_crear.html", title = 'Crear usuario', form = form)

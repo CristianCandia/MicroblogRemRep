@@ -15,3 +15,6 @@ class ControllerPermiso():
         return permiso.add_permiso()
     def traerPermisos(self):
         return Permiso.query.all()
+    
+    def getPermiso(self, id_permiso):
+        return Permiso.query.get(id_permiso)

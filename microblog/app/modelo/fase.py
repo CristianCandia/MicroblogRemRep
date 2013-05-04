@@ -24,6 +24,9 @@ class Fase(db.Model):
     """Registra el estado de una fase"""
     estado = db.Column(db.String(64))
     
+    id_proyecto = db.Column(db.Integer, db.ForeignKey('proyecto.id'))
+
+    
     def add_fase(self):
         try:
             db.session.add(self)

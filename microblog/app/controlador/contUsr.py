@@ -8,10 +8,18 @@ class ControllerUsr():
     def regUsuario(self, **kwargsUsr):
         usr = User2()
         for k, v in kwargsUsr.iteritems():
-            if k == 'nombre':
+            if k == 'name':
                 usr.name = v
             if k == 'passWord':
                 usr.passWord = v
-            if k == 'role':
-                usr.role = v
+            if k == 'nombre':
+                usr.nombre = v
+            if k == 'apellido':
+                usr.apellido = v
+            if k == 'telefono':
+                usr.telefono = v
+            if k == 'ci':
+                usr.ci = v
+            if k == 'e_mail':
+                usr.e_mail = v
         return usr.add_usr()
