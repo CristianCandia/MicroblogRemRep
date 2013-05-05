@@ -56,6 +56,7 @@ class User2(db.Model):
             db.session.rollback()
             return str(error)
         return "Exito"
+    
     def is_authenticated(self):
         return True
     
