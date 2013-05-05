@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 align="center">Crear un permiso</h1>
+<form action="" method="post" name="crear_permiso">
+    <p>
+    {{form.hidden_tag()}}
+    {% if err %}
+	<div>{{error}}</div>
+	{% endif %}
+	</p>
+    <p align=center>
+        Nombre del permiso:<br>
+        {{form.nombre(size=20)}}<br>
+        {% for error in form.errors.nombre %}
+        <span style="color: red;">[{{error}}]</span>
+        {% endfor %}<br>
+    </p>
+    <p align=center>
+        Codigo:<br>
+        {{form.codigo(size=100)}}<br>
+        {% for error in form.errors.codigo %}
+        <span style="color: red;">[{{error}}]</span>
+        {% endfor %}<br>
+    </p>
+    
+    <p align=center>
+    	<input type="submit" value="Crear permiso">
+    	<a href="/permiso"><button>Cancelar</button></a>
+    </p>
+</form>
+{% endblock %}

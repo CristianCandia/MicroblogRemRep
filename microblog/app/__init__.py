@@ -10,6 +10,7 @@ from flask import Flask
 from flask.ext.sqlalchemy import SQLAlchemy
 from flask.ext.login import LoginManager
 from config import basedir
+import forms
 
 app = Flask(__name__)
 app.config.from_object('config')
@@ -22,4 +23,8 @@ db = SQLAlchemy(app)
 
 from app import views, models
 from app.modelo import usuario
+<<<<<<< HEAD
 from app.vista import vistaProyecto, vistaUsuario, vistaFase
+=======
+from app.vista import vistaProyecto, vistaUsuario, vistaFase, vistaRol, vistaPermiso
+>>>>>>> refs/heads/Postgre

@@ -5,25 +5,63 @@
     {% else %}
     <title>Sygma_System</title>
     {% endif %}
+    <link href="{{ url_for('static', filename = 'bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename = 'bootstrap/css/bootstrap-responsive.css') }}" rel="stylesheet">
+	<script type="text/javascript">
+		function cerrar() {
+			$(".modal").hide();
+		}
+	</script>
+	<script src="{{ url_for('static', filename = 'jquery-1.9.0.min.js') }}"></script>
+	<script src="{{ url_for('static', filename = 'bootstrap/js/bootstrap.min.js') }}"></script>
   </head>
   <body>
-    <div align=center>Sygma_System: 
-    {% if g.user.is_authenticated() %}
-    	  <a href="/login">Principal</a>
-    	| <a href="{{ url_for('admin') }}">Administracion General</a>
-        | <a href="{{ url_for('logout') }}">Finalizar sesión</a>
-    {% endif %}
-    {% if not g.user.is_authenticated() %}
-        | <a href="{{ url_for('login') }}">Login</a>
-    {% endif %}
-    
+    <div class="navbar navbar-fixed-top">
+	    <div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+		        	<span class="icon-bar"></span>
+		      	</a>
+			    {% if g.user.is_authenticated() %}
+			    	<a class="brand" href="{{ url_for('index') }}">Sygma System</a>
+			    	<div class="nav-collapse">
+				    	<ul class="nav">
+							<li><a href="/login">Principal</a></li>
+							<li><a href="{{ url_for('admin') }}">Administracion General</a></li>
+							<li><a href="{{ url_for('logout') }}">Finalizar sesión</a></li>
+				        </ul>
+			        </div>
+			    {% endif %}
+			    {% if not g.user.is_authenticated() %}
+			    	<a class="brand" href="{{ url_for('login') }}">Sygma System</a>
+			    	<div class="nav-collapse">
+				    	<ul class="nav">
+							<li><a href="{{ url_for('login') }}">Login</a></li>
+						</ul>
+			        </div>
+			    {% endif %}
+			</div>
+	    </div>
     </div>
     <hr>
     {% with messages = get_flashed_messages() %}
     {% if messages %}
     <ul>
     {% for message in messages %}
-        <li>{{ message }} </li>
+        <div class="modal">
+			<div class="modal-header">
+        		<a class="close" data-dismiss="modal">&times;</a>
+        		<h3>Mensaje</h3>
+      		</div>
+      		<div class="modal-body">
+   				{{ message }}
+      		</div>
+	      	<div class="modal-footer">
+	        	<a href="#" class="btn btn-danger" data-dismiss="modal" onClick="cerrar();">Cerrar</a>
+	      	</div>				
+		</div>
     {% endfor %}
     </ul>
     {% endif %}

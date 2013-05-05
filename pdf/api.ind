@@ -1,7 +1,5 @@
 \begin{theindex}
 
-  \item app \textit{(package)}
-    \subitem app.models \textit{(module)}, \hyperpage{2--4}
-      \subsubitem app.models.User \textit{(class)}, \hyperpage{2--4}
+  \item script-microdoc\_txt \textit{(script)}, \hyperpage{2}
 
 \end{theindex}

@@ -7,18 +7,19 @@ from flask import render_template, flash, redirect, session, url_for, request, g
 from forms import LoginForm, usr_CrearForm
 from flask.ext.login import login_user, logout_user, current_user, login_required
 from app import app, db, lm #models, oid
-from models import User, ROLE_USER, ROLE_ADMIN
+from models import ROLE_USER, ROLE_ADMIN
+from app.modelo import User2
 
 @lm.user_loader
 def load_user(id):
-    return User.query.get(int(id))
+    return User2.query.get(int(id))
 
 @app.route('/')
 @app.route('/index')
 @login_required
 def index():
     user = g.user#{ 'nickname': 'Miguel' } # fake user
-    posts = [ # fake array of posts
+    ''' posts = [ # fake array of posts
         { 
             'author': { 'nickname': 'John' }, 
             'body': 'Beautiful day in Portland!' 
@@ -27,19 +28,19 @@ def index():
             'author': { 'nickname': 'Susan' }, 
             'body': 'The Avengers movie was so cool!' 
         }
-    ]
+    ]'''
     return render_template("index.html",
         title = 'Home',
-        user = user,
-        posts = posts)
+        user = user)
 
 @app.route('/login', methods = ['GET', 'POST'])
 def login():
+    print 'fer1'
     if g.user is not None and g.user.is_authenticated():
         return redirect(url_for('index'))
     form = LoginForm()
     if form.validate_on_submit():
-        user = User.query.filter_by(name = form.nomUsr.data).first()
+        user = User2.query.filter_by(name = form.nomUsr.data).first()
         if user is not None:
             if user.passWord == form.passWord.data:
                 session['logged_in'] = True
@@ -81,7 +82,7 @@ def usr_crear():
             if form.nomUsr.data != '':
                 if form.passWord.data != '':
                     if buscar_str(form.nomUsr.data) != True:
-                        u = User(name=form.nomUsr.data, passWord=form.passWord.data, role=ROLE_ADMIN)
+                        u = User2(name=form.nomUsr.data, passWord=form.passWord.data, role=ROLE_ADMIN)
                         db.session.add(u)
                         db.session.commit()
                         flash('Se ha creado un nuevo usuario')
@@ -103,7 +104,7 @@ def usr_eliminar():
     return render_template("usr_eliminar.html", title = 'Eliminar usuario')
 
 def buscar_str(nom):
-    users = User.query.all()
+    users = User2.query.all()
     ban = 0
     for u in users:
         if u.name == nom:
@@ -115,7 +116,7 @@ def buscar_str(nom):
 @app.route('/usr_listar')
 @login_required
 def usr_listar():
-    users = User.query.all()
+    users = User2.query.all()
     return render_template("usr_listar.html", title = 'Listado usuario',User = users)
                 
     

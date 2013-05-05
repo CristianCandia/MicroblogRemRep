@@ -1,0 +1,24 @@
+[Sat May 04 09:21:53 2013] [error] [client 127.0.0.1] mod_wsgi (pid=8135): Target WSGI script '/home/cristian/git/microblogRepo/microblog/microblog.wsgi' cannot be loaded as Python module.
+[Sat May 04 09:21:53 2013] [error] [client 127.0.0.1] mod_wsgi (pid=8135): Exception occurred processing WSGI script '/home/cristian/git/microblogRepo/microblog/microblog.wsgi'.
+[Sat May 04 09:21:53 2013] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Sat May 04 09:21:53 2013] [error] [client 127.0.0.1]   File "/home/cristian/git/microblogRepo/microblog/microblog.wsgi", line 6, in <module>
+[Sat May 04 09:21:53 2013] [error] [client 127.0.0.1]     from microblog import app as application
+[Sat May 04 09:21:53 2013] [error] [client 127.0.0.1] ImportError: No module named microblog
+[Sat May 04 09:21:53 2013] [error] [client 127.0.0.1] mod_wsgi (pid=8135): Target WSGI script '/home/cristian/git/microblogRepo/microblog/microblog.wsgi' cannot be loaded as Python module.
+[Sat May 04 09:21:53 2013] [error] [client 127.0.0.1] mod_wsgi (pid=8135): Exception occurred processing WSGI script '/home/cristian/git/microblogRepo/microblog/microblog.wsgi'.
+[Sat May 04 09:21:53 2013] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Sat May 04 09:21:53 2013] [error] [client 127.0.0.1]   File "/home/cristian/git/microblogRepo/microblog/microblog.wsgi", line 6, in <module>
+[Sat May 04 09:21:53 2013] [error] [client 127.0.0.1]     from microblog import app as application
+[Sat May 04 09:21:53 2013] [error] [client 127.0.0.1] ImportError: No module named microblog
+[Sat May 04 09:22:05 2013] [error] [client 127.0.0.1] mod_wsgi (pid=8135): Target WSGI script '/home/cristian/git/microblogRepo/microblog/microblog.wsgi' cannot be loaded as Python module.
+[Sat May 04 09:22:05 2013] [error] [client 127.0.0.1] mod_wsgi (pid=8135): Exception occurred processing WSGI script '/home/cristian/git/microblogRepo/microblog/microblog.wsgi'.
+[Sat May 04 09:22:05 2013] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Sat May 04 09:22:05 2013] [error] [client 127.0.0.1]   File "/home/cristian/git/microblogRepo/microblog/microblog.wsgi", line 6, in <module>
+[Sat May 04 09:22:05 2013] [error] [client 127.0.0.1]     from microblog import app as application
+[Sat May 04 09:22:05 2013] [error] [client 127.0.0.1] ImportError: No module named microblog
+[Sat May 04 09:22:05 2013] [error] [client 127.0.0.1] mod_wsgi (pid=8135): Target WSGI script '/home/cristian/git/microblogRepo/microblog/microblog.wsgi' cannot be loaded as Python module.
+[Sat May 04 09:22:05 2013] [error] [client 127.0.0.1] mod_wsgi (pid=8135): Exception occurred processing WSGI script '/home/cristian/git/microblogRepo/microblog/microblog.wsgi'.
+[Sat May 04 09:22:05 2013] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Sat May 04 09:22:05 2013] [error] [client 127.0.0.1]   File "/home/cristian/git/microblogRepo/microblog/microblog.wsgi", line 6, in <module>
+[Sat May 04 09:22:05 2013] [error] [client 127.0.0.1]     from microblog import app as application
+[Sat May 04 09:22:05 2013] [error] [client 127.0.0.1] ImportError: No module named microblog
