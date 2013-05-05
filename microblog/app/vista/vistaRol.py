@@ -17,7 +17,7 @@ c_rol = ControllerRol()
 @app.route('/rol')
 @login_required
 def rol():
-    return render_template("rol.html", title = 'Administracion de Roles')
+    return render_template("rol2.html", title = 'Administracion de Roles')
 
 @app.route('/rol/rol_crear', methods = ['GET', 'POST'])
 @login_required
