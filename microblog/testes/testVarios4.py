@@ -3,10 +3,12 @@ Created on 05/05/2013
 
 @author: cristian
 '''
+
 import unittest
 import os
+
 #from app import db
-from modelo import User2
+from app.modelo import User2
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 

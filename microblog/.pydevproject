@@ -6,5 +6,6 @@
 <path>/microblog/app</path>
 <path>/microblog/tmp</path>
 <path>/microblog/app/templates</path>
+<path>/microblog</path>
 </pydev_pathproperty>
 </pydev_project>
