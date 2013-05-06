@@ -6,7 +6,9 @@ Sygma_System
 @author: Fernando Saucedo
 models.py
 """
+
 from app import db
+
 ROLE_USER = 0
 ROLE_ADMIN = 1
 
