@@ -2,7 +2,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Iniciar Sesion</h1>
+<h1 align="center">Iniciar Sesi&oacute;n</h1>
 <form action="" method="post" name="login">
     <p>
     {{form.hidden_tag()}}
@@ -10,20 +10,20 @@
 	<div>{{error}}</div>
 	{% endif %}
 	</p>
-    <p>
+    <p align="center">
         Nombre de usuario:<br>
-        {{form.nomUsr(size=20)}}<br>
+        {{form.nomUsr(size=15)}}<br>
         {% for error in form.errors.nomUsr %}
         <span style="color: red;">[{{error}}]</span>
         {% endfor %}<br>
     </p>
-    <p>
+    <p align="center">
         Contraseña:<br>
-        {{form.passWord(size=20)}}<br>
+        {{form.passWord(size=15)}}<br>
         {% for error in form.errors.passWord %}
         <span style="color: red;">[{{error}}]</span>
         {% endfor %}<br>
     </p>
-      <p><a class="btn btn-sucess" onclick="submit();" >Iniciar Sesi&oacute;n</a></p>
+      <p align="center"><a class="btn btn-sucess" onclick="submit();" >Iniciar Sesi&oacute;n</a></p>
 </form>
 {% endblock %}

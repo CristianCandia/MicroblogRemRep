@@ -14,7 +14,7 @@ class TestUser2(unittest.TestCase):
         def setUp(self):
             self.user1 = User2(name="name", passWord="name", nombre="cristian", 
                                apellido="candia", telefono="123-321", 
-                               ci = "123321", e_mail= "@email.com")
+                               ci = "4673", e_mail= "@email.com")
             self.contador = 0
       
         def testGuardar(self):  
