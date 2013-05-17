@@ -1,0 +1,23 @@
+<!-- extend from base layout -->
+
+{% extends "base.html" %}
+{% block content %}
+<h1>Recuperar contraseña</h1>
+<form action="{{ url_for('recuperarPass')}}" method="post" name="RP">
+	<p>
+	    {{form.hidden_tag()}}
+	    {% if err %}
+		<div>{{error}}</div>
+		{% endif %}
+	</p>
+	<p>
+        Ingrese su nombre de usuario:<br>
+        {{form.nomUsr(size=20)}}<br>
+        {% for error in form.errors.nomUsr %}
+        <span style="color: red;">[{{error}}]</span>
+        {% endfor %}<br>
+    </p>
+		<a href="{{ url_for('login')}}" class="btn btn-info" >Cerrar</a>
+		<input type="submit" value="Recuperar" class="btn btn-succes"></input>
+</form>
+{% endblock %}

@@ -8,9 +8,12 @@ from flask.ext.sqlalchemy import SQLAlchemy
 from flask.ext.login import LoginManager
 from config import basedir
 import forms
+from flask_mail import Mail
 
+mail = Mail()
 app = Flask(__name__)
 app.config.from_object('config')
+mail.init_app(app)
 
 lm = LoginManager()
 lm.setup_app(app)

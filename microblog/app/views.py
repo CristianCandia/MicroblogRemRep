@@ -9,6 +9,8 @@ from flask.ext.login import login_user, logout_user, current_user, login_require
 from app import app, db, lm #models, oid
 from models import ROLE_USER, ROLE_ADMIN
 from app.modelo import User2
+from app.controlador import ControllerUsr
+
 
 @lm.user_loader
 def load_user(id):
@@ -44,12 +46,18 @@ def login():
         if user is not None:
             if user.passWord == form.passWord.data:
                 session['logged_in'] = True
+                session['permisos'] = c_user.getPermisos(user)
                 flash('Has iniciado sesion')
                 login_user(user)
                 return redirect(url_for('admin'))
-        flash('Fallo en el logueo. Por favor, intente de nuevo.')       
-    return render_template('login.html',title = 'Iniciar Sesion',form = form)           
-      
+            else:
+                flash('Pass incorrecto, ingresela de nuevo')
+        else:
+            flash('Usuario no existente, pongase en contacto con el administrador para obtener una cuenta')
+            return render_template('login.html',title = 'Iniciar Sesion',form = form)
+               
+    return render_template('login.html',title = 'Iniciar Sesion',form = form)         
+
 @app.before_request
 def before_request():
     g.user = current_user    
@@ -58,21 +66,35 @@ def before_request():
 @app.route('/admin')
 @login_required
 def admin():
-    return render_template("admin.html", title = 'Administrador General')
+    
+    return render_template("admin.html", title = 'Administrador General', session = session['permisos'])
 
 @app.route('/logout')
 def logout():
     logout_user()
     return redirect(url_for('index'))
 
+#todo lo que hizo fernando saucedo
+c_user = ControllerUsr()
+
+def listadoUsuarios():
+    ''' Devuelve un listado de los usuarios '''
+    lista = None
+    r = True
+    if(r):
+        lista = c_user.getUsrFull()
+    else:
+        flash("Error. Lista no devuelta")
+    return lista
 
 @app.route('/usuario')
 @login_required
 def usuario():
-    return render_template("usuario.html", title = 'Administracion de usuario')
+    ''' Devuelve los datos de un Usuario en Concreto '''
+    usuarios = listadoUsuarios();
+    return render_template('indexUser.html', usuarios = usuarios, form = usr_CrearForm())
 
-
-
+#hasta aca
 
 @app.route('/usr_crear', methods = ['GET', 'POST'])
 @login_required

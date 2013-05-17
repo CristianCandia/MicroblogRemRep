@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+{% block content %}
+<script type="text/javascript">
+	function ocultarModal() {
+		$("#modalCU").hide();
+		$("#formulario-carga")[0].reset();
+	}
+	
+	function modificar(id, name, passWord, nombre, apellido, ci, telefono, e_mail){
+		/*función para modificar los datos de los usuarios**/
+		$("#formulario-carga").attr('action','{{ url_for('modificarUsuario') }}');
+		$("#formulario-carga").append('<input type="hidden" value='+id+' name="idUser">');
+		/*Se rellenan los campos**/
+		$("#idUser").val(id);
+		$("#nomUsr").val(name);
+		$("#password").val(passWord);
+		$("#nombres").val(nombre);
+		$("#apellidos").val(apellido);
+		$("#ci").val(ci);
+		$("#telefono").val(telefono);
+		$("#email").val(e_mail);
+	}
+	
+	function eliminar(id){
+		/*Eliminar usuario**/
+		$("#botonesEU").empty().append("<a href=\"{{ url_for('eliminarUsuario') }}" + id + "\" class=\"btn btn-danger\">Si</a>"
+				+"<a data-dismiss=\"modal\" class=\"btn btn-secondary\">No</a>");
+		$("#modalEU").modal("show")
+	}
+	
+	function mostrarModal(){
+		$('#modalCU').modal('show');
+	}
+</script>
+<!-- Bolque donde se define la lista de usuarios -->
+<h1 align="center">Administrar Usuarios</h1>
+<div class="row">
+	<div class="span8">
+		<h2>Listado</h2>
+		<table class="table table-striped">
+			<tr>
+				<th>Id</th>
+				<th>Nombre Usuario</th>
+	            <th>Contraseña</th>
+	            <th>Nombre </th>
+	            <th>Apellido</th>
+	            <th>CI</th>
+	            <th>Telefono</th>
+	            <th>Email</th>
+			</tr>
+			{% for u in usuarios %}
+          	<tr>
+	            <td>{{u.id}}</td>
+	            <td>{{u.name}}</td>
+	            <td>{{u.passWord}}</td>
+	            <td>{{u.nombre}}</td>
+	            <td>{{u.apellido}}</td>
+	            <td>{{u.ci}}</td>
+	            <td>{{u.telefono}}</td>
+	            <td>{{u.e_mail}}</td>
+	            <td><a class="btn btn-danger" data-toggle="modal" onclick="eliminar('{{ u.id }}')" >Eliminar</a></td>
+	            <td><a class="btn" data-toggle="modal" onclick="modificar('{{ u.id }}', '{{ u.name }}', '{{ u.passWord }}', '{{ u.nombre }}', '{{ u.apellido }}', '{{ u.ci }}', '{{ u.telefono }}', '{{ u.e_mail }}');mostrarModal();" >Modificar</a></td>
+	            <td><a class="btn btn-info" >Roles</a></td>
+          	</tr>
+          {% else %}
+          	<tr>
+          		<td>NO HAY REGISTROS</td>
+          	</tr>
+          {% endfor %}
+		</table>
+	</div>
+</div>
+
+<p align="center">
+	<a class="btn btn-success btn-large" data-toggle="modal" onclick="$('#formulario-carga')[0].reset();$('#formulario-carga').attr('action','{{ url_for('crearUsuario') }}');mostrarModal();"> Agregar Nuevo Usuario</a>
+</p> 
+
+<!-- Modal para añadir o modificar un usuario -->
+<div class="modal hide fade" id="modalCU" style="display: none">
+	<div class="modal-header">
+		<a class="close" data-dismiss="modal">&times;</a>
+		<h3>Usuario</h3>
+	</div>
+	<form action="{{ url_for('crearUsuario') }}" method="post" class="form-horizontal" id="formulario-carga">
+		<div class="modal-body">
+			<center>
+				<fieldset>
+					{{form.hidden_tag()}}
+		   			{% if err %}
+					<div>{{error}}</div>
+					{% endif %}
+					<label>Nombre de Usuario:</label>
+					{{ form.nomUsr(size=64, id='nomUsr') }}
+					<label>Pass:</label>
+					{{ form.passWord(size=120, type='password', placeholder='pass', id='passWord') }}
+					<label>Nombres:</label>
+					{{ form.nombre(size=64, placeholder='Nombres', id='nombres') }}
+					<label>Apellidos:</label>
+					{{ form.apellido(size=64, placeholder='Apellidos', id='apellidos') }}
+					<label>C.I.Nº:</label>
+					{{ form.ci(size=15, type='number', placeholder='CI', id='ci') }}
+					<label>Teléfono:</label>
+					{{ form.telefono(size=15, placeholder='Telefono', id='telefono') }}
+					<label>Email:</label>
+					{{ form.e_mail(size=64, type='email', placeholder='Email', id='email') }}
+				</fieldset>
+			</center>
+		</div>
+		<div class="modal-footer">
+			<a class="btn" data-dismiss="modal" onclick="ocultarModal();">Cerrar</a>
+			<input type="submit" value="Guardar" class="btn btn-success"></input>
+		</div>
+	</form>
+</div>
+
+<!-- Modal para eliminar un usuario -->
+<div class="modal hide fade" id="modalEU" style="display: none">
+	<div class="modal-header">
+		<a class="close" data-dismiss="modal">&times</a>
+		<h3>Eliminar Usuario</h3>
+	</div>
+	<div class="modal-body">
+		<p>Aquí no hay marcha atrás, está</p>
+		<p>usted seguro que quiere eliminarlo?</p>
+	</div>
+	<div class="modal-footer" id="botonesEU">
+		<!-- definido en el script -->
+	</div>
+</div>
+{% endblock %}

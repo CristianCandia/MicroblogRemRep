@@ -3,7 +3,7 @@ Created on 19/04/2013
 
 @author: cristian
 '''
-#!usr/bin/python
+#!usr/bin/python2.7
 from migrate.versioning import api
 from config import SQLALCHEMY_DATABASE_URI
 from config import SQLALCHEMY_MIGRATE_REPO

@@ -22,3 +22,4 @@
 [Sat May 04 09:22:05 2013] [error] [client 127.0.0.1]   File "/home/cristian/git/microblogRepo/microblog/microblog.wsgi", line 6, in <module>
 [Sat May 04 09:22:05 2013] [error] [client 127.0.0.1]     from microblog import app as application
 [Sat May 04 09:22:05 2013] [error] [client 127.0.0.1] ImportError: No module named microblog
+[Fri May 10 16:51:56 2013] [error] fer1

@@ -29,6 +29,9 @@ class ControllerUsr():
     def getUsr(self, id):
         return User2.query.get(id)
     
+    def getUsrFull(self):
+        return User2.query.all()
+    
     def asignarRoles(self,id_usr,id_rol):
         c_rol = ControllerRol()
         
@@ -45,3 +48,31 @@ class ControllerUsr():
                 return error
             return 'Exito'
         return 'No existen el/los id(s) ingresados'
+    
+    def modUsuario(self, usuario):
+        try:
+            db.session.merge(usuario)
+            db.session.commit()
+        except Exception, error :
+            db.session.rollback()
+            return str(error)
+        return "Exito"
+    
+    def eliminarUsr(self, usuario):
+        return usuario.delete_usr()
+    
+    def getPermisos(self, usr):
+        sopermi = []
+        if usr.roles is not None:
+            for rol in usr.roles:
+                if rol.permisos is not None:
+                    for p in rol.permisos:
+                        if not p.id in sopermi:
+                            sopermi.append(p.id)
+        return sopermi
+                
+                
+                
+            
+        
+        

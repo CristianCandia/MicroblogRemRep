@@ -34,7 +34,7 @@ class User2(db.Model):
     """Registra el documento del usuario"""
     ci = db.Column(db.String(15))
     """Almacena una direccion de correo elec del usuario"""
-    e_mail = db.Column(db.String(15), unique = True)
+    e_mail = db.Column(db.String(100), unique = True)
     
     """registra el rol asociado al usuario"""
     #roles = db.Column(db.SmallInteger, default = ROLE_USER)

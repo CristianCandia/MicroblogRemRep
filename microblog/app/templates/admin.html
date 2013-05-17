@@ -2,7 +2,9 @@
 {% block content %}
 <h1 align="center">Bienvenido administrador principal</h1>
 <p align="center">
-<a href="/usuario"><button>Usuario</button></a>
+
+	<a href="{{ url_for('usuario') }}" class="btn btn-success">Usuario</a>
+
 <a href="/proyecto"><button>Proyecto</button></a>
 <a href="/fase"><button>Fase</button></a>
 <a href="/rol"><button>Rol</button></a>
