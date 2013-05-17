@@ -2,9 +2,11 @@
 {% block content %}
 <h1 align="center">Bienvenido administrador principal</h1>
 <p align="center">
-
-	<a href="{{ url_for('usuario') }}" class="btn btn-success">Usuario</a>
-
+{% if (1 or 2 or 3) in session['permisos']%}
+	<a href="{{ url_for('usuario') }}" class="btn btn-success" >Usuario</a>
+{% else %}
+	<a class="btn btn-success disabled">Usuario</a>
+{% endif %}
 <a href="/proyecto"><button>Proyecto</button></a>
 <a href="/fase"><button>Fase</button></a>
 <a href="/rol"><button>Rol</button></a>
