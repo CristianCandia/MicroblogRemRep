@@ -95,6 +95,7 @@ def recuperarPass():
     
     return render_template('rec_pass.html',title = 'Recuperar Pass', form = form)
 @app.route('/usuario/usuario_asignar_roles' , methods=['GET', 'POST'])
+
 @login_required
 def asignarRoles():
     form = asignar_Roles()

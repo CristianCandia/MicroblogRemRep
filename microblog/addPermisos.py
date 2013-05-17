@@ -10,86 +10,83 @@ from app.modelo import Permiso, Rol
 from app.controlador import ControllerRol
 
 
-p1 = Permiso(nombre='Crear usuario', codigo = '1')
+p1 = Permiso(id = 1, nombre='Crear usuario', codigo = '1')
 db.session.add(p1)
 
-p2 = Permiso(nombre='Modificar usuario', codigo = '2')
+p2 = Permiso(id = 2, nombre='Modificar usuario', codigo = '2')
 db.session.add(p2)
 
-p3 = Permiso(nombre='Eliminar Usuario', codigo = '3')
+p3 = Permiso(id = 3, nombre='Eliminar Usuario', codigo = '3')
 db.session.add(p3)
 
-p4 = Permiso(nombre='Crear rol', codigo = '4')
+p4 = Permiso(id = 4, nombre='Crear rol', codigo = '4')
 db.session.add(p4)
 
-p5 = Permiso(nombre='Modificar rol', codigo = '5')
+p5 = Permiso(id = 5, nombre='Modificar rol', codigo = '5')
 db.session.add(p5)
 
-p6 = Permiso(nombre='Eliminar rol', codigo = '6')
+p6 = Permiso(id = 6, nombre='Eliminar rol', codigo = '6')
 db.session.add(p6)
 
-p7 = Permiso(nombre='Asignar rol', codigo = '7')
+p7 = Permiso(id = 7, nombre='Asignar rol', codigo = '7')
 db.session.add(p7)
 
-p8 = Permiso(nombre='Crear proyecto', codigo = '8')
+p8 = Permiso(id = 8, nombre='Crear proyecto', codigo = '8')
 db.session.add(p8)
 
-p9 = Permiso(nombre='Configurar proyecto', codigo = '9')
+p9 = Permiso(id = 9, nombre='Configurar proyecto', codigo = '9')
 db.session.add(p9)
 
-p10 = Permiso(nombre='Modificar proyecto', codigo = '10')
+p10 = Permiso(id = 10, nombre='Modificar proyecto', codigo = '10')
 db.session.add(p10)
 
-p11 = Permiso(nombre='Eliminar proyecto', codigo = '11')
+p11 = Permiso(id = 11, nombre='Eliminar proyecto', codigo = '11')
 db.session.add(p11)
 
-p12 = Permiso(nombre='Ver fase', codigo = '12')
+p12 = Permiso(id = 12, nombre='Ver fase', codigo = '12')
 db.session.add(p12)
 
-p13 = Permiso(nombre='Crear Item', codigo = '13')
+p13 = Permiso(id = 13, nombre='Crear Item', codigo = '13')
 db.session.add(p13)
 
-p14 = Permiso(nombre='Eliminar item', codigo = '14')
+p14 = Permiso(id = 14, nombre='Eliminar item', codigo = '14')
 db.session.add(p14)
 
-p15 = Permiso(nombre='Modificar Item', codigo = '15')
+p15 = Permiso(id = 15, nombre='Modificar Item', codigo = '15')
 db.session.add(p15)
 
-p16 = Permiso(nombre='Crear tipo de item', codigo = '16')
+p16 = Permiso(id = 16, nombre='Crear tipo de item', codigo = '16')
 db.session.add(p16)
 
-p17 = Permiso(nombre='Modificar tipo de item', codigo = '17')
+p17 = Permiso(id = 17, nombre='Modificar tipo de item', codigo = '17')
 db.session.add(p17)
 
-p18 = Permiso(nombre='Eliminar tipo de item', codigo = '18')
+p18 = Permiso(id = 18, nombre='Eliminar tipo de item', codigo = '18')
 db.session.add(p18)
 
-p19 = Permiso(nombre='Crear linea base', codigo = '19')
+p19 = Permiso(id = 19, nombre='Crear linea base', codigo = '19')
 db.session.add(p19)
 
-p20 = Permiso(nombre='Liberar-cerrar linea base', codigo = '20')
+p20 = Permiso(id = 20, nombre='Liberar-cerrar linea base', codigo = '20')
 db.session.add(p20)
 
-p21 = Permiso(nombre='Eliminar Linea base', codigo = '21')
+p21 = Permiso(id = 21, nombre='Eliminar Linea base', codigo = '21')
 db.session.add(p21)
 
-p22 = Permiso(nombre='Aprobar-rechazar item', codigo = '22')
+p22 = Permiso(id = 22, nombre='Aprobar-rechazar item', codigo = '22')
 db.session.add(p22)
 
-p23 = Permiso(nombre='Solicitar reportes', codigo = '23')
+p23 = Permiso(id = 23, nombre='Solicitar reportes', codigo = '23')
 db.session.add(p23)
 
-p24 = Permiso(nombre='Aprobar-rechazar solicitud de cambio', codigo = '24')
+p24 = Permiso(id = 24, nombre='Aprobar-rechazar solicitud de cambio', codigo = '24')
 db.session.add(p24)
 
 db.session.commit()
 
 
-rol2 = Rol(nombre = 'Administrador Principal', descripcion = 'Este rol posee todos los permisos', id_proyecto = 1, id_fase = 1)
-db.session.add(rol2)
-db.session.commit()
-
 c_rol = ControllerRol()
+
 
 permisos2 = Permiso.query.all()
 

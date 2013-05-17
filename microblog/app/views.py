@@ -37,7 +37,6 @@ def index():
 
 @app.route('/login', methods = ['GET', 'POST'])
 def login():
-    print 'fer1'
     if g.user is not None and g.user.is_authenticated():
         return redirect(url_for('index'))
     form = LoginForm()
@@ -49,7 +48,7 @@ def login():
                 session['permisos'] = c_user.getPermisos(user)
                 flash('Has iniciado sesion')
                 login_user(user)
-                return redirect(url_for('admin'))
+                return redirect(url_for('admin')
             else:
                 flash('Pass incorrecto, ingresela de nuevo')
         else:
