@@ -66,7 +66,6 @@ def before_request():
 @app.route('/admin')
 @login_required
 def admin():
-    
     return render_template("admin.html", title = 'Administrador General', session = session['permisos'])
 
 @app.route('/logout')

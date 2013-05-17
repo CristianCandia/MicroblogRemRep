@@ -11,7 +11,7 @@ Created on 17/05/2013
 #!usr/lib/python
 
 from app import db
-from app.modelo import Permiso, Rol
+from app.modelo import Permiso, Rol, User2
 
 roles = Rol.query.all()
 if roles is not None:
