@@ -11,8 +11,7 @@ SECRET_KEY = 'you-will-never-guess'
 basedir = os.path.abspath(os.path.dirname(__file__))
 SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://cristian:usuario@localhost/app' #' + os.path.join(basedir, 'app2')
 SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'db_repository')
-<<<<<<< HEAD
-=======
+
 
 '''Configuracion del correo del sistema'''
 MAIL_SERVER = 'smtp.googlemail.com'
@@ -23,5 +22,5 @@ MAIL_USERNAME = 'sigmasystem21'
 MAIL_PASSWORD = 'useruser'
 
 # administrator list
-ADMINS = ['carlifer.fernando@gmail.com']
->>>>>>> refs/heads/Postgre
+ADMINS = ['carlifer.fernando@gmail.com', 'kandia88@gmail.com']
+
