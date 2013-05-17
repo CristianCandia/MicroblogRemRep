@@ -14,5 +14,5 @@ from app import db, models
 users = models.User.query.all()
 for u in users:
     db.session.delete(u)
-    
+    print "Se elimino" + u.name
 db.session.commit()

@@ -1,0 +1,4 @@
+Buenas {{user.nombre}},
+usted ha solicitado un recordatorio de pass, 
+aqui lo tiene, 
+{{user.passWord}}

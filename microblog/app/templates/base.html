@@ -5,8 +5,10 @@
     {% else %}
     <title>Sygma_System</title>
     {% endif %}
-    <link href="{{ url_for('static', filename = 'bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-	<link href="{{ url_for('static', filename = 'bootstrap/css/bootstrap-responsive.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename = 'bootstrap/css/bootstrap.min.css') }}" rel="stylesheet"></link>
+	<link href="{{ url_for('static', filename = 'bootstrap/css/bootstrap-responsive.css') }}" rel="stylesheet"></link>
+	<link href="{{ url_for('static', filename = 'bootstrap/css/bootstrap.css') }}" rel="stylesheet"></link>
+	<link href="{{ url_for('static', filename = 'bootstrap/css/bootstrap-responsive.min.css') }}" rel="stylesheet"></link>
 	<script type="text/javascript">
 		function cerrar() {
 			$(".modal").hide();
@@ -14,6 +16,7 @@
 	</script>
 	<script src="{{ url_for('static', filename = 'jquery-1.9.0.min.js') }}"></script>
 	<script src="{{ url_for('static', filename = 'bootstrap/js/bootstrap.min.js') }}"></script>
+	<script src="{{ url_for('static', filename = 'bootstrap/js/bootstrap-transition.js') }}"></script>
   </head>
   <body>
     <div class="navbar navbar-fixed-top">
@@ -50,7 +53,7 @@
     {% if messages %}
     <ul>
     {% for message in messages %}
-        <div class="modal">
+        <div class="modal" >
 			<div class="modal-header">
         		<a class="close" data-dismiss="modal">&times;</a>
         		<h3>Mensaje</h3>

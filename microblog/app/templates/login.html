@@ -23,7 +23,9 @@
         {% for error in form.errors.passWord %}
         <span style="color: red;">[{{error}}]</span>
         {% endfor %}<br>
+        <a href="{{ url_for('recuperarPass')}}" data-toggle="modal" >Olvido su pass</a>
     </p>
-      <p><a class="btn btn-sucess" onclick="submit();" >Iniciar Sesi&oacute;n</a></p>
+      <p><input type="submit" value="Iniciar Sesión" class="btn btn-succes"></input></p>
 </form>
+
 {% endblock %}

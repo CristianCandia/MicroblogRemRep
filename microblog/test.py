@@ -34,6 +34,5 @@ class UsuarioTestCase(unittest.TestCase):
     #    print "Creamos un usuario nuevo" + self.usuario1.nombre
     #    assertEqual(r, "Exito" )  
     #    self.contador = 1
-
     if __name__ == '__main__':
         unittest.main()

@@ -14,6 +14,9 @@ from flask.ext.wtf import Required
 class LoginForm(Form):
     nomUsr = TextField('openid', validators = [Required()])
     passWord = PasswordField('password', validators = [Required()])
+    
+class rec_passForm(Form):
+    nomUsr = TextField('name', validators = [Required()])
 
 class usr_CrearForm(Form):
     nomUsr = TextField('nick', validators = [Required()])
