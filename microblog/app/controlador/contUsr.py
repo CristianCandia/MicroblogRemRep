@@ -62,13 +62,16 @@ class ControllerUsr():
         return usuario.delete_usr()
     
     def getPermisos(self, usr):
+        print 'entro en permisos'
         sopermi = []
         if usr.roles is not None:
+            print 'tiene roles'
             for rol in usr.roles:
                 if rol.permisos is not None:
                     for p in rol.permisos:
                         if not p.id in sopermi:
                             sopermi.append(p.id)
+                            print p.nombre
         return sopermi
                 
                 

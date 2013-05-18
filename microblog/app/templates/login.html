@@ -2,7 +2,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Iniciar Sesion</h1>
+<h1 align="center">Iniciar Sesión</h1>
 <form action="" method="post" name="login">
     <p>
     {{form.hidden_tag()}}
@@ -10,14 +10,14 @@
 	<div>{{error}}</div>
 	{% endif %}
 	</p>
-    <p>
+    <p align="center">
         Nombre de usuario:<br>
         {{form.nomUsr(size=20)}}<br>
         {% for error in form.errors.nomUsr %}
         <span style="color: red;">[{{error}}]</span>
         {% endfor %}<br>
     </p>
-    <p>
+    <p align="center">
         Contraseña:<br>
         {{form.passWord(size=20)}}<br>
         {% for error in form.errors.passWord %}
@@ -25,7 +25,7 @@
         {% endfor %}<br>
         <a href="{{ url_for('recuperarPass')}}" data-toggle="modal" >Olvido su pass</a>
     </p>
-      <p><input type="submit" value="Iniciar Sesión" class="btn btn-succes"></input></p>
+      <p align="center"><input type="submit" value="Iniciar Sesión" class="btn btn-succes"></input></p>
 </form>
 
 {% endblock %}

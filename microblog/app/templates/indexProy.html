@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+{% block content %}
+<script type="text/javascript">
+	function ocultarModal() {
+		$("#modalCP").hide();
+		$("#formulario-carga")[0].reset();
+	}
+	
+	function modificar(id, nombre, descripcion, fecha_de_creacion, complejidad_total, estado){
+		/*función para modificar los datos del proyecto**/
+		$("#formulario-carga").attr('action','{{ url_for('modificarProyecto') }}');
+		$("#formulario-carga").append('<input type="hidden" value='+id+' name="idProy">');
+		/*Se rellenan los campos**/
+		$("#idProy").val(id);
+		$("#nomProy").val(nombre);
+		$("#descripcion").val(descripcion);
+		$("#fecha_de_creacion").val(fecha_de_creacion);
+		$("#complejidad").val(complejidad_total);
+		$("#estado").val(estado);
+	}
+	
+	function eliminar(id){
+		/*Eliminar proyecto**/
+		$("#botonesEP").empty().append("<a href=\"{{ url_for('eliminarProy') }}" + id + "\" class=\"btn btn-danger\">Si</a>"
+				+"<a data-dismiss=\"modal\" class=\"btn btn-secondary\">No</a>");
+		$("#modalEP").modal("show")
+	}
+	
+	function mostrarModal(){
+		$('#modalCP').modal('show');
+	}
+</script>
+<!-- Bolque donde se define la lista de proyectos -->
+<h1 align="center">Administrar Proyectos</h1>
+<div class="row">
+	<div class="span8">
+		<h2>Listado</h2>
+		<table class="table table-striped">
+			<tr>
+				<th>Id</th>
+				<th>Nombre Proyecto</th>
+	            <th>Descripcion</th>
+	            <th>Fecha de creacion </th>
+	            <th>Complejidad total</th>
+	            <th>Estado</th>
+	        </tr>
+			{% for p in proyectos %}
+          	<tr>
+	            <td>{{p.id}}</td>
+	            <td>{{p.nombre}}</td>
+	            <td>{{p.descripcion}}</td>
+	            <td>{{p.fecha_de_creacion}}</td>
+	            <td>{{p.complejidad_total}}</td>
+	            <td>{{p.estado}}</td>
+	            <td><a class="btn btn-danger" data-toggle="modal" onclick="eliminar('{{ p.id }}')" >Eliminar</a></td>
+	            <td><a class="btn" data-toggle="modal" onclick="modificar('{{ p.id }}', '{{ p.nombre }}', '{{ p.descripcion }}', '{{ p.fecha_de_creacion }}', '{{ p.complejidad_total }}', '{{ p.estado }}');mostrarModal();" >Modificar</a></td>
+	            <td><a class="btn btn-info" >Configurar Proyecto</a></td>
+          	</tr>
+          {% else %}
+          	<tr>
+          		<td>NO HAY REGISTROS</td>
+          	</tr>
+          {% endfor %}
+		</table>
+	</div>
+</div>
+
+<p align="center">
+	<a class="btn btn-success btn-large" data-toggle="modal" onclick="$('#formulario-carga')[0].reset();$('#formulario-carga').attr('action','{{ url_for('crearProyecto') }}');mostrarModal();"> Agregar Nuevo Proyecto</a>
+</p> 
+
+<!-- Modal para añadir o modificar un proyecto -->
+<div class="modal hide fade" id="modalCP" style="display: none">
+	<div class="modal-header">
+		<a class="close" data-dismiss="modal">&times;</a>
+		<h3>Proyecto</h3>
+	</div>
+	<form action="{{ url_for('crearProyecto') }}" method="post" class="form-horizontal" id="formulario-carga">
+		<div class="modal-body">
+			<center>
+				<fieldset>
+					{{form.hidden_tag()}}
+		   			{% if err %}
+					<div>{{error}}</div>
+					{% endif %}
+					<label>Nombre del Proyecto:</label>
+					{{ form.nomProy(size=64, id='nomProy') }}
+					<label>Descripcion:</label>
+					{{ form.descripcion(size=120, placeholder='Descripcion', id='descripcion') }}
+					<label>Fecha de creación:</label>
+					{{ form.fecha_creacion(size=64, type='date', placeholder='fecha de creacion', id='fecha_creacion') }}
+					<label>Complejidad:</label>
+					{{ form.complejidad(size=64, type='number', placeholder='complejidad', id='complejidad') }}
+					<label>Estado:</label>
+					{{ form.estado(size=64, placeholder='estado', id='estado') }}
+				</fieldset>
+			</center>
+		</div>
+		<div class="modal-footer">
+			<a class="btn" data-dismiss="modal" onclick="ocultarModal();">Cerrar</a>
+			<input type="submit" value="Guardar" class="btn btn-success"></input>
+		</div>
+	</form>
+</div>
+
+<!-- Modal para eliminar un usuario -->
+<div class="modal hide fade" id="modalEP" style="display: none">
+	<div class="modal-header">
+		<a class="close" data-dismiss="modal">&times</a>
+		<h3>Eliminar Proyecto</h3>
+	</div>
+	<div class="modal-body">
+		<p>Aquí no hay marcha atrás, está</p>
+		<p>usted seguro que quiere eliminarlo?</p>
+	</div>
+	<div class="modal-footer" id="botonesEP">
+		<!-- definido en el script -->
+	</div>
+</div>
+{% endblock %}

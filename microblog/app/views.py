@@ -48,7 +48,7 @@ def login():
                 session['permisos'] = c_user.getPermisos(user)
                 flash('Has iniciado sesion')
                 login_user(user)
-                return redirect(url_for('admin')
+                return redirect(url_for('admin'))
             else:
                 flash('Pass incorrecto, ingresela de nuevo')
         else:

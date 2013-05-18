@@ -39,6 +39,15 @@ class Proyecto(db.Model):
             return str(error)
         return "Exito"
     
+    def delete_proyecto(self):
+        try:
+            db.session.delete(self)
+            db.session.commit()
+        except Exception, error :
+            db.session.rollback()
+            return str(error)
+        return "Exito"
+    
     """Imprime el titulo del proyecto"""
     def __repr__(self):
         return '<<Proyecto %r>'%(self.nombre)

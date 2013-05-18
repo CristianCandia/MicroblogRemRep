@@ -2,14 +2,34 @@
 {% block content %}
 <h1 align="center">Bienvenido administrador principal</h1>
 <p align="center">
-{% if (1 or 2 or 3) in session['permisos']%}
+{% if (1 or 2 or 3) in session %}
 	<a href="{{ url_for('usuario') }}" class="btn btn-success" >Usuario</a>
 {% else %}
 	<a class="btn btn-success disabled">Usuario</a>
 {% endif %}
-<a href="/proyecto"><button>Proyecto</button></a>
-<a href="/fase"><button>Fase</button></a>
-<a href="/rol"><button>Rol</button></a>
-<a href="/permiso"><button>Permiso</button></a>
-</p>
+
+{% if (8 or 9 or 10 or 11) in session %}
+	<a href="/proyecto2" class="btn btn-success">Proyecto</a>
+{% else %}
+	<a class="btn btn-success disabled">Proyecto</a>
+{% endif %}
+
+{% if (12) in session %}
+	<a href="/fase" class="btn btn-success">Fase</a>
+{% else %}
+	<a class="btn btn-success disabled">Fase</a>
+{% endif %}
+
+{% if (4 or 4 or 6 or 7) in session %}
+	<a href="/rol" class="btn btn-success">Rol</a>
+{% else %}
+	<a class="btn btn-success disabled">Rol</a>
+{% endif %}
+
+{% if (5) in session %}
+	<a href="/permiso" class="btn btn-success">Permiso</a>
+{% else %}
+	<a class="btn btn-success disabled">Permiso</a>
+{% endif %}
+
 {% endblock %}

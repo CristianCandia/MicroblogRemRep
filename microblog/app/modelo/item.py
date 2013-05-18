@@ -1,0 +1,61 @@
+'''
+@authors:
+    - U{Cristian Candia<mailto:kandia88@gmail.com>}
+    - U{Ruth Centurion<mailto:ruthiccr@gmail.com>}
+    - U{Fernando Saucedo<mailto:carlifer.fernando@gmail.com>}
+'''
+
+from app import db
+
+ROLE_USER = 0
+ROLE_ADMIN = 1
+'''Definicion de relaciones'''
+relacion_item = db.Table('relacion_item',
+                         db.Column('id', db.Integer,
+                                   primary_key = True),
+                         db.Column('id_item', db.Integer,
+                                   db.ForeignKey('item.id_item')),
+                         db.Column('id_relacion', db.Integer,
+                                   db.ForeignKey('relacion.id_relacion')))
+
+'''Definicion de la clase item'''
+class Item(db.Model):
+    '''Id asignado a cada item del proyecto'''
+    id_item = db.Column(db.Integer, primary_key = True)
+    ''''''
+    descripcion = db.Column(db.String(200))
+    '''Atributo para saber cantidad de items por fase'''
+    numero = db.Column(db.Integer)
+    ''''''
+    #num_x_TI = db.Column(db.Integer)
+    ''''''
+    #id_TI = db.Column(db.Integer, db.ForeignKey('ti.id'))
+    ''''''
+    id_fase = db.Column(db.Integer, db.ForeignKey('fase.id'))
+    ''''''
+    version = db.Column(db.Integer)
+    ''''''
+    complejidad = db.Column(db.Integer)
+    ''''''
+    prioridad = db.Column(db.Integer)
+    ''''''
+    estado = db.Column(db.String(64))
+    ''''''
+    borrado = db.Column(db.Boolean)
+    ''''''
+    observaciones = db.Column(db.String(200))
+    
+    relacion = db.relationship('Relacion', secondary = relacion_item, 
+                            backref = db.backref('item', lazy = 'dinamic'))
+    
+    def __repr__(self):
+        return '<Item %r>' % (self.descripcion)
+
+'''Definicion de la clase relacion'''
+class Relacion(db.Model):
+    id_relacion = db.Column(db.Integer, primary_key = True)
+    tipo = db.Column(db.String(100))
+    id_item = db.Column(db.Integer, db.ForeignKey('item.id_item'))
+    
+    def __repr__(self):
+        return '<Relacion %r>' % (self.id_item)

@@ -86,12 +86,9 @@ db.session.commit()
 
 
 c_rol = ControllerRol()
-
+rol2 = Rol.query.filter_by(nombre = 'Administrador Principal').first()
 
 permisos2 = Permiso.query.all()
 
 for permiso in permisos2:
     c_rol.asignarPermisos(rol2.id, permiso.id)
-    
-    
-

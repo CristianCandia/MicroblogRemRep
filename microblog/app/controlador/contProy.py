@@ -19,5 +19,21 @@ class ControllerProy():
             if k == 'estado':
                 proy.estado = v
         return proy.add_proy()
+    
+    def getProy(self, id):
+        return Proyecto.query.get(id)
+    
     def traerProyectos(self):
         return Proyecto.query.all()
+    
+    def modProyecto(self, proyecto):
+        try:
+            db.session.merge(proyecto)
+            db.session.commit()
+        except Exception, error :
+            db.session.rollback()
+            return str(error)
+        return "Exito"
+    
+    def eliminarProyecto(self, proyecto):
+        return proyecto.delete_proyecto()
