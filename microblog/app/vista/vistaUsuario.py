@@ -36,14 +36,16 @@ def crearUsuario():
     return redirect(url_for('usuario'))
 
 '''Vista para modificar el usuario'''
+'''Vista para modificar el usuario'''
 @app.route('/usuario/modificar/', methods = ['GET', 'POST'])
+@login_required
 def modificarUsuario():
     form2 = usr_CrearForm()
     resp = None
     print 'antes'
     if (form2.validate_on_submit()):
         print 'despues'
-        user = User2()
+        user = User2.query.filter_by(name = form2.nomUsr.data).first()
         user.name = form2.nomUsr.data
         user.passWord = form2.passWord.data
         user.nombre = form2.nombre.data
@@ -108,3 +110,21 @@ def asignarRoles():
     if resp != None:
         flash(resp)
     return render_template("usr_asignar_roles.html",title = 'Asignar Roles', form = form)
+
+def busquedaPorNombre(nombre):
+    ''' Devuelve un listado de los usuarios que coincidan con un nombre '''
+    lista = None
+    r = True
+    if(r):
+        lista = c_usr.buscarPorNombre(nombre)
+    else:
+        flash("Error. Lista no devuelta")
+    return lista
+
+@app.route('/usuario/buscar')
+@app.route('/usuario/buscar/<nombre>')
+def buscarUsuario(nombrebuscado):
+    ''' Devuelve una lista de usuarios que coincidan con el nombre proporcionado '''
+    print "Helloooooowww"
+    usuarios = busquedaPorNombre(nombrebuscado);
+    return render_template('indexUsuario.html', usuarios = usuarios)

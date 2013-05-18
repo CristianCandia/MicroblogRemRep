@@ -73,9 +73,6 @@ class ControllerUsr():
                             sopermi.append(p.id)
                             print p.nombre
         return sopermi
-                
-                
-                
-            
-        
-        
+
+    def buscarPorNombre(self,nombre):
+        return db.session.query(User2).filter(User2.nombre.ilike("%"+nombre+"%")).all()

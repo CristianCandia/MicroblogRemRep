@@ -1,0 +1,91 @@
+{% extends "base.html"%}
+{% block content %}
+<script>
+	function abrirModal(){
+		$("#modalItem").modal("show")
+		
+	}
+</script>
+
+<div class="row">
+	<div class="span12">
+		<center>
+			<h1> Items </h1>
+			<h2>Proyecto: {{proyecto.nombre}}</h2>
+			<h3>Fase: {{fase.nombre}}</h3>
+		</center>
+	</div>
+</div>
+
+<div class="row">
+	<div class="span12">
+		<table class="table table-striped" >
+			<tr>
+				<td>Id</td>
+				<td>Descripcion</td>
+				<td>Numero por fase</td>
+				<td>Version</td>
+				<td>Complejidad</td>
+				<td>Prioridad</td>
+				<td>Estado</td>
+				<td>Observaciones</td>
+			</tr>
+			{% for i in item %}
+			<tr id="hola">
+				<td>{{i.id_item}}</td>
+				<td>{{i.descripcion}}</td>
+				<td>{{i.numero}}</td>
+				<td>{{i.version}}</td>
+				<td>{{i.complejidad}}</td>
+				<td>{{i.prioridad}}</td>
+				<td>{{i.estado}}</td>
+				<td>{{i.observaciones}}</td>
+				<td><a>Eliminar</a></td>
+				<td><a>Modificar</a></td>
+			</tr>
+			{%else%}
+			<tr>
+				NO HAY REGISTROS
+			</tr>
+			{%endfor%}
+		</table>
+	</div>
+	<div class="span12">
+		<center>
+			<a class="btn btn-info btn-large" onclick="abrirModal();">Agregar Item a la fase {{fase.id}}</a>
+		</center>
+	</div>
+</div>
+<div class="modal hide fade" id="modalItem" style="display: none;">
+	<div class="modal-header">
+		<a class="close" data-dismiss="modal">&times;</a>
+		<h3>Item</h3>
+	</div>
+	<form action="{{url_for('nuevoItem')}}" method="post" name="formItem" id="formItem">
+		<fieldset>
+			<div class="modal-body">
+				<label>Descripcion</label>
+				<input type="text" placeholder="Descripcion" name="descItem" id="descItem"></input>
+				<label>N&uacute;mero</label>
+				<input type="text" placeholder="numero" name="numeroItem" id="nroItem"></input>
+				<label></label>
+				<input></input>
+				<label></label>
+				<input></input>
+				<label></label>
+				<input></input>
+				<label></label>
+				<input></input>
+				<label></label>
+				<input></input>
+				<label></label>
+				<input></input>
+			</div>
+			<div class="modal-footer">
+				
+			</div>
+		</fieldset>
+	</form>
+</div>
+
+{% endblock %}
