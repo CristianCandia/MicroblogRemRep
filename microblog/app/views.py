@@ -54,9 +54,8 @@ def login():
         else:
             flash('Usuario no existente, pongase en contacto con el administrador para obtener una cuenta')
             return render_template('login.html',title = 'Iniciar Sesion',form = form)
-               
     return render_template('login.html',title = 'Iniciar Sesion',form = form)         
-
+    
 @app.before_request
 def before_request():
     g.user = current_user    
