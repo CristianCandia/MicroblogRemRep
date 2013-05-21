@@ -5,7 +5,8 @@ Created on 26/04/2013
 '''
 
 from flask import render_template, flash, redirect, session, url_for, request, g
-from app.forms import LoginForm, usr_CrearForm, asignar_Roles, rec_passForm
+from app.forms import LoginForm, usr_CrearForm, asignar_Roles, rec_passForm,\
+    buscarUser
 from flask.ext.login import login_user, logout_user, current_user, login_required
 from app import app, db, lm, email
 from app.controlador import ControllerUsr
@@ -121,10 +122,11 @@ def busquedaPorNombre(nombre):
         flash("Error. Lista no devuelta")
     return lista
 
-@app.route('/usuario/buscar')
-@app.route('/usuario/buscar/<nombre>')
+@app.route('/usuario/buscar', methods = ['GET', 'POST'])
+@app.route('/usuario/buscar/<nombre>', methods = ['GET', 'POST'])
 def buscarUsuario(nombrebuscado):
     ''' Devuelve una lista de usuarios que coincidan con el nombre proporcionado '''
-    print "Helloooooowww"
-    usuarios = busquedaPorNombre(nombrebuscado);
-    return render_template('indexUsuario.html', usuarios = usuarios)
+    form = buscarUser()
+    if form.validate_on_submit():
+        usuarios = busquedaPorNombre(form.nombreBuscado.data)
+    return render_template('indexUser.html', usuarios = usuarios)

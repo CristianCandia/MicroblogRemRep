@@ -48,7 +48,7 @@ def proy_listar():
     proy = c_proy.traerProyectos()  
     return render_template("proy_listar.html", title = 'Listado proyecto', Proyecto = proy)
 
-'''Vista para modificar el usuario'''
+'''Vista para modificar el proyecto'''
 @app.route('/proyecto/modificar/', methods = ['GET', 'POST'])
 def modificarProyecto():
     form2 = proy_CrearForm()
@@ -86,3 +86,11 @@ def eliminarProy(id=None):
             flash('Ocurrio un error durante la eliminacion.')
     
     return redirect(url_for('proy2'))
+
+
+'''Vista para configurar el proyecto'''
+@app.route('/proyecto/configurar/', methods = ['GET', 'POST'])
+@app.route('/proyecto/configurar/<id>')
+def configurarProyecto(id = None):
+    nomProy = c_proy.getNombre(id)
+    return render_template("proy_configurar.html", title = 'Configurar Proyecto', nomProy = nomProy)

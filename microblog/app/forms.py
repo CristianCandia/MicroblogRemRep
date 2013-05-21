@@ -26,6 +26,7 @@ class usr_CrearForm(Form):
     telefono = TextField('telefono', validators = [Required()])
     ci = TextField('ci', validators = [Required()])
     e_mail = TextField('e_mail', validators = [Required()])
+    nombreBuscado = TextField('nombreBuscado')
 
 class proy_CrearForm(Form):
     nomProy = TextField('nombre', validators = [Required()])
@@ -58,3 +59,6 @@ class asignar_Permisos(Form):
 class asignar_Roles(Form):
     id_usr = IntegerField('id_usr')
     id_rol = IntegerField ('id_rol')
+    
+class buscarUser(Form):
+    nombreBuscado = TextField('nombre-buscado')
