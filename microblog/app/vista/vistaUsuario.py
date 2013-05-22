@@ -6,7 +6,7 @@ Created on 26/04/2013
 
 from flask import render_template, flash, redirect, session, url_for, request, g
 from app.forms import LoginForm, usr_CrearForm, asignar_Roles, rec_passForm,\
-    buscarUser
+    buscar
 from flask.ext.login import login_user, logout_user, current_user, login_required
 from app import app, db, lm, email
 from app.controlador import ControllerUsr
@@ -123,10 +123,9 @@ def busquedaPorNombre(nombre):
     return lista
 
 @app.route('/usuario/buscar', methods = ['GET', 'POST'])
-@app.route('/usuario/buscar/<nombre>', methods = ['GET', 'POST'])
-def buscarUsuario(nombrebuscado):
+#@app.route('/usuario/buscar/<nombrebuscado>', methods = ['GET', 'POST'])
+def buscarUsuario():
     ''' Devuelve una lista de usuarios que coincidan con el nombre proporcionado '''
-    form = buscarUser()
-    if form.validate_on_submit():
-        usuarios = busquedaPorNombre(form.nombreBuscado.data)
-    return render_template('indexUser.html', usuarios = usuarios)
+    form2 = buscar()
+    usuarios2 = c_usr.buscarPorNombreUsuario(form2.nombreBuscado.data)
+    return render_template('indexUser.html', usuarios = usuarios2, form = usr_CrearForm(), form2=form2)

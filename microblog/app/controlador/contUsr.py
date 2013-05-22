@@ -65,7 +65,6 @@ class ControllerUsr():
         print 'entro en permisos'
         sopermi = []
         if usr.roles is not None:
-            print 'tiene roles'
             for rol in usr.roles:
                 if rol.permisos is not None:
                     for p in rol.permisos:
@@ -74,5 +73,5 @@ class ControllerUsr():
                             print p.nombre
         return sopermi
 
-    def buscarPorNombre(self,nombre):
-        return db.session.query(User2).filter(User2.nombre.ilike("%"+nombre+"%")).all()
+    def buscarPorNombreUsuario(self,nombre):
+        return db.session.query(User2).filter(User2.name.ilike("%"+nombre+"%")).all()

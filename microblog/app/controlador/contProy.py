@@ -20,6 +20,9 @@ class ControllerProy():
                 proy.estado = v
         return proy.add_proy()
     
+    def getFases(self, id):
+        p = Proyecto.query.get(id)
+        return p.fases
     def getNombre(self, id):
         p = Proyecto.query.get(id)
         return p.nombre

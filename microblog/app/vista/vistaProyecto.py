@@ -16,7 +16,7 @@ c_proy = ControllerProy()
 @app.route('/proyecto2')
 @login_required
 def proy2():
-    ''' Devuelve los datos de un Usuario en Concreto '''
+    ''' Devuelve los datos de un Proyecto en Concreto '''
     proyecto = c_proy.traerProyectos()
     return render_template('indexProy.html', proyectos = proyecto, form = proy_CrearForm())
 
@@ -71,7 +71,7 @@ def modificarProyecto():
 
 @app.route('/proyecto/eliminar/')
 @app.route('/proyecto/eliminar/<id>')
-def eliminarProy(id=None):
+def eliminarProy(id = None):
     if(id):
         proyecto = c_proy.getProy(id)
         
@@ -90,7 +90,7 @@ def eliminarProy(id=None):
 
 '''Vista para configurar el proyecto'''
 @app.route('/proyecto/configurar/', methods = ['GET', 'POST'])
-@app.route('/proyecto/configurar/<id>')
-def configurarProyecto(id = None):
-    nomProy = c_proy.getNombre(id)
-    return render_template("proy_configurar.html", title = 'Configurar Proyecto', nomProy = nomProy)
+@app.route('/proyecto/configurar/<idp>')
+def configurarProyecto(idp = None):
+    nomProy = c_proy.getNombre(idp)
+    return render_template("proy_configurar.html", title = 'Configurar Proyecto', nomProy = nomProy, idp=idp)

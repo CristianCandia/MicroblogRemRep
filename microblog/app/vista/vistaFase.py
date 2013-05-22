@@ -10,14 +10,18 @@ from app.forms import fase_CrearForm
 
 from flask.ext.login import login_user, logout_user, current_user, login_required
 from app import app, db, lm #models, oid
-from app.controlador import ControllerFase
+from app.controlador import ControllerFase, ControllerProy
 
 c_fase = ControllerFase()
+c_proy = ControllerProy()
 
-@app.route('/fase')
+@app.route('/fase/')
+@app.route('/fase/<idp>')
 @login_required
-def fase():
-    return render_template("fase.html", title = 'Administracion de Fase')
+def fase(idp = None):
+    fases = c_proy.getFases(idp)
+    nomProy = c_proy.getNombre(idp)
+    return render_template("indexFase.html", title = 'Administracion de Fases', fases = fases, nomProy = nomProy)
 
 @app.route('/fase/fase_crear', methods = ['GET', 'POST'])
 @login_required

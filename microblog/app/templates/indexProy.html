@@ -54,7 +54,7 @@
 	            <td>{{p.estado}}</td>
 	            <td><a class="btn btn-danger" data-toggle="modal" onclick="eliminar('{{ p.id }}')" >Eliminar</a></td>
 	            <td><a class="btn" data-toggle="modal" onclick="modificar('{{ p.id }}', '{{ p.nombre }}', '{{ p.descripcion }}', '{{ p.fecha_de_creacion }}', '{{ p.complejidad_total }}', '{{ p.estado }}');mostrarModal();" >Modificar</a></td>
-	            <td><a class="btn btn-info" href = "/proyecto/configurar/{{ p.id }}">Configurar Proyecto</a></td>
+	            <td><a class="btn btn-info" href = "/proyecto/configurar/{{p.id }}">Configurar Proyecto</a></td>
           	</tr>
           {% else %}
           	<tr>

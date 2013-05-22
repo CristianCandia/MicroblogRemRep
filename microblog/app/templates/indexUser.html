@@ -41,7 +41,14 @@
 		window.location = "{{url_for('buscarUsuario')}}/" + nombre;
 	}
 </script>
-<!-- Bolque donde se define la lista de usuarios -->
+<!-- Bloque donde se define la lista de usuarios -->
+<div>
+	<form action="{{ url_for('buscarUsuario') }}" method="post" class="form-horizontal" id="formulario-buscar">
+		<p align="right">	
+			{{form2.nombreBuscado(size=20)}}<input type="submit" value="Buscar" class="btn btn-success"></input>
+		</p>
+	</form>
+</div>
 <h1 align="center">Administrar Usuarios</h1>
 <div class="row">
 	<div class="span8">
@@ -78,22 +85,7 @@
           {% endfor %}
 		</table>
 	</div>
-<!-- <form action="" method="post" name="buscar"> 
-	<div class="span4">
-		<p>{{form.nombre(size=20)}} </p>>
-		
-		    <input placeholder="Buscar Usuario..." id="nombreBuscado" type="number" />
-			<input class='btn btn-success' value="Buscar">
-      </div>
-	</form> -->
-      <form action="" method="post" name="buscar">
-		<div class="span4">
-			<p>{{form.nombreBuscado(size=20)}}</p>
-			<p><a href="/usuario/buscarUsuario"><button>Buscar</button></a></p>    
-      	</div>
-      </form>
 </div>
-
 <p align="center">
 	<a class="btn btn-success btn-large" data-toggle="modal" onclick="$('#formulario-carga')[0].reset();$('#formulario-carga').attr('action','{{ url_for('crearUsuario') }}');mostrarModal();"> Agregar Nuevo Usuario</a>
 </p> 
