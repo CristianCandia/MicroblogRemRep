@@ -4,6 +4,7 @@ Created on 02/05/2013
 @author: cristian
 '''
 from app.modelo import Fase
+from app import db
 class ControllerFase():
     def regFase(self, **kwargsProy):
         fase = Fase()
@@ -20,6 +21,32 @@ class ControllerFase():
                 fase.cantidadLB = v
             if k == 'estado':
                 fase.estado = v
+            if k == 'idProy':
+                fase.id_proyecto = v
+            
         return fase.add_fase()
+    
+    def getFase(self, idfase):
+        return Fase.query.get(idfase)
+    
     def traerFases(self):
         return Fase.query.all()
+    
+    def modFase(self, faseAux):
+        fase = self.getFase(faseAux.id)
+        fase.nombre = faseAux.nombre
+        fase.posicion = faseAux.posicion
+        fase.descripcion = faseAux.descripcion
+        fase.cantidadItems = faseAux.cantidadItems
+        fase.cantidadLB = faseAux.cantidadLB
+        fase.estado = faseAux.estado
+        try:
+            db.session.merge(fase)
+            db.session.commit()
+        except Exception, error:
+            db.session.rollback()
+            return str(error)
+        return "Exito"
+    
+    def eliminarFase(self, fase):
+        return fase.delete_fase()

@@ -33,7 +33,7 @@ def crearProyecto():
     if form.validate_on_submit():
         resp = c_proy.regProyecto(nombre = form.nomProy.data,
                                   descripcion = form.descripcion.data,
-                                  fecha_de_creacion = form.fecha_creacion.data,
+                                  fecha_de_creacion = form.fecha_de_creacion.data,
                                   complejidad_total = form.complejidad.data,
                                   estado = form.estado.data)
     if resp == 'Exito':
@@ -55,8 +55,9 @@ def modificarProyecto():
     resp = None
     if (form2.validate_on_submit()):
         proy = Proyecto()
+        proy.id = form2.idProy.data
         proy.nombre = form2.nomProy.data
-        proy.decripcion = form2.descripcion.data
+        proy.descripcion = form2.descripcion.data
         proy.fecha_de_creacion = form2.fecha_de_creacion.data
         proy.complejidad_total = form2.complejidad.data
         proy.estado = form2.estado.data
@@ -64,10 +65,10 @@ def modificarProyecto():
         resp = c_proy.modProyecto(proy)
         
     if(resp == 'Exito'):
-        flash('Usuario modificado con exito.')
+        flash('Proyecto modificado con exito.')
     else:
         flash('Ocurrio un error: ' + str(resp))
-    return redirect(url_for('usuario'))
+    return redirect(url_for('proy2'))
 
 @app.route('/proyecto/eliminar/')
 @app.route('/proyecto/eliminar/<id>')

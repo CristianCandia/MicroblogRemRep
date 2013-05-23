@@ -13,7 +13,7 @@
 		/*Se rellenan los campos**/
 		$("#idUser").val(id);
 		$("#nomUsr").val(name);
-		$("#password").val(passWord);
+		$("#passWord").val(passWord);
 		$("#nombres").val(nombre);
 		$("#apellidos").val(apellido);
 		$("#ci").val(ci);
@@ -76,7 +76,7 @@
 	            <td>{{u.e_mail}}</td>
 	            <td><a class="btn btn-danger" data-toggle="modal" onclick="eliminar('{{ u.id }}')" >Eliminar</a></td>
 	            <td><a class="btn" data-toggle="modal" onclick="modificar('{{ u.id }}', '{{ u.name }}', '{{ u.passWord }}', '{{ u.nombre }}', '{{ u.apellido }}', '{{ u.ci }}', '{{ u.telefono }}', '{{ u.e_mail }}');mostrarModal();" >Modificar</a></td>
-	            <td><a class="btn btn-info" >Roles</a></td>
+	            <td><a class="btn btn-info">Roles</a></td>
           	</tr>
           {% else %}
           	<tr>

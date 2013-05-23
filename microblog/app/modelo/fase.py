@@ -39,3 +39,12 @@ class Fase(db.Model):
     
     def __repr__(self):
         return '<Fase %r>' % (self.nombre)
+    
+    def delete_fase(self):
+        try:
+            db.session.delete(self)
+            db.session.commit()
+        except Exception, error :
+            db.session.rollback()
+            return str(error)
+        return "Exito"

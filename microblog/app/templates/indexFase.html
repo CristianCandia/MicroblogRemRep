@@ -6,23 +6,26 @@
 		$("#formulario-carga")[0].reset();
 	}
 	
-	function modificar(id, nombre, descripcion, fecha_de_creacion, complejidad_total, estado){
+	function modificar(id, nombre, posicion, descripcion, cantidadItems, cantidadLB, estado, idProy){
 		/*función para modificar los datos del proyecto**/
-		$("#formulario-carga").attr('action','{{ url_for('modificarProyecto') }}');
-		$("#formulario-carga").append('<input type="hidden" value='+id+' name="idProy">');
+		$("#formulario-carga").attr('action','{{ url_for('modificarFase') }}');
+		$("#formulario-carga").append('<input type="hidden" value='+id+' name="idFase">');
+		$("#formulario-carga").append('<input type="hidden" value='+idProy+' name="idProy">');
 		/*Se rellenan los campos**/
-		$("#idProy").val(id);
-		$("#nomProy").val(nombre);
+		$("#idFase").val(id);
+		$("#nomFase").val(nombre);
+		$("#posicion").val(posicion);
 		$("#descripcion").val(descripcion);
-		$("#fecha_de_creacion").val(fecha_de_creacion);
-		$("#complejidad").val(complejidad_total);
+		$("#cantidadItems").val(cantidadItems);
+		$("#cantidadLB").val(cantidadLB);
 		$("#estado").val(estado);
+		$("#idProy").val(idProy);
 	}
 	
-	function eliminar(id){
+	function eliminar(idf, idp){
 		/*Eliminar fase**/
-		$("#botonesEF").empty().append("<a href=\"{{ url_for('eliminarProy') }}" + id + "\" class=\"btn btn-danger\">Si</a>"
-				+"<a data-dismiss=\"modal\" class=\"btn btn-secondary\">No</a>");
+		$("#botonesEF").empty().append("<a href=\"/fase/eliminar/" + idf + "," +idp+ "\" class=\"btn btn-danger\">Si</a>"
+										+"<a data-dismiss=\"modal\" class=\"btn btn-secondary\">No</a>");
 		$("#modalEF").modal("show")
 	}
 	
@@ -30,34 +33,32 @@
 		$('#modalCF').modal('show');
 	}
 </script>
+
 <!-- Bloque donde se define la lista de fases -->
-<h3>Proyecto: {{nomProy}}</h3>
+<h3>Proyecto: {{Proy.nombre}}</h3>
 <h1 align="center">Administrar fases</h1>
 <div class="row">
-	<div class="span8">
-		<h2>Listado</h2>
+	<div class="span20">
+		<h2>Listado de fases</h2>
 		<table class="table table-striped">
 			<tr>
-				<th>Id</th>
-				<th>Nombre de la Fase</th>
-	            <th>Posicion de la fase</th>
-	            <th>Fecha de creacion </th>
-	            <th>Descripcion</th>
+				<th>Nombre</th>
+	            <th>Posición</th>
+	            <th>Descripción</th>
 	            <th>cantidadItems</th>
 	            <th>cantidadLB</th>
 	            <th>estado</th>
 	        </tr>
 			{% for f in fases %}
           	<tr>
-	            <td>{{f.id}}</td>
-	            <td>{{f.nombre}}</td>
+          		<td>{{f.nombre}}</td>
 	            <td>{{f.posicion}}</td>
 	            <td>{{f.descripcion}}</td>
 	            <td>{{f.cantidadItems}}</td>
 	            <td>{{f.cantidadLB}}</td>
 	            <td>{{f.estado}}</td>
-	            <td><a class="btn btn-danger" data-toggle="modal" onclick="eliminar('{{ f.id }}')" >Eliminar</a></td>
-	            <td><a class="btn" data-toggle="modal" onclick="modificar('{{ f.id }}')" >Modificar</a></td>
+	            <td><a class="btn btn-danger" data-toggle="modal" onclick="eliminar('{{ f.id }}','{{ f.id_proyecto }}')" >Eliminar</a></td>
+	            <td><a class="btn" data-toggle="modal" onclick="modificar('{{ f.id }}', '{{f.nombre}}' ,'{{f.posicion}}', '{{f.descripcion}}', '{{f.cantidadItems}}', '{{f.cantidadLB}}', '{{f.estado}}', '{{f.id_proyecto}}');mostrarModal();" >Modificar</a></td>
 	            <td><a class="btn btn-info" href = "">Configurar Fase</a></td>
           	</tr>
           {% else %}
@@ -70,8 +71,57 @@
 </div>
 
 <p align="center">
-	<a class="btn btn-success btn-large" data-toggle="modal" onclick="$('#formulario-carga')[0].reset();$('#formulario-carga').attr('action','{{ url_for('crearProyecto') }}');mostrarModal();"> Agregar Nuevo Proyecto</a>
+	<a class="btn btn-success btn-large" data-toggle="modal" onclick="$('#formulario-carga')[0].reset();$('#formulario-carga').attr('action','{{ url_for('crearFase',idp=Proy.id) }}');mostrarModal();"> Agregar Nueva Fase</a>
 </p> 
 
+<!-- Modal para añadir o modificar un proyecto -->
+<div class="modal hide fade" id="modalCF" style="display: none">
+	<div class="modal-header">
+		<a class="close" data-dismiss="modal">&times;</a>
+		<h3>Fase</h3>
+	</div>
+	<form action="{{ url_for('crearFase', idp=Proy.id) }}" method="post" class="form-horizontal" id="formulario-carga">
+		<div class="modal-body" >
+			<center>
+				<fieldset>
+					{{form.hidden_tag()}}
+		   			{% if err %}
+					<div>{{error}}</div>
+					{% endif %}
+					<label>Nombre de la fase:</label>
+					{{ form.nomFase(size=64, placeholder='Nombre', id='nomFase') }}
+					<label>Posicion:</label>
+					{{ form.posicion(size=64, type='number', placeholder='Posicion', id='posicion') }}
+					<label>Descripcion:</label>
+					{{ form.descripcion(size=120, placeholder='Descripcion', id='descripcion') }}
+					<label>cantidadItems:</label>
+					{{ form.cantidadItems(size=64, type='number', placeholder='items', id='cantidadItems') }}
+					<label>CantidadLB:</label>
+					{{ form.cantidadLB(size=120, type='number', placeholder='nro. LB', id='cantidadLB') }}
+					<label>Estado:</label>
+					{{ form.estado(size=64, placeholder = 'estado', id = 'estado') }}
+				</fieldset>
+			</center>
+		</div>
+		<div class="modal-footer">
+			<a class="btn" data-dismiss="modal" onclick="ocultarModal();">Cerrar</a>
+			<input type="submit" value="Guardar" class="btn btn-success"></input>
+		</div>
+	</form>
+</div>
 
+<!-- Modal para eliminar un usuario -->
+<div class="modal hide fade" id="modalEF" style="display: none">
+	<div class="modal-header">
+		<a class="close" data-dismiss="modal">&times</a>
+		<h3>Eliminar Proyecto</h3>
+	</div>
+	<div class="modal-body">
+		<p>Aquí no hay marcha atrás, está</p>
+		<p>usted seguro que quiere eliminarlo?</p>
+	</div>
+	<div class="modal-footer" id="botonesEF">
+		<!-- definido en el script -->
+	</div>
+</div>
 {% endblock %}

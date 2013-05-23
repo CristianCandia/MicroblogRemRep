@@ -123,7 +123,6 @@ def busquedaPorNombre(nombre):
     return lista
 
 @app.route('/usuario/buscar', methods = ['GET', 'POST'])
-#@app.route('/usuario/buscar/<nombrebuscado>', methods = ['GET', 'POST'])
 def buscarUsuario():
     ''' Devuelve una lista de usuarios que coincidan con el nombre proporcionado '''
     form2 = buscar()

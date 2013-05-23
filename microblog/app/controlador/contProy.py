@@ -4,6 +4,7 @@ Created on 02/05/2013
 @author: cristian
 '''
 from app.modelo import Proyecto
+from app import db
 class ControllerProy():
     def regProyecto(self, **kwargsProy):
         proy = Proyecto()
@@ -33,11 +34,17 @@ class ControllerProy():
     def traerProyectos(self):
         return Proyecto.query.all()
     
-    def modProyecto(self, proyecto):
+    def modProyecto(self, proyAux):
+        proyecto = self.getProy(proyAux.id)
+        proyecto.nombre = proyAux.nombre
+        proyecto.descripcion = proyAux.descripcion
+        proyecto.fecha_de_creacion = proyAux.fecha_de_creacion
+        proyecto.complejidad_total = proyAux.complejidad_total
+        proyecto.estado = proyAux.estado
         try:
             db.session.merge(proyecto)
             db.session.commit()
-        except Exception, error :
+        except Exception, error:
             db.session.rollback()
             return str(error)
         return "Exito"

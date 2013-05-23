@@ -28,19 +28,22 @@ class usr_CrearForm(Form):
     e_mail = TextField('e_mail', validators = [Required()])
 
 class proy_CrearForm(Form):
+    idProy = IntegerField('idProy')
     nomProy = TextField('nombre', validators = [Required()])
     descripcion = TextField('desc')
-    fecha_creacion = DateField('fecha')
+    fecha_de_creacion = DateField('fecha')
     complejidad = IntegerField('complejidad')
     estado = TextField('estado')
 
 class fase_CrearForm(Form):
-    nombre = TextField('nombre', validators = [Required()])
+    idFase = IntegerField('idFase')
+    nomFase = TextField('nomFase', validators = [Required()])
     posicion = IntegerField('posicion', validators = [Required()])
     descripcion = TextField('descripcion')
     cantidadItems = IntegerField('cantidadItems')
     cantidadLB = IntegerField ('cantidadLB')
     estado = TextField('estado')
+    idProy = IntegerField('idProy')
     
 class rol_CrearForm(Form):
     nombre = TextField('nombre', validators = [Required()])

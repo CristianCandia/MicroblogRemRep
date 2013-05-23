@@ -1091,10 +1091,10 @@ input[type="tel"],
 input[type="color"],
 .uneditable-input {
   display: inline-block;
-  height: 21px;
+  height: 31px;
   padding: 4px 6px;
   margin-bottom: 10.5px;
-  font-size: 14px;
+  font-size: 17px;
   line-height: 21px;
   color: #52575c;
   vertical-align: middle;
