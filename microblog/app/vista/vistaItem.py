@@ -35,8 +35,8 @@ def listadoItemFase(id):
 def itemFase(id = None):
     items = listadoItemFase(request.form['id_fase'])
     print str(items)
-    fase = c_fases.traerFaseId(request.form['id_fase'])
-    proyecto = c_proyecto.traerProyectoId(fase.id_proyecto) 
+    fase = c_fases.getFase(request.form['id_fase'])
+    proyecto = c_proyecto.getProy(fase.id_proyecto) 
     return render_template('indexItem.html', item = items, fase = fase, proyecto = proyecto)
     
 

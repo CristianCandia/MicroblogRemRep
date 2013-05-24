@@ -9,6 +9,13 @@
 	<link href="{{ url_for('static', filename = 'bootstrap/css/bootstrap-responsive.css') }}" rel="stylesheet"></link>
 	<link href="{{ url_for('static', filename = 'bootstrap/css/bootstrap.css') }}" rel="stylesheet"></link>
 	<link href="{{ url_for('static', filename = 'bootstrap/css/bootstrap-responsive.min.css') }}" rel="stylesheet"></link>
+	<link href="{{ url_for('static', filename = 'bootstrap/css/base-admin-2.css') }}" rel="stylesheet"></link>
+	<link href="{{ url_for('static', filename = 'bootstrap/css/base-admin-responsive-2.css') }}" rel="stylesheet"></link>
+	<link href="{{ url_for('static', filename = 'bootstrap/css/css.css') }}" rel="stylesheet"></link>
+	<link href="{{ url_for('static', filename = 'bootstrap/css/custom.css') }}" rel="stylesheet"></link>
+	<link href="{{ url_for('static', filename = 'bootstrap/css/dashboard.css') }}" rel="stylesheet"></link>
+	<link href="{{ url_for('static', filename = 'bootstrap/css/font-awesome.min.css') }}" rel="stylesheet"></link>
+	<link href="{{ url_for('static', filename = 'bootstrap/css/jquery-ui-1.10.0.custom.min.css') }}" rel="stylesheet"></link>
 	<script type="text/javascript">
 		function cerrar() {
 			$(".modal").hide();
@@ -16,7 +23,7 @@
 	</script>
 	<script src="{{ url_for('static', filename = 'jquery-1.9.0.min.js') }}"></script>
 	<script src="{{ url_for('static', filename = 'bootstrap/js/bootstrap.min.js') }}"></script>
-	<script src="{{ url_for('static', filename = 'bootstrap/js/bootstrap-transition.js') }}"></script>
+	<!-- <script src="{{ url_for('static', filename = 'bootstrap/js/bootstrap-transition.js') }}"></script>-->
   </head>
   <body>
     <div class="navbar navbar-fixed-top">
@@ -31,7 +38,6 @@
 			    	<a class="brand" href="{{ url_for('index') }}">Sygma System</a>
 			    	<div class="nav-collapse">
 				    	<ul class="nav">
-							<li><a href="/login">Principal</a></li>
 							<li><a href="{{ url_for('admin') }}">Administracion General</a></li>
 							<li><a href="{{ url_for('logout') }}">Finalizar sesión</a></li>
 				        </ul>

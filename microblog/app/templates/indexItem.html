@@ -21,14 +21,14 @@
 	<div class="span12">
 		<table class="table table-striped" >
 			<tr>
-				<td>Id</td>
-				<td>Descripcion</td>
-				<td>Numero por fase</td>
-				<td>Version</td>
-				<td>Complejidad</td>
-				<td>Prioridad</td>
-				<td>Estado</td>
-				<td>Observaciones</td>
+				<th>Id</th>
+				<th>Descripcion</th>
+				<th>Numero por fase</th>
+				<th>Version</th>
+				<th>Complejidad</th>
+				<th>Prioridad</th>
+				<th>Estado</th>
+				<th>Observaciones</th>
 			</tr>
 			{% for i in item %}
 			<tr id="hola">
@@ -45,7 +45,7 @@
 			</tr>
 			{%else%}
 			<tr>
-				NO HAY REGISTROS
+				<td>NO HAY REGISTROS</td>
 			</tr>
 			{%endfor%}
 		</table>
@@ -68,18 +68,18 @@
 				<input type="text" placeholder="Descripcion" name="descItem" id="descItem"></input>
 				<label>N&uacute;mero</label>
 				<input type="text" placeholder="numero" name="numeroItem" id="nroItem"></input>
-				<label></label>
-				<input></input>
-				<label></label>
-				<input></input>
-				<label></label>
-				<input></input>
-				<label></label>
-				<input></input>
-				<label></label>
-				<input></input>
-				<label></label>
-				<input></input>
+				<label>N&uacute;ero por fase</label>
+				<input type="text" placeholder="numero por fase" name="numeroItemFase" id="nroItemFase"></input>
+				<label>Versi&oacute;n</label>
+				<input type="text" placeholder="version" name="version" id="version"></input>
+				<label>Complejidad</label>
+				<input type="text" placeholder="complejidad" name="complejidad" id="complejidad"></input>
+				<label>Prioridad</label>
+				<input type="text" placeholder="prioridad" name="prioridad" id="prioridad"></input>
+				<label>Estado</label>
+				<input type="text" placeholder="estado" name="estado" id="estado"></input>
+				<label>Observaciones</label>
+				<input type="text" placeholder="observaciones" name="obs" id="obs"></input>
 			</div>
 			<div class="modal-footer">
 				

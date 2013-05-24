@@ -30,6 +30,16 @@
 		$('#modalCP').modal('show');
 	}
 </script>
+
+<!-- Bloque donde se define el formulario de busqueda -->
+<div>
+	<form action="{{url_for('buscarProyecto')}}" method="post" class="form-horizontal" id="formulario-buscar">
+		<p align="right">	
+			{{form2.nombreBuscado(size=20)}}<input type="submit" value="Buscar" class="btn btn-success"></input>
+		</p>
+	</form>
+</div>
+
 <!-- Bloque donde se define la lista de proyectos -->
 <h1 align="center">Administrar Proyectos</h1>
 <div class="row">

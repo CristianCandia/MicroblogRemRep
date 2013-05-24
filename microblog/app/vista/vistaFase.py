@@ -6,8 +6,7 @@ Created on 03/05/2013
 from flask import render_template, flash, redirect, session, url_for, request, g
 
 """Se importa el metodo fase_CrearForm para manipular el formulario"""
-from app.forms import fase_CrearForm
-
+from app.forms import fase_CrearForm, buscar
 from flask.ext.login import login_user, logout_user, current_user, login_required
 from app import app, db, lm #models, oid
 from app.controlador import ControllerFase, ControllerProy
@@ -22,7 +21,7 @@ c_proy = ControllerProy()
 def fase(idp = None):
     fases = c_proy.getFases(idp)
     Proy = c_proy.getProy(idp)
-    return render_template("indexFase.html", title = 'Administracion de Fases', fases = fases, Proy = Proy, form = fase_CrearForm())
+    return render_template("indexFase.html",title='Administracion de Fases',fases=fases,Proy=Proy,form=fase_CrearForm(),form2=buscar())
 
 @app.route('/fase/fase_crear', methods = ['GET', 'POST'])
 @app.route('/fase/fase_crear/<idp>', methods = ['GET', 'POST'])
@@ -87,3 +86,11 @@ def eliminarFase(idf = None, idp = None):
             flash('Ocurrio un error durante la eliminacion.')
     
     return redirect(url_for('fase', idp=idp))
+
+@app.route('/fase/buscar', methods = ['GET', 'POST'])
+@app.route('/fase/buscar/<idp>',methods = ['GET', 'POST'])
+def buscarFase(idp = None):
+    ''' Devuelve una lista de fases que coincidan con el nombre proporcionado '''
+    form2 = buscar()
+    fases = c_fase.buscarPorNombreFaseProyecto(form2.nombreBuscado.data, idp)
+    return render_template("indexFase.html",title='Administracion de Fases',fases=fases,Proy=c_proy.getProy(idp),form=fase_CrearForm(),form2=form2)

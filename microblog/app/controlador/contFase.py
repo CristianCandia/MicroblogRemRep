@@ -4,6 +4,7 @@ Created on 02/05/2013
 @author: cristian
 '''
 from app.modelo import Fase
+from app.controlador import ControllerProy
 from app import db
 class ControllerFase():
     def regFase(self, **kwargsProy):
@@ -50,3 +51,13 @@ class ControllerFase():
     
     def eliminarFase(self, fase):
         return fase.delete_fase()
+    
+    def buscarPorNombreFaseProyecto(self,nombre,idp):
+        fasesAux = db.session.query(Fase).filter(Fase.nombre.ilike("%"+nombre+"%")).all()
+        fases = []
+        #fasesAux = db.session.query(Fase).filter(Fase.nombre.ilike(nombre), Fase.id_proyecto.ilike(idp)).all()
+        if fasesAux != None:
+            for f in fasesAux:
+                if f.id_proyecto == idp:
+                    fases.append(f)
+            return fases

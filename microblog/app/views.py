@@ -11,6 +11,7 @@ from models import ROLE_USER, ROLE_ADMIN
 from app.modelo import User2
 from app.controlador import ControllerUsr
 
+user1=None
 
 @lm.user_loader
 def load_user(id):
@@ -48,6 +49,8 @@ def login():
                 session['permisos'] = c_user.getPermisos(user)
                 flash('Has iniciado sesion')
                 login_user(user)
+                global user1
+                user1 = user
                 return redirect(url_for('admin'))
             else:
                 flash('Pass incorrecto, ingresela de nuevo')
@@ -64,7 +67,7 @@ def before_request():
 @app.route('/admin')
 @login_required
 def admin():
-    return render_template("admin.html", title = 'Administrador General', session = session['permisos'])
+    return render_template("admin.html", title = 'Administrador General', session = session['permisos'], usuario = user1)
 
 @app.route('/logout')
 def logout():

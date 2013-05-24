@@ -21,15 +21,15 @@ class ControllerProy():
                 proy.estado = v
         return proy.add_proy()
     
-    def getFases(self, id):
-        p = Proyecto.query.get(id)
+    def getFases(self, idp):
+        p = Proyecto.query.get(idp)
         return p.fases
-    def getNombre(self, id):
-        p = Proyecto.query.get(id)
+    def getNombre(self, idp):
+        p = Proyecto.query.get(idp)
         return p.nombre
     
-    def getProy(self, id):
-        return Proyecto.query.get(id)
+    def getProy(self, idp):
+        return Proyecto.query.get(idp)
     
     def traerProyectos(self):
         return Proyecto.query.all()
@@ -51,3 +51,6 @@ class ControllerProy():
     
     def eliminarProyecto(self, proyecto):
         return proyecto.delete_proyecto()
+    
+    def buscarPorNombreProyecto(self,nombre):
+        return db.session.query(Proyecto).filter(Proyecto.nombre.ilike("%"+nombre+"%")).all()

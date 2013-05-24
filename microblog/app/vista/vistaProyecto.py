@@ -5,7 +5,7 @@ Created on 25/04/2013
 '''
 
 from flask import render_template, flash, redirect, session, url_for, request, g
-from app.forms import proy_CrearForm
+from app.forms import proy_CrearForm, buscar
 from flask.ext.login import login_user, logout_user, current_user, login_required
 from app import app, db, lm #models, oid
 from app.controlador import ControllerProy
@@ -18,7 +18,7 @@ c_proy = ControllerProy()
 def proy2():
     ''' Devuelve los datos de un Proyecto en Concreto '''
     proyecto = c_proy.traerProyectos()
-    return render_template('indexProy.html', proyectos = proyecto, form = proy_CrearForm())
+    return render_template('indexProy.html', proyectos = proyecto, form = proy_CrearForm(), form2 = buscar())
 
 @app.route('/proyecto')
 @login_required
@@ -95,3 +95,10 @@ def eliminarProy(id = None):
 def configurarProyecto(idp = None):
     nomProy = c_proy.getNombre(idp)
     return render_template("proy_configurar.html", title = 'Configurar Proyecto', nomProy = nomProy, idp=idp)
+
+@app.route('/proyecto/buscar', methods = ['GET', 'POST'])
+def buscarProyecto():
+    ''' Devuelve una lista de proyectos que coincidan con el nombre proporcionado '''
+    form2 = buscar()
+    proyectos = c_proy.buscarPorNombreProyecto(form2.nombreBuscado.data)
+    return render_template('indexProy.html', proyectos = proyectos, form = proy_CrearForm(), form2=form2)

@@ -34,6 +34,15 @@
 	}
 </script>
 
+<!-- Bloque donde se define el formulario de busqueda {{url_for('buscarFase', idp=Proy.id)}}-->
+<div>
+	<form action="{{url_for('buscarFase', idp=Proy.id)}}" method="post" class="form-horizontal" id="formulario-buscar">
+		<p align="right">	
+			{{form2.nombreBuscado(size=20)}}<input type="submit" value="Buscar" class="btn btn-success"></input>
+		</p>
+	</form>
+</div>
+
 <!-- Bloque donde se define la lista de fases -->
 <h3>Proyecto: {{Proy.nombre}}</h3>
 <h1 align="center">Administrar fases</h1>
@@ -42,21 +51,25 @@
 		<h2>Listado de fases</h2>
 		<table class="table table-striped">
 			<tr>
+				<th>ID</th>
 				<th>Nombre</th>
 	            <th>Posición</th>
 	            <th>Descripción</th>
 	            <th>cantidadItems</th>
 	            <th>cantidadLB</th>
 	            <th>estado</th>
+	            <th>idProy</th>
 	        </tr>
 			{% for f in fases %}
           	<tr>
+          		<td>{{f.id}}</td>
           		<td>{{f.nombre}}</td>
 	            <td>{{f.posicion}}</td>
 	            <td>{{f.descripcion}}</td>
 	            <td>{{f.cantidadItems}}</td>
 	            <td>{{f.cantidadLB}}</td>
 	            <td>{{f.estado}}</td>
+	            <td>{{f.id_proyecto}}</td>
 	            <td><a class="btn btn-danger" data-toggle="modal" onclick="eliminar('{{ f.id }}','{{ f.id_proyecto }}')" >Eliminar</a></td>
 	            <td><a class="btn" data-toggle="modal" onclick="modificar('{{ f.id }}', '{{f.nombre}}' ,'{{f.posicion}}', '{{f.descripcion}}', '{{f.cantidadItems}}', '{{f.cantidadLB}}', '{{f.estado}}', '{{f.id_proyecto}}');mostrarModal();" >Modificar</a></td>
 	            <td><a class="btn btn-info" href = "">Configurar Fase</a></td>
