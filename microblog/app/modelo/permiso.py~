@@ -17,7 +17,7 @@ class Permiso(db.Model):
     
     """
         @note: Metodo para agregar un permiso
-        
+        @return: Retorna un mensaje  de confirmacion o error
     """
     def add_permiso(self):
         try:

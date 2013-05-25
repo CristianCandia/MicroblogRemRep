@@ -5,9 +5,9 @@ Created on 02/05/2013
 '''
 
 from app.modelo import Rol
-from app import db
-#from app.controlador import ControllerUsr 
-#from contPermiso import ControllerUsr 
+from app import db 
+from app.controlador.contPermiso import ControllerPermiso
+ 
 
 
 class ControllerRol():
@@ -59,8 +59,3 @@ class ControllerRol():
     
     def buscarPorNombreRol(self,nombre):
         return db.session.query(Rol).filter(Rol.nombre.ilike("%"+nombre+"%")).all()
-            
-        
-        
-        
-        

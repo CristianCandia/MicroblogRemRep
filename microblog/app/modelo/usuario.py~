@@ -41,7 +41,9 @@ class User2(db.Model):
     roles = db.relationship('Rol', secondary = rol_por_usuario, 
                             backref = db.backref('usuarios', lazy = 'dinamic'))
     
-    """@note: Metodo para agregar usuario"""
+    """@note: Metodo para agregar usuario
+       @return: string
+    """
     def add_usr(self):
         try:
             db.session.add(self)

@@ -31,6 +31,9 @@ class ControllerProy():
     def getProy(self, idp):
         return Proyecto.query.get(idp)
     
+    def getProyNombre(self, nombre):
+        return Proyecto.query.filter_by(nombre = nombre).first()
+    
     def traerProyectos(self):
         return Proyecto.query.all()
     

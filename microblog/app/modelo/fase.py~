@@ -28,6 +28,7 @@ class Fase(db.Model):
     
     """
         @note: Metodo para agregar una fase
+        @return: Retorna un mensaje de confirmacion o error
     """
     def add_fase(self):
         try:

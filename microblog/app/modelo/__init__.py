@@ -1,3 +1,9 @@
+"""
+@organization: Sigma-System - CRF_Proyect
+@author: Cristian Candia
+@author: Ruth Centurion
+@author: Fernando Saucedo
+"""
 from usuario import User2
 from proyecto import Proyecto
 from fase import Fase

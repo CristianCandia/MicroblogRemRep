@@ -29,6 +29,9 @@ class ControllerUsr():
     def getUsr(self, id):
         return User2.query.get(id)
     
+    def getUsrName(self, name):
+        return User2.query.filter_by(name = name).first()
+    
     def getUsrFull(self):
         return User2.query.all()
     

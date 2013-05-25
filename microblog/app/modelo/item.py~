@@ -51,7 +51,7 @@ class Item(db.Model):
     
     """
         @note: Metodo que imprime el nombre que representa al objeto
-
+        @return: Retorna un nombre de objeto
     """
     def __repr__(self):
         return '<Item %r>' % (self.descripcion)
