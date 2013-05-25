@@ -6,7 +6,7 @@ Created on 26/04/2013
 
 from flask import render_template, flash, redirect, session, url_for, request, g
 from app.forms import LoginForm, usr_CrearForm, asignar_Roles, rec_passForm,\
-    buscar
+    buscar, SimpleForm, listarPermisos
 from flask.ext.login import login_user, logout_user, current_user, login_required
 from app import app, db, lm, email
 from app.controlador import ControllerUsr
@@ -126,5 +126,27 @@ def busquedaPorNombre(nombre):
 def buscarUsuario():
     ''' Devuelve una lista de usuarios que coincidan con el nombre proporcionado '''
     form2 = buscar()
-    usuarios2 = c_usr.buscarPorNombreUsuario(form2.nombreBuscado.data)
+    usuarios2 = c_usr.buscarPorNombreUsuario(form2.nombreBuscado. data)
     return render_template('indexUser.html', usuarios = usuarios2, form = usr_CrearForm(), form2=form2)
+
+@app.route('/prueba/',methods=['post','get'])
+def helloWorld():
+    form = SimpleForm()
+    if form.validate_on_submit():
+        lista = form.example.data
+        for l in lista:
+            print l
+    else:
+        print form.errors
+    return render_template('example.html',form=form)
+
+@app.route('/prueba2/',methods=['post','get'])
+#http://www.desarrolloweb.com/articulos/1448.php
+def helloWorld2():
+    form = listarPermisos()
+    if form.validate_on_submit():
+        print form.uno.data
+        print form.uno1.data
+    else:
+        print form.errors
+    return render_template('example.html',form=form)

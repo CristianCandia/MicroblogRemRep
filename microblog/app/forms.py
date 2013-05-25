@@ -7,8 +7,8 @@ Sygma_System
 
 forms.py
 """
-from flask.ext.wtf import Form, TextField, PasswordField, DateField, IntegerField
-from flask.ext.wtf import Required
+from flask.ext.wtf import Form, TextField, PasswordField, DateField, IntegerField, BooleanField
+from flask.ext.wtf import Required, widgets, SelectMultipleField
 
 """:note: Clase de Formulario de Login"""
 class LoginForm(Form):
@@ -66,3 +66,20 @@ class asignar_Roles(Form):
     
 class buscar(Form):
     nombreBuscado = TextField('nombre-buscado')
+    
+class MultiCheckboxField(SelectMultipleField):
+    widget = widgets.ListWidget(prefix_label=False)
+    option_widget = widgets.CheckboxInput()
+
+class SimpleForm(Form):
+    string_of_files = ['one\r\ntwo\r\nthree\r\n']
+    list_of_files = string_of_files[0].split()
+    # create a list of value/description tuples
+    files = [(x, x) for x in list_of_files]
+    example = MultiCheckboxField('Label', choices=files)
+
+class listarPermisos(Form):
+    uno = BooleanField('chkuno')
+    uno1 = BooleanField('chkuno1')
+    uno2 = BooleanField('chkuno2')
+    uno3 = BooleanField('chkuno3')
