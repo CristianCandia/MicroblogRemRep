@@ -37,7 +37,15 @@ class Rol(db.Model):
             db.session.rollback()
             return str(error)
         return "Exito"
-        
     
+    def delete_rol(self):
+        try:
+            db.session.delete(self)
+            db.session.commit()
+        except Exception, error :
+            db.session.rollback()
+            return str(error)
+        return "Exito"
+        
     def __repr__(self):
         return '<Rol %r>' % (self.nombre)

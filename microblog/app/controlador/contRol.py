@@ -3,9 +3,12 @@ Created on 02/05/2013
 
 @author: cristian
 '''
-from app import db
+
 from app.modelo import Rol
-from contPermiso import ControllerPermiso
+from app import db
+#from app.controlador import ControllerUsr 
+#from contPermiso import ControllerUsr 
+
 
 class ControllerRol():
     def regRol(self, **kwargsProy):
@@ -21,6 +24,9 @@ class ControllerRol():
     
     def getRol(self, id):
         return Rol.query.get(id)
+    
+    def eliminarRol(self, rol):
+        return rol.delete_rol()
     
     def asignarPermisos(self,id_rol,id_permiso):
         c_permiso = ControllerPermiso()
@@ -38,6 +44,21 @@ class ControllerRol():
                 return error
             return 'Exito'
         return 'No existen el/los id(s) ingresados'
+    
+    def modRol(self, rolAux):
+        rol = self.getRol(rolAux.id)
+        rol.nombre = rolAux.nombre
+        rol.descripcion = rolAux.descripcion
+        try:
+            db.session.merge(rol)
+            db.session.commit()
+        except Exception, error:
+            db.session.rollback()
+            return str(error)
+        return "Exito"
+    
+    def buscarPorNombreRol(self,nombre):
+        return db.session.query(Rol).filter(Rol.nombre.ilike("%"+nombre+"%")).all()
             
         
         

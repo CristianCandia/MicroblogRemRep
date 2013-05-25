@@ -52,12 +52,15 @@ class ControllerFase():
     def eliminarFase(self, fase):
         return fase.delete_fase()
     
-    def buscarPorNombreFaseProyecto(self,nombre,idp):
+    def buscarPorNombreFaseProyecto(self,nombre,idp2):
+        idp = int(idp2)
+        c_proy = ControllerProy()
         fasesAux = db.session.query(Fase).filter(Fase.nombre.ilike("%"+nombre+"%")).all()
         fases = []
-        #fasesAux = db.session.query(Fase).filter(Fase.nombre.ilike(nombre), Fase.id_proyecto.ilike(idp)).all()
         if fasesAux != None:
             for f in fasesAux:
-                if f.id_proyecto == idp:
+                if (f.id_proyecto == idp):
                     fases.append(f)
-            return fases
+        else:
+            fases = c_proy.getFases(idp)
+        return fases

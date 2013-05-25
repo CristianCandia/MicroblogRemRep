@@ -46,8 +46,10 @@ class fase_CrearForm(Form):
     idProy = IntegerField('idProy')
     
 class rol_CrearForm(Form):
-    nombre = TextField('nombre', validators = [Required()])
+    idRol = IntegerField('idRol')
+    nomRol = TextField('nombre', validators = [Required()])
     descripcion = TextField('descripcion')
+    idUsr = IntegerField('idUsr')
 
 class permiso_CrearForm(Form):
     nombre = TextField('nombre', validators = [Required()])

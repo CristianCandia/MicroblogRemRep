@@ -32,6 +32,9 @@ class ControllerUsr():
     def getUsrFull(self):
         return User2.query.all()
     
+    def getRoles(self,idu):
+        return self.getUsr(idu).roles
+    
     def asignarRoles(self,id_usr,id_rol):
         c_rol = ControllerRol()
         
