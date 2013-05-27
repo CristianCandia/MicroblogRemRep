@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
 <script type="text/javascript">
+	{% if permisos!= None%}
+		$(window).load(function() {
+			$("#modalADP").modal("show");	
+		});
+	{% endif%}
 	function ocultarModal() {
 		$("#modalCR").hide();
 		$("#formulario-carga")[0].reset();
@@ -26,9 +31,6 @@
 		$("#modalER").modal("show")
 	}
 	
-	function asigdesasig(){
-		$("#modalADP").modal("show")
-	}
 	function mostrarModal(){
 		$('#modalCR').modal('show');
 	}
@@ -55,19 +57,19 @@
 	            <th>Descripción</th>
 	        </tr>
 			{% for r in roles %}
-          	<tr>
-          		<td>{{r.id}}</td>
-          		<td>{{r.nombre}}</td>
-	            <td>{{r.descripcion}}</td>
-	            <td><a class="btn btn-danger" data-toggle="modal" onclick="eliminar('{{ r.id }}')" >Eliminar</a></td>
-	            <td><a class="btn" data-toggle="modal" onclick="modificar('{{ r.id }}', '{{r.nombre}}' ,'{{r.descripcion}}');mostrarModal();" >Modificar</a></td>
-	            <td><a class="btn btn-info" onclick="asigdesasig()">Asignar/Desasignar Permisos</a></td>
-          	</tr>
-          {% else %}
-          	<tr>
-          		<td>NO HAY REGISTROS</td>
-          	</tr>
-          {% endfor %}
+	          	<tr>
+	          		<td>{{r.id}}</td>
+	          		<td>{{r.nombre}}</td>
+		            <td>{{r.descripcion}}</td>
+		            <td><a class="btn btn-danger" data-toggle="modal" onclick="eliminar('{{ r.id }}')" >Eliminar</a></td>
+		            <td><a class="btn" data-toggle="modal" onclick="modificar('{{ r.id }}', '{{r.nombre}}' ,'{{r.descripcion}}');mostrarModal();" >Modificar</a></td>
+		            <td><a class="btn btn-info" href = "{{url_for('rol',idr = r.id)}}">Asignar/Desasignar Permisos</a></td>
+	          	</tr>
+          	{% else %}
+	          	<tr>
+	          		<td>NO HAY REGISTROS</td>
+	          	</tr>
+          	{% endfor %}
 		</table>
 	</div>
 </div>
@@ -129,8 +131,8 @@
 		<div class="modal-body" >
 			<center>
 				<fieldset>
-				<p><input type="checkbox" name="uno1" value="Uno1" checked="true">Uno1</p>
-	    		<p><input type="checkbox" name="uno2" value="Uno2" checked="true">Uno2</p>	
+				<p><input type="checkbox" name="uno1" value="uno1" checked="true">Uno1</p>
+	    		<p><input type="checkbox" name="uno2" value="uno2" checked="true">Uno2</p>	
 				</fieldset>
 			</center>
 		</div>

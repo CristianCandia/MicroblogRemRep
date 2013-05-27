@@ -22,6 +22,9 @@ class ControllerRol():
     def traerRoles(self):
         return Rol.query.all()
     
+    def getPermisos_X_Rol(self,idr):
+        return self.getRol(idr).permisos
+    
     def getRol(self, id):
         return Rol.query.get(id)
     
@@ -30,7 +33,6 @@ class ControllerRol():
     
     def asignarPermisos(self,id_rol,id_permiso):
         c_permiso = ControllerPermiso()
-        
         rol = self.getRol(id_rol)
         permiso = c_permiso.getPermiso(id_permiso)
         

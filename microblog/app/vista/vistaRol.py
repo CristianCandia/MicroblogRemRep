@@ -17,10 +17,18 @@ c_rol = ControllerRol()
 c_usr = ControllerUsr()
 
 @app.route('/rol')
+@app.route('/rol/<idr>')
 @login_required
-def rol():
+def rol(idr = None):
     roles = c_rol.traerRoles()
-    return render_template("indexRol.html", title='Administracion de Roles',roles=roles,form=rol_CrearForm(),form2=buscar())
+    permisosXrol = None
+    '''Este if es para recargar la pagina con todos los roles
+    mas los permisos del rol que se ha elegido para asignar 
+    o desasignar permisos'''
+    if idr != None:
+        permisosXrol = c_rol.getPermisos_X_Rol(idr)
+    return render_template("indexRol.html", title='Administracion de Roles',roles=roles,
+                           form=rol_CrearForm(),form2=buscar(),permisos=permisosXrol)
 
 @app.route('/rol/rol_crear', methods = ['GET', 'POST'])
 @login_required
@@ -79,7 +87,7 @@ def buscarRol(idu = None):
     ''' Devuelve una lista de roles que coincidan con el nombre proporcionado '''
     form2 = buscar()
     roles = c_rol.buscarPorNombreRol(form2.nombreBuscado.data)
-    return render_template("indexRol.html", title='Administracion de Roles',roles=roles,form=rol_CrearForm(),form2=buscar())
+    return render_template("indexRol.html", title='Administracion de Roles',roles=roles,form=rol_CrearForm(),form2=buscar(),permisos=None)
 
 @app.route('/rol/eliminar/')
 @app.route('/rol/eliminar/<idr>')
