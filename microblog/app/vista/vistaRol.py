@@ -6,15 +6,16 @@ Created on 03/05/2013
 from flask import render_template, flash, redirect, session, url_for, request, g
 
 """Se importa el metodo rol_CrearForm para manipular el formulario"""
-from app.forms import rol_CrearForm, asignar_Permisos, buscar
+from app.forms import rol_CrearForm, asignar_Permisos, buscar, listarPermisos
 
 from flask.ext.login import login_user, logout_user, current_user, login_required
 from app import app, db, lm #models, oid
-from app.controlador import ControllerRol, ControllerUsr
+from app.controlador import ControllerRol, ControllerUsr, ControllerPermiso
 from app.modelo import Rol
 
 c_rol = ControllerRol()
 c_usr = ControllerUsr()
+c_per = ControllerPermiso()
 
 @app.route('/rol')
 @app.route('/rol/<idr>')
@@ -22,13 +23,15 @@ c_usr = ControllerUsr()
 def rol(idr = None):
     roles = c_rol.traerRoles()
     permisosXrol = None
+    rol = None
     '''Este if es para recargar la pagina con todos los roles
     mas los permisos del rol que se ha elegido para asignar 
     o desasignar permisos'''
     if idr != None:
         permisosXrol = c_rol.getPermisos_X_Rol(idr)
-    return render_template("indexRol.html", title='Administracion de Roles',roles=roles,
-                           form=rol_CrearForm(),form2=buscar(),permisos=permisosXrol)
+        rol=c_rol.getRol(idr)
+    return render_template("indexRol.html", title='Administracion de Roles',roles=roles,form3=listarPermisos,
+                           form=rol_CrearForm(),form2=buscar(),permisos=permisosXrol,permisos2=c_per.getPermisos(), rol=rol)
 
 @app.route('/rol/rol_crear', methods = ['GET', 'POST'])
 @login_required
@@ -49,6 +52,26 @@ def crearRol():
 def rol_listar():
     rol = c_rol.traerRoles()  
     return render_template("rol_listar.html", title = 'Listado de roles', Rol = rol)
+
+
+#@app.route('/rol')
+#@app.route('/rol/<idr>')
+
+@app.route('/rol/asignar_permisos2/<idr>',methods = ['GET', 'POST'])
+@login_required
+def asignarPermisos2(idr=None):
+    form = listarPermisos()
+    
+    print ("Prueba1: ",form.u1.data)
+    print ("Prueba2: ",form.u2.data)
+    print ("Prueba3: ",form.u3.data)
+    print ("Prueba4: ",form.u4.data)
+    print ("Prueba5: ",form.u5.data)
+    print ("Prueba6: ",form.u6.data)
+    print ("Prueba4: ",form.u4.data)
+    
+    flash("se imprimen los true o false del form")
+    return redirect(url_for('rol'))
 
 @app.route('/rol/rol_asignar_permisos' , methods=['GET', 'POST'])
 @login_required

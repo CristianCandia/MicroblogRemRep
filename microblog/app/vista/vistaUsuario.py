@@ -67,17 +67,14 @@ def modificarUsuario():
 def eliminarUsuario(id=None):
     if(id):
         usuario = c_usr.getUsr(id)
-        
         if(usuario):
             resp = c_usr.eliminarUsr(usuario)
-            
             if(resp == 'Exito'):
                 flash('Usuario eliminado.')
             else:
                 flash('Ocurrio un error: '+str(resp))
         else:
             flash('Ocurrio un error durante la eliminacion.')
-    
     return redirect(url_for('usuario'))
 
 @app.route('/rec_pass', methods = ['GET', 'POST'])

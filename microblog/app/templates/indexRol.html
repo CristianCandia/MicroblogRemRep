@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 <script type="text/javascript">
-	{% if permisos!= None%}
+	{% if permisos != None %}
 		$(window).load(function() {
 			$("#modalADP").modal("show");	
 		});
@@ -127,12 +127,15 @@
 		<a class="close" data-dismiss="modal">&times;</a>
 		<h3>Permisos</h3>
 	</div>
-	<form action="{{ url_for('crearRol') }}" method="post" class="form-horizontal" id="formulario-carga2">
+	<form action="{{url_for('asignarPermisos2',idr=1)}}" method="post" class="form-horizontal" id="formulario-carga2">
 		<div class="modal-body" >
 			<center>
 				<fieldset>
-				<p><input type="checkbox" name="uno1" value="uno1" checked="true">Uno1</p>
-	    		<p><input type="checkbox" name="uno2" value="uno2" checked="true">Uno2</p>	
+				{% if permisos != None %}
+					{% for p in permisos %}
+						<p align="left"><input type="checkbox" name = "{{p['id']}}" value ="prueba" {{p['check']}}> {{p['check']}}<br></p>
+					{% endfor %}
+				{% endif %}
 				</fieldset>
 			</center>
 		</div>

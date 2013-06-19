@@ -191,7 +191,7 @@ except Exception, error:
     print 'No se pudo cargar el permiso %s: %s' % (nombre, str(error))
 
 try:
-    p21 = Permiso(id = 21, nombre='Eliminar Linea base', codigo = '21')
+    p21 = Permiso(id = 21, nombre='Eliminar linea base', codigo = '21')
     db.session.add(p21)
     db.session.commit()
     print 'Permiso %s registrado' % (nombre)
