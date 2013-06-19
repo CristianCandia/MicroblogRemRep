@@ -19,17 +19,17 @@ class TipoItem(db.Model):
         @note: Clase que representa a la Entidad Tipo de Item.
     """
     __tablename__ = 'tipo_item'
-    id_TI = Column(Integer, primary_key = True)
+    id_TI = db.Column(db.Integer, primary_key = True)
     """
         Clave primaria de la tabla.
     """
     
-    codigo = Column(String(100))
+    codigo = db.Column(db.String(100))
     """
         Atributo que representa el codigo del tipo de item.
     """
     
-    descripcion = Column(String(100))
+    descripcion = db.Column(db.String(100))
     """
         Atributo que describe al tipo de item.
     """

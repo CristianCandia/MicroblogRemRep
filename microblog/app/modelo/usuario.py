@@ -17,26 +17,27 @@ rol_por_usuario = db.Table('rol_usuario',
                              db.Column('id_usuario', db.Integer, db.ForeignKey('user2.id')),
                              db.Column('id_rol', db.Integer, db.ForeignKey('rol.id'))
                             )
-"""@note: Clase que representa al usuario"""
+
 class User2(db.Model):
-    """Id que se le asigna al usuario"""
+    """@note: Clase que representa al usuario"""
     id = db.Column(db.Integer, primary_key = True)
-    """Define el nickname del usuario"""
+    """Id que se le asigna al usuario"""
     name = db.Column(db.String(64), index = True, unique = True)
-    """almacena el password del user"""
+    """Define el nickname del usuario"""
     passWord = db.Column(db.String(120), index = True, unique = True)
-    """Define el nombre del usuario"""
+    """almacena el password del user"""
     nombre = db.Column(db.String(64))
-    """Define el apellido del usuario"""
+    """Define el nombre del usuario"""
     apellido = db.Column(db.String(64))
-    """Define el telefono del usuario"""
+    """Define el apellido del usuario"""
     telefono = db.Column(db.String(15))
-    """Registra el documento del usuario"""
+    """Define el telefono del usuario"""
     ci = db.Column(db.String(15))
-    """Almacena una direccion de correo elec del usuario"""
-    e_mail = db.Column(db.String(100), unique = True)
+    """Registra el documento del usuario"""
     
-    """registra el rol asociado al usuario"""
+    e_mail = db.Column(db.String(100), unique = True)
+    """Almacena una direccion de correo elec del usuario"""
+    #"""registra el rol asociado al usuario"""
     #roles = db.Column(db.SmallInteger, default = ROLE_USER)
     roles = db.relationship('Rol', secondary = rol_por_usuario, 
                             backref = db.backref('usuarios', lazy = 'dinamic'))

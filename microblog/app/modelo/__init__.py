@@ -11,5 +11,8 @@ from proyecto import Proyecto
 from fase import Fase
 from rol import Rol
 from permiso import Permiso
-from item import Item, Relacion, TipoItem
+from item import *
 from atributo import *
+from historial import *
+from archivo import *
+from lineabase import *
