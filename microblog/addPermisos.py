@@ -1,8 +1,11 @@
-'''
-Created on 17/05/2013
-
-@author: cristian
-'''
+"""
+    Sigma_System
+    @organization:CRF_Proyect
+    @authors:
+        - U{Cristian Candia<mailto:kandia88@gmail.com>}
+        - U{Ruth Centurion<mailto:ruthiccr@gmail.com>}
+        - U{Fernando Saucedo<mailto:carlifer.fernando@gmail.com>}
+"""
 #!usr/lib/python
 
 from app import db
@@ -17,7 +20,7 @@ try:
     print 'Permiso %s registrado' % (nombre)
 except Exception, error:
     db.session.rollback()
-    print 'No se pudo cargar el permiso %s: %s' % (nombre, str(error))
+    print 'No se pudo cargar el permiso: + ' + str(error)
    
 try:
     p2 = Permiso(id = 2, nombre='Modificar usuario', codigo = '2')
@@ -26,7 +29,7 @@ try:
     print 'Permiso %s registrado' % (nombre)
 except Exception, error:
     db.session.rollback()
-    print 'No se pudo cargar el permiso %s: %s' % (nombre, str(error))
+    print 'No se pudo cargar el permiso: + ' + str(error)
 
 try:
     p3 = Permiso(id = 3, nombre='Eliminar Usuario', codigo = '3')
@@ -35,7 +38,7 @@ try:
     print 'Permiso %s registrado' % (nombre)
 except Exception, error:
     db.session.rollback()
-    print 'No se pudo cargar el permiso %s: %s' % (nombre, str(error))
+    print 'No se pudo cargar el permiso: + ' + str(error)
    
 try:
     p4 = Permiso(id = 4, nombre='Crear rol', codigo = '4')
@@ -44,7 +47,7 @@ try:
     print 'Permiso %s registrado' % (nombre)
 except Exception, error:
     db.session.rollback()
-    print 'No se pudo cargar el permiso %s: %s' % (nombre, str(error))
+    print 'No se pudo cargar el permiso: + ' + str(error)
    
 try:
     p5 = Permiso(id = 5, nombre='Modificar rol', codigo = '5')
@@ -53,7 +56,7 @@ try:
     print 'Permiso %s registrado' % (nombre)
 except Exception, error:
     db.session.rollback()
-    print 'No se pudo cargar el permiso %s: %s' % (nombre, str(error))
+    print 'No se pudo cargar el permiso: + ' + str(error)
    
 try:
     p6 = Permiso(id = 6, nombre='Eliminar rol', codigo = '6')
@@ -62,7 +65,7 @@ try:
     print 'Permiso %s registrado' % (nombre)
 except Exception, error:
     db.session.rollback()
-    print 'No se pudo cargar el permiso %s: %s' % (nombre, str(error))
+    print 'No se pudo cargar el permiso: + ' + str(error)
    
 try:
     p7 = Permiso(id = 7, nombre='Asignar rol', codigo = '7')
@@ -71,7 +74,7 @@ try:
     print 'Permiso %s registrado' % (nombre)
 except Exception, error:
     db.session.rollback()
-    print 'No se pudo cargar el permiso %s: %s' % (nombre, str(error))
+    print 'No se pudo cargar el permiso: + ' + str(error)
    
 try:
     p8 = Permiso(id = 8, nombre='Crear proyecto', codigo = '8')
@@ -80,7 +83,7 @@ try:
     print 'Permiso %s registrado' % (nombre)
 except Exception, error:
     db.session.rollback()
-    print 'No se pudo cargar el permiso %s: %s' % (nombre, str(error))
+    print 'No se pudo cargar el permiso: + ' + str(error)
 
 try:
     p9 = Permiso(id = 9, nombre='Configurar proyecto', codigo = '9')
@@ -89,7 +92,7 @@ try:
     print 'Permiso %s registrado' % (nombre)
 except Exception, error:
     db.session.rollback()
-    print 'No se pudo cargar el permiso %s: %s' % (nombre, str(error))
+    print 'No se pudo cargar el permiso: + ' + str(error)
 
 try:
     p10 = Permiso(id = 10, nombre='Modificar proyecto', codigo = '10')
@@ -98,7 +101,7 @@ try:
     print 'Permiso %s registrado' % (nombre)
 except Exception, error:
     db.session.rollback()
-    print 'No se pudo cargar el permiso %s: %s' % (nombre, str(error))
+    print 'No se pudo cargar el permiso: + ' + str(error)
 
 try:   
     p11 = Permiso(id = 11, nombre='Eliminar proyecto', codigo = '11')
@@ -107,7 +110,7 @@ try:
     print 'Permiso %s registrado' % (nombre)
 except Exception, error:
     db.session.rollback()
-    print 'No se pudo cargar el permiso %s: %s' % (nombre, str(error))
+    print 'No se pudo cargar el permiso: + ' + str(error)
 
 try: 
     p12 = Permiso(id = 12, nombre='Ver fase', codigo = '12')
@@ -116,7 +119,7 @@ try:
     print 'Permiso %s registrado' % (nombre)
 except Exception, error:
     db.session.rollback()
-    print 'No se pudo cargar el permiso %s: %s' % (nombre, str(error))
+    print 'No se pudo cargar el permiso: + ' + str(error)
 
 try:   
     p13 = Permiso(id = 13, nombre='Crear Item', codigo = '13')
@@ -125,7 +128,7 @@ try:
     print 'Permiso %s registrado' % (nombre)
 except Exception, error:
     db.session.rollback()
-    print 'No se pudo cargar el permiso %s: %s' % (nombre, str(error))
+    print 'No se pudo cargar el permiso: + ' + str(error)
 
 try:   
     p14 = Permiso(id = 14, nombre='Eliminar item', codigo = '14')
@@ -134,7 +137,7 @@ try:
     print 'Permiso %s registrado' % (nombre)
 except Exception, error:
     db.session.rollback()
-    print 'No se pudo cargar el permiso %s: %s' % (nombre, str(error))
+    print 'No se pudo cargar el permiso: + ' + str(error)
 
 try:
     p15 = Permiso(id = 15, nombre='Modificar Item', codigo = '15')
@@ -143,7 +146,7 @@ try:
     print 'Permiso %s registrado' % (nombre)
 except Exception, error:
     db.session.rollback()
-    print 'No se pudo cargar el permiso %s: %s' % (nombre, str(error))
+    print 'No se pudo cargar el permiso: + ' + str(error)
 
 try:   
     p16 = Permiso(id = 16, nombre='Crear tipo de item', codigo = '16')
@@ -152,7 +155,7 @@ try:
     print 'Permiso %s registrado' % (nombre)
 except Exception, error:
     db.session.rollback()
-    print 'No se pudo cargar el permiso %s: %s' % (nombre, str(error))
+    print 'No se pudo cargar el permiso: + ' + str(error)
 
 try:
     p17 = Permiso(id = 17, nombre='Modificar tipo de item', codigo = '17')
@@ -161,7 +164,7 @@ try:
     print 'Permiso %s registrado' % (nombre)
 except Exception, error:
     db.session.rollback()
-    print 'No se pudo cargar el permiso %s: %s' % (nombre, str(error))
+    print 'No se pudo cargar el permiso: + ' + str(error)
 
 try:   
     p18 = Permiso(id = 18, nombre='Eliminar tipo de item', codigo = '18')
@@ -170,7 +173,7 @@ try:
     print 'Permiso %s registrado' % (nombre)
 except Exception, error:
     db.session.rollback()
-    print 'No se pudo cargar el permiso %s: %s' % (nombre, str(error))
+    print 'No se pudo cargar el permiso: + ' + str(error)
 
 try:
     p19 = Permiso(id = 19, nombre='Crear linea base', codigo = '19')
@@ -179,7 +182,7 @@ try:
     print 'Permiso %s registrado' % (nombre)
 except Exception, error:
     db.session.rollback()
-    print 'No se pudo cargar el permiso %s: %s' % (nombre, str(error))
+    print 'No se pudo cargar el permiso: + ' + str(error)
 
 try:
     p20 = Permiso(id = 20, nombre='Liberar-cerrar linea base', codigo = '20')
@@ -188,7 +191,7 @@ try:
     print 'Permiso %s registrado' % (nombre)
 except Exception, error:
     db.session.rollback()
-    print 'No se pudo cargar el permiso %s: %s' % (nombre, str(error))
+    print 'No se pudo cargar el permiso: + ' + str(error)
 
 try:
     p21 = Permiso(id = 21, nombre='Eliminar Linea base', codigo = '21')
@@ -197,7 +200,7 @@ try:
     print 'Permiso %s registrado' % (nombre)
 except Exception, error:
     db.session.rollback()
-    print 'No se pudo cargar el permiso %s: %s' % (nombre, str(error))
+    print 'No se pudo cargar el permiso: + ' + str(error)
 
 try:
     p22 = Permiso(id = 22, nombre='Aprobar-rechazar item', codigo = '22')
@@ -206,7 +209,7 @@ try:
     print 'Permiso %s registrado' % (nombre)
 except Exception, error:
     db.session.rollback()
-    print 'No se pudo cargar el permiso %s: %s' % (nombre, str(error))
+    print 'No se pudo cargar el permiso: + ' + str(error)
 
 try:
     p23 = Permiso(id = 23, nombre='Solicitar reportes', codigo = '23')
@@ -215,7 +218,7 @@ try:
     print 'Permiso %s registrado' % (nombre)
 except Exception, error:
     db.session.rollback()
-    print 'No se pudo cargar el permiso %s: %s' % (nombre, str(error))
+    print 'No se pudo cargar el permiso: + ' + str(error)
 
 try:
     p24 = Permiso(id = 24, nombre='Aprobar-rechazar solicitud de cambio', codigo = '24')
@@ -224,7 +227,7 @@ try:
     print 'Permiso %s registrado' % (nombre)
 except Exception, error:
     db.session.rollback()
-    print 'No se pudo cargar el permiso %s: %s' % (nombre, str(error))
+    print 'No se pudo cargar el permiso: + ' + str(error)
 
 
 c_rol = ControllerRol()
