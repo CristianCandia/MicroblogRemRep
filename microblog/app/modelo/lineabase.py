@@ -30,3 +30,24 @@ class LineaBase(db.Model):
 
     fase_id = db.Column(None, db.ForeignKey("fase.id"), nullable=True)
     fase = db.relation('Fase', backref=db.backref('fase_LB'))
+    
+class ItemsPorLineaBase(db.Model):
+    """
+        Clase que representa a la entidad items_x_LB
+    """
+    __tablename__ = 'items_x_LB'
+    
+    id = db.Column(db.Integer, primary_key = True)
+    """
+    
+    """
+    
+    id_item = db.Column(db.Integer, db.ForeingKey('item.id_item'))
+    """
+    
+    """
+    
+    id_linea_base = db.Column(db.Integer, db.ForeingKey('linea_base.id'))
+    """
+    
+    """
