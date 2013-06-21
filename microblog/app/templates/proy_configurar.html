@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<h1 align="center">Proyecto: {{nomProy}}</h1>
+<h1 align="center">Proyecto: <a href = "/proyecto2">{{nomProy}}</h1>
 <p align="center">
 	<a href = "/fase/{{idp}}" class="btn btn-success">Fases</a>
 	<a href="{{ url_for('itemProy') }}" class="btn btn-success">Items</a>

@@ -49,6 +49,16 @@ def fase_listar():
     fase = c_fase.traerFases()  
     return render_template("fase_listar.html", title = 'Listado de fases', Fase = fase)
 
+
+'''Vista para configurar el proyecto'''
+@app.route('/fase/configurar/', methods = ['GET', 'POST'])
+@app.route('/fase/configurar/<idp>/<idf>')
+def configurarFase(idp = None, idf = None):
+    nomProy = c_proy.getNombre(idp)
+    nomFase = c_fase.getNombre(idf)
+    return render_template("fase_configurar.html", title = 'Configurar Fase', nomProy = nomProy,nomFase=nomFase, idp=idp,idf=idf)
+
+
 '''Vista para modificar fase'''
 @app.route('/fase/modificar/', methods = ['GET', 'POST'])
 def modificarFase():

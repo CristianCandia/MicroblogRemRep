@@ -63,7 +63,7 @@
 		            <td>{{r.descripcion}}</td>
 		            <td><a class="btn btn-danger" data-toggle="modal" onclick="eliminar('{{ r.id }}')" >Eliminar</a></td>
 		            <td><a class="btn" data-toggle="modal" onclick="modificar('{{ r.id }}', '{{r.nombre}}' ,'{{r.descripcion}}');mostrarModal();" >Modificar</a></td>
-		            <td><a class="btn btn-info" href = "{{url_for('rol',idr = r.id)}}">Asignar/Desasignar Permisos</a></td>
+		            <td><a class="btn btn-info" href = "{{ url_for('rol_proyFase', id1=idf, id2=r.id, opcion = 2) }}">Asignar/Desasignar Permisos</a></td>
 	          	</tr>
           	{% else %}
 	          	<tr>
@@ -127,7 +127,7 @@
 		<a class="close" data-dismiss="modal">&times;</a>
 		<h3>Permisos</h3>
 	</div>
-	<form action="{{url_for('asignarPermisos2', idr=rol.id)}}" method="post" class="form-horizontal" id="formulario-carga2">
+	<form action="{{url_for('asignarPermisos2', idr=rol.id, idf=idf)}}" method="post" class="form-horizontal" id="formulario-carga2">
 		<div class="modal-body" >
 			<left>
 				{{ form.hidden_tag() }}

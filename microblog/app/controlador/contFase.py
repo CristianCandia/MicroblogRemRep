@@ -30,6 +30,10 @@ class ControllerFase():
     def getFase(self, idfase):
         return Fase.query.get(idfase)
     
+    def getNombre(self, idf):
+        f = Fase.query.get(idf)
+        return f.nombre
+    
     def traerFases(self):
         return Fase.query.all()
     

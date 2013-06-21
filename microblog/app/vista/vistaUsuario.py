@@ -140,10 +140,23 @@ def helloWorld():
 @app.route('/prueba2/',methods=['post','get'])
 #http://www.desarrolloweb.com/articulos/1448.php
 def helloWorld2():
+    print "entro en prueba2"
     form = listarPermisos()
     if form.validate_on_submit():
-        print form.uno.data
-        print form.uno1.data
+        print "entro en submit"
+        print form.u1.data
+        print form.u2.data
+        print form.u3.data
+        print form.u4.data
+        print form.u5.data
+        print form.u6.data
+        print form.u7.data
+        print form.u14.data
+        print form.u15.data
+        print form.u16.data
+        print form.u17.data
+        print form.u18.data
+        print form.u19.data
     else:
         print form.errors
     return render_template('example.html',form=form)

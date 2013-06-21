@@ -17,6 +17,28 @@ c_rol = ControllerRol()
 c_usr = ControllerUsr()
 c_per = ControllerPermiso()
 
+
+@app.route('/rol/proyFase/<id1>/<id2>/<opcion>')
+@login_required
+def rol_proyFase(id1=None, id2=None, opcion=None):
+    if id1 != None:
+        print "entro en opcion 1"
+        roles = c_rol.getRolIdf(id1)
+        for r in roles:
+            print r
+    permisosXrol = None
+    rol = None
+    '''Este if es para recargar la pagina con todos los roles
+    mas los permisos del rol que se ha elegido para asignar 
+    o desasignar permisos'''
+    if id2 != None and int(opcion) == 2:
+        print "entro en opcion 2"
+        permisosXrol = c_rol.getPermisos_X_Rol(id2)
+        rol=c_rol.getRol(id2)
+    return render_template("indexRol2.html", title='Administracion de Roles',roles=roles,form3=listarPermisos,
+                           form=rol_CrearForm(),form2=buscar(),permisos=permisosXrol,permisos2=c_per.getPermisos(), 
+                           rol=rol, idf=id1)
+
 @app.route('/rol')
 @app.route('/rol/<idr>')
 @login_required
@@ -54,38 +76,38 @@ def rol_listar():
     return render_template("rol_listar.html", title = 'Listado de roles', Rol = rol)
 
 
-#@app.route('/rol')
-#@app.route('/rol/<idr>')
-
-@app.route('/rol/asignar_permisos2/<idr>',methods = ['GET', 'POST'])
-@login_required
-def asignarPermisos2(idr=None):
-    form = listarPermisos()
-    
-    print ("Prueba1: ",form.u1.data)
-    print ("Prueba2: ",form.u2.data)
-    print ("Prueba3: ",form.u3.data)
-    print ("Prueba4: ",form.u4.data)
-    print ("Prueba5: ",form.u5.data)
-    print ("Prueba6: ",form.u6.data)
-    print ("Prueba4: ",form.u4.data)
-    
-    flash("se imprimen los true o false del form")
-    return redirect(url_for('rol'))
-
-@app.route('/rol/rol_asignar_permisos' , methods=['GET', 'POST'])
-@login_required
-def asignarPermisos():
-    form = asignar_Permisos()
-    resp = None
+@app.route('/rol/asignar_permisos2/<idr>/<idf>', methods = ['post', 'get'])
+@login_required 
+def asignarPermisos2(idr=None, idf=None):
+    form = listarPermisos() 
+    lista = []
     if form.validate_on_submit():
-        resp = c_rol.asignarPermisos(form.id_rol.data, form.id_permiso.data)
-    if resp == 'Exito':
-        flash('Se ha hecho la asignacion')
-        redirect(url_for('rol'))
-    if resp != None:
-        flash(resp)
-    return render_template("rol_asignar_permisos.html",title = 'Asignar Permisos', form = form)
+        ban = 0
+        for f in form:
+            if ban == 1:
+                datos = f.id.split('u')
+                l = {'id':int(datos[1]), 'dato':f.data}
+                #print l['id'], l['dato']
+                lista.append(l)
+            ban = 1
+    respuesta = c_rol.asignarDesasginarPer(idr, lista)
+    ban = 0
+    for r in respuesta:
+        if r['error'] == 1:
+            ban = 1
+            break
+        if r['error'] == 2:
+            ban = 2
+            break
+    if ban == 0:    
+        flash("Se realizaron correctamente las asignaciones/desasignaciones")
+    else:
+        if ban == 1:
+            flash("Error en algunas de las las asignaciones")
+        if ban == 2:
+            flash("Error en algunas de las las desasignaciones")
+                
+    return redirect(url_for('rol_proyFase',id1=idf,id2=idf,opcion=1))
 
 '''Vista para modificar rol'''
 @app.route('/rol/modificar/', methods = ['GET', 'POST'])
