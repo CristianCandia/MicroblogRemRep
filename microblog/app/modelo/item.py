@@ -15,11 +15,16 @@ from sqlalchemy.types import String, Integer, Enum
 ROLE_USER = 0
 ROLE_ADMIN = 1
 
+###############################################################################
+###############################################################################
+###############################################################################
 
 Herencia_TipoItem = db.Table('herencia_TI',
                              db.Column('id', db.Integer, primary_key = True),
-                             db.Column('padre', db.Integer, db.ForeignKey('tipo_item.id_TI')),
-                             db.Column('hijo', db.Integer, db.ForeignKey('tipo_item.id_TI')))
+                             db.Column('padre', db.Integer, 
+                                       db.ForeignKey('tipo_item.id_TI')),
+                             db.Column('hijo', db.Integer, 
+                                       db.ForeignKey('tipo_item.id_TI')))
 """
     Entidad para realizar la herencia entre TIs
 """
@@ -87,10 +92,11 @@ class TipoItem(db.Model):
 relacion_item = db.Table('relacion_item',
                          db.Column('id', db.Integer,
                                    primary_key = True),
-                         db.Column('id_item', db.Integer,
+                         db.Column('id_item_1', db.Integer,
                                    db.ForeignKey('item.id_item')),
-                         db.Column('id_relacion', db.Integer,
-                                   db.ForeignKey('relacion.id_relacion')))
+                         db.Column('id_item_2', db.Integer,
+                                   db.ForeignKey('item.id_item')),
+                         db.Column('relacion', db.Integer))
 """Definicion de la entidad relaciones"""
 
 ###############################################################################
@@ -146,12 +152,21 @@ class Item(db.Model):
     prioridad = db.Column(db.Integer)
     """
         Atributo que define la prioridad del item.
+        1. Alta.
+        2. Media.
+        3. Baja
     """
     
-    estado = db.Column(db.String(64))
+    estado = db.Column(db.Integer)
     """
         Atributo que define el estado en que se encuentra el 
         item.
+        1 = Aprobado.
+        2 = Desaprobado.
+        3 = Bloqueado.
+        4 = Revision-Bloqueada.
+        5 = Revision-Desbloqueada
+        6 = Finalizada
     """
     
     borrado = db.Column(db.Boolean)
@@ -173,19 +188,3 @@ class Item(db.Model):
             @note: Metodo que imprime el nombre que representa al objeto
         """
         return '<Item %r>' % (self.descripcion)
-
-###############################################################################
-###############################################################################
-###############################################################################
-
-
-class Relacion(db.Model):
-    """
-        Definicion de la entidad relacion
-    """
-    id_relacion = db.Column(db.Integer, primary_key = True)
-    tipo = db.Column(Enum('Antecesor', 'Padre', name = 'tipo_relacion'))
-    id_item = db.Column(db.Integer, db.ForeignKey('item.id_item'))
-    
-    def __repr__(self):
-        return '<Relacion %r>' % (self.id_item)

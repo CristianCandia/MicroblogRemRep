@@ -8,7 +8,8 @@ Sygma_System
 forms.py
 """
 from flask.ext.wtf import Form, TextField, PasswordField, DateField, \
-                          IntegerField, BooleanField, SelectField
+                          IntegerField, BooleanField, SelectField, \
+                          TextAreaField
 from flask.ext.wtf import Required, widgets, SelectMultipleField
 
 """:note: Clase de Formulario de Login"""
@@ -98,3 +99,15 @@ class crear_mod_atributoTI(Form):
                                           ('DATE', 'Fecha')],validators = [Required()])
     valorDefault = TextField('valorDefault', validators = [Required()])
     
+class crear_mod_item(Form):
+    id = IntegerField('id')
+    descripcion = TextAreaField('descripcion')
+    numero = IntegerField('numero')
+    numero_TI = IntegerField('numero_TI')
+    version = IntegerField('version')
+    complejidad = IntegerField('complejidad')
+    prioridad = SelectField('prioridad', choices = [(1,'Alta'), (2,'Media'), (3,'Baja')])
+    estado = SelectField('estado', choices = [(1,'Aprobado'),(2,'Desaprobado'),
+                                               (3,'Bloqueado'),(4,'Revision-Bloq'),
+                                               (5,'Revision-Desbloq')])
+    observaciones = TextAreaField('observaciones')
