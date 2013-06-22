@@ -179,8 +179,8 @@ class Item(db.Model):
         Atributo que define las observaciones correspondientes al item.
     """
     
-    relacion = db.relationship('Relacion', secondary = relacion_item, 
-                            backref = db.backref('item', lazy = 'dinamic'))
+    #relacion = db.relationship('Relacion', secondary = relacion_item, 
+                            #backref = db.backref('item', lazy = 'dinamic'))
     
     
     def __repr__(self):
