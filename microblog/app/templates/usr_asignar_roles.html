@@ -1,31 +1,36 @@
 {% extends "base.html" %}
 {% block content %}
-<h1 align="center">Asignar un rol</h1>
-<form action="" method="post" name="asignar_rol">
-    <p>
-    {{form.hidden_tag()}}
-    {% if err %}
-	<div>{{error}}</div>
-	{% endif %}
-	</p>
-    <p align=center>
-        Id del usuario:<br>
-        {{form.id_usr(size=20)}}<br>
-        {% for error in form.errors.id_usr %}
-        <span style="color: red;">[{{error}}]</span>
-        {% endfor %}<br>
-    </p>
-    <p align=center>
-        Id del rol:<br>
-        {{form.id_rol(size=20)}}<br>
-        {% for error in form.errors.id_rol %}
-        <span style="color: red;">[{{error}}]</span>
-        {% endfor %}<br>
-    </p>
-    
-    <p align=center>
-    	<input type="submit" value="Asignar rol">
-    </p>
-</form>
-<p align=center><a href="/usuario"><button>Cancelar</button></a></p>
+<!-- Bloque donde se define la lista de usuarios sin rol -->
+<h2 align="center">Usuarios sin rol con id:{{idr}}</h2>
+<div class="row">
+	<div class="span20">
+		<form action="{{ url_for('asigUsrRol', idr=idr) }}" method="post" name="asignar_rol">
+			<table class="table table-striped">
+			    <tr>
+					<th>Check</th>
+					<th>ID</th>
+					<th>Nombre</th>
+					<th>Apellido</th>
+				</tr>
+			    {% for u in usr %}
+					<tr>
+						<td><input type="checkbox" id = "{{u.id}}" name = "listado"  value ="{{u.id}}"></td>
+						<td>{{u.id}}</td>
+				        <td>{{u.nombre}}</td>
+				        <td>{{u.apellido}}</td>
+					</tr>
+				{% else %}
+		          	<tr>
+		          		<td>NO HAY REGISTROS</td>
+		          	</tr>
+	          	{% endfor %}
+        	</table>
+		    <p align=center>
+		    	<input type="submit" value="Guardar" class="btn btn-success"></input>
+		    </p>
+		</form>
+		<p align=center class="btn btn-success"><a href="/usuario"><button>Cancelar</button></a></p>
+	 </div>
+</div>
+
 {% endblock %}

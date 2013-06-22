@@ -5,23 +5,31 @@ Created on 02/05/2013
 '''
 
 from app.modelo import Rol
+from app.modelo import Fase
+from app.modelo import User2
 from app import db 
 from app.controlador.contPermiso import ControllerPermiso
-
 class ControllerRol():
     def regRol(self, **kwargsProy):
         rol = Rol()
+        fase = Fase()
         for k, v in kwargsProy.iteritems():
             if k == 'nombre':
                 rol.nombre = v
             if k == 'descripcion':
                 rol.descripcion = v
+            if k == 'idf':
+                rol.id_fase = int(v)
+                rol.id_proyecto = fase.query.get(v).id_proyecto
         return rol.add_rol()
     def traerRoles(self):
         return Rol.query.all()
     
     def getRolIdf(self, idf):
         return Rol.query.filter_by(id_fase = idf).all()
+    
+    def getIdfaseDeRol(self, idr):
+        return self.getRol(idr).id_fase
     
     def cargarPermisos(self):
         lista = []
@@ -146,6 +154,15 @@ class ControllerRol():
                 return error
             return 'Exito'
         return 'No existen el/los id(s) ingresados'
+    
+    def usrSinRolIdr(self, idr):
+        usuarios2 = []
+        usuarios = User2.query.all()
+        rol = self.getRol(idr)
+        for u in usuarios:
+            if not (rol in u.roles):
+                usuarios2.append(u)
+        return usuarios2
     
     def desasignarPermisos(self,id_rol,id_permiso):
         c_permiso = ControllerPermiso()

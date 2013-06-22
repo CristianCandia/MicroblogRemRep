@@ -10,3 +10,5 @@ from fase import Fase
 from rol import Rol
 from permiso import Permiso
 from item import Item, Relacion
+from comite import Comite
+from solicitud import Solicitud

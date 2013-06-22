@@ -22,10 +22,7 @@ c_per = ControllerPermiso()
 @login_required
 def rol_proyFase(id1=None, id2=None, opcion=None):
     if id1 != None:
-        print "entro en opcion 1"
         roles = c_rol.getRolIdf(id1)
-        for r in roles:
-            print r
     permisosXrol = None
     rol = None
     '''Este if es para recargar la pagina con todos los roles
@@ -55,19 +52,19 @@ def rol(idr = None):
     return render_template("indexRol.html", title='Administracion de Roles',roles=roles,form3=listarPermisos,
                            form=rol_CrearForm(),form2=buscar(),permisos=permisosXrol,permisos2=c_per.getPermisos(), rol=rol)
 
-@app.route('/rol/rol_crear', methods = ['GET', 'POST'])
+@app.route('/rol/rol_crear/<idf>', methods = ['GET', 'POST'])
 @login_required
-def crearRol():
+def crearRol(idf = None):
     form = rol_CrearForm()
     resp = None
     if form.validate_on_submit():
         resp = c_rol.regRol(nombre = form.nomRol.data,
-                            descripcion = form.descripcion.data)
+                            descripcion = form.descripcion.data, idf = idf)
     if resp == 'Exito':
         flash('Rol agregado correctamente')
     else:
         flash('Ocurrio un error: ' + str(resp))
-    return redirect(url_for('rol'))
+    return redirect(url_for('rol_proyFase', id1=idf, id2=idf, opcion = 1))
 
 @app.route('/rol_listar')
 @login_required
@@ -75,6 +72,27 @@ def rol_listar():
     rol = c_rol.traerRoles()  
     return render_template("rol_listar.html", title = 'Listado de roles', Rol = rol)
 
+
+@app.route('/rol/asignarRoles/<idr>/<idf>', methods = ['post', 'get'])
+@login_required 
+def asignarRoles(idr = None, idf = None):
+    usr = c_rol.usrSinRolIdr(idr)
+    return render_template("usr_asignar_roles.html",usr=usr,idr=idr)
+
+@app.route('/rol/asigUerRol/<idr>', methods = ['GET', 'POST'])
+@login_required 
+def asigUsrRol(idr = None):
+    if request.method == 'POST':
+        usr = request.form.getlist('listado')
+        if usr != None:
+            respuesta = c_usr.asignarRolAListaDeUsr(usr, idr)
+            print "se puede hacer algo"
+        else:
+            print "no se puede hacer nada por ahora"
+        if respuesta == 'Exito':
+            flash("Se ha asignado correctamente") 
+                  
+    return redirect(url_for('rol_proyFase',id1=c_rol.getIdfaseDeRol(idr),id2=0,opcion=1))
 
 @app.route('/rol/asignar_permisos2/<idr>/<idf>', methods = ['post', 'get'])
 @login_required 
@@ -110,8 +128,8 @@ def asignarPermisos2(idr=None, idf=None):
     return redirect(url_for('rol_proyFase',id1=idf,id2=idf,opcion=1))
 
 '''Vista para modificar rol'''
-@app.route('/rol/modificar/', methods = ['GET', 'POST'])
-def modificarRol():
+@app.route('/rol/modificar/<idf>', methods = ['GET', 'POST'])
+def modificarRol(idf = None):
     form2 = rol_CrearForm()
     resp = None
     if (form2.validate_on_submit()):
@@ -120,12 +138,11 @@ def modificarRol():
         rol.nombre = form2.nomRol.data
         rol.descripcion = form2.descripcion.data
         resp = c_rol.modRol(rol)
-        
     if(resp == 'Exito'):
         flash('Rol modificado con exito.')
     else:
         flash('Ocurrio un error: ' + str(resp))
-    return redirect(url_for('rol'))
+    return redirect(url_for('rol_proyFase',id1=idf,id2=idf,opcion = 1))
 
 @app.route('/rol/buscar', methods = ['GET', 'POST'])
 def buscarRol(idu = None):
@@ -135,8 +152,8 @@ def buscarRol(idu = None):
     return render_template("indexRol.html", title='Administracion de Roles',roles=roles,form=rol_CrearForm(),form2=buscar(),permisos=None)
 
 @app.route('/rol/eliminar/')
-@app.route('/rol/eliminar/<idr>')
-def eliminarRol(idr = None):
+@app.route('/rol/eliminar/<idr>/<idf>')
+def eliminarRol(idr=None, idf=None):
     if(idr):
         rol = c_rol.getRol(idr)
         if(rol):
@@ -147,5 +164,4 @@ def eliminarRol(idr = None):
                 flash('Ocurrio un error: '+str(resp))
         else:
             flash('Ocurrio un error durante la eliminacion.')
-    
-    return redirect(url_for('rol'))
+    return redirect(url_for('rol_proyFase',id1=idf,id2=idf,opcion = 1))
