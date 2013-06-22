@@ -38,6 +38,11 @@ class ControllerUsr():
     def getRoles(self,idu):
         return self.getUsr(idu).roles
     
+    def asignarRolAListaDeUsr(self,usr,idr):
+        for u in usr:
+            resp = self.asignarRoles(u, idr)
+        return resp
+    
     def asignarRoles(self,id_usr,id_rol):
         c_rol = ControllerRol()
         

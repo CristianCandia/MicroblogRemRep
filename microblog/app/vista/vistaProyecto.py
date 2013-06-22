@@ -5,12 +5,13 @@ Created on 25/04/2013
 '''
 
 from flask import render_template, flash, redirect, session, url_for, request, g
-from app.forms import proy_CrearForm, buscar
+from app.forms import proy_CrearForm, buscar, comite_CrearForm
 from flask.ext.login import login_user, logout_user, current_user, login_required
 from app import app, db, lm #models, oid
-from app.controlador import ControllerProy
+from app.controlador import ControllerProy, ControllerComite
 from app.modelo import Proyecto
 
+c_comite = ControllerComite()
 c_proy = ControllerProy()
 
 @app.route('/proyecto2')
@@ -94,7 +95,48 @@ def eliminarProy(id = None):
 @app.route('/proyecto/configurar/<idp>')
 def configurarProyecto(idp = None):
     nomProy = c_proy.getNombre(idp)
-    return render_template("proy_configurar.html", title = 'Configurar Proyecto', nomProy = nomProy, idp=idp)
+    return render_template("proy_configurar.html", title = 'Configurar Proyecto', nomProy = nomProy, idp=idp,resp=c_comite.hayComite(idp))
+
+
+@app.route('/proyecto/crear_comite/<idp>', methods = ['GET', 'POST'])
+def crearComite(idp = None):
+    resp = None
+    if request.method == 'POST':
+        print request.form['nomComite']
+        print request.form['u1']
+        resp = c_comite.regComite(nombre = request.form['nomComite'],
+                                  cant_miembros = int(request.form['u1']),
+                                  id_proyecto = idp)
+    if(resp == 'Exito'):
+        flash('Comite inicializado con exito.')
+    else:
+        flash('Ocurrio un error: ' + str(resp))
+    nomProy = c_proy.getNombre(idp)
+    return render_template("proy_configurar.html", title = 'Configurar Proyecto', nomProy = nomProy, idp=idp, form = comite_CrearForm())
+
+@app.route('/proyecto/asignarMiembros/<idp>', methods = ['post', 'get'])
+@login_required 
+def asignarMiembros(idp = None):
+    com = c_comite.getComiteXIdp(idp)
+    usr = c_comite.usrSinComiteIdc(com.id)
+    return render_template("comite_asig_usr.html",usr=usr,idp=idp,idc=com.id)
+
+@app.route('/proyecto/asigUsrComite/<idc>', methods = ['GET', 'POST'])
+@login_required 
+def asigUsrComite(idc = None):
+    proy = c_proy.getProy(c_comite.getComite(idc).id_proyecto)
+    if request.method == 'POST':
+        usr = request.form.getlist('listado')
+        print usr
+        if usr != None:
+            respuesta = c_comite.asignarComiteAListaDeUsr(usr, idc)
+            print "se puede hacer algo"
+        else:
+            print "no se puede hacer nada por ahora"
+        if respuesta == 'Exito':
+            flash("Se ha asignado correctamente") 
+    return render_template("proy_configurar.html", title = 'Configurar Proyecto', nomProy = proy.nombre, idp=proy.id,resp=1)
+
 
 @app.route('/proyecto/buscar', methods = ['GET', 'POST'])
 def buscarProyecto():

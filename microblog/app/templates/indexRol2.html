@@ -16,7 +16,7 @@
 	}
 	function modificar(id, nombre, descripcion){
 		/*función para modificar los datos del proyecto**/
-		$("#formulario-carga").attr('action','{{ url_for('modificarRol') }}');
+		$("#formulario-carga").attr('action','{{ url_for('modificarRol', idf = idf) }}');
 		$("#formulario-carga").append('<input type="hidden" value='+id+' name="idRol">');
 		/*Se rellenan los campos**/
 		$("#idRol").val(id);
@@ -26,7 +26,7 @@
 	
 	function eliminar(idr){
 		/*Eliminar fase**/
-		$("#botonesER").empty().append("<a href=\"/rol/eliminar/" + idr + "\" class=\"btn btn-danger\">Si</a>"
+		$("#botonesER").empty().append("<a href=\"/rol/eliminar/" + idr + "/{{idf}}\" class=\"btn btn-danger\">Si</a>"
 										+"<a data-dismiss=\"modal\" class=\"btn btn-secondary\">No</a>");
 		$("#modalER").modal("show")
 	}
@@ -63,8 +63,9 @@
 		            <td>{{r.descripcion}}</td>
 		            <td><a class="btn btn-danger" data-toggle="modal" onclick="eliminar('{{ r.id }}')" >Eliminar</a></td>
 		            <td><a class="btn" data-toggle="modal" onclick="modificar('{{ r.id }}', '{{r.nombre}}' ,'{{r.descripcion}}');mostrarModal();" >Modificar</a></td>
-		            <td><a class="btn btn-info" href = "{{url_for('rol',idr = r.id)}}">Asignar/Desasignar Permisos</a></td>
-	          	</tr>
+		            <td><a class="btn btn-info" href = "{{ url_for('rol_proyFase', id1=idf, id2=r.id, opcion = 2) }}">Asignar/Desasignar Permisos</a></td>
+		            <td><a class="btn btn-info" href = "{{url_for('asignarRoles', idr=r.id, idf=idf)}}" >Asignar Roles</a></td>
+		        </tr>
           	{% else %}
 	          	<tr>
 	          		<td>NO HAY REGISTROS</td>
@@ -75,7 +76,7 @@
 </div>
 
 <p align="center">
-	<a class="btn btn-success btn-large" data-toggle="modal" onclick="$('#formulario-carga')[0].reset();$('#formulario-carga').attr('action','{{ url_for('crearRol') }}');mostrarModal();"> Agregar Nuevo Rol</a>
+	<a class="btn btn-success btn-large" data-toggle="modal" onclick="$('#formulario-carga')[0].reset();$('#formulario-carga').attr('action','{{ url_for('crearRol',idf=idf) }}');mostrarModal();"> Agregar Nuevo Rol</a>
 </p> 
 
 <!-- Modal para añadir o modificar un rol -->
@@ -84,7 +85,7 @@
 		<a class="close" data-dismiss="modal">&times;</a>
 		<h3>Fase</h3>
 	</div>
-	<form action="{{ url_for('crearRol') }}" method="post" class="form-horizontal" id="formulario-carga">
+	<form action="{{ url_for('crearRol', idf=idf) }}" method="post" class="form-horizontal" id="formulario-carga">
 		<div class="modal-body" >
 			<center>
 				<fieldset>
@@ -127,7 +128,7 @@
 		<a class="close" data-dismiss="modal">&times;</a>
 		<h3>Permisos</h3>
 	</div>
-	<form action="{{url_for('asignarPermisos2', idr=rol.id)}}" method="post" class="form-horizontal" id="formulario-carga2">
+	<form action="{{url_for('asignarPermisos2', idr=rol.id, idf=idf)}}" method="post" class="form-horizontal" id="formulario-carga2">
 		<div class="modal-body" >
 			<left>
 				{{ form.hidden_tag() }}

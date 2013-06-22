@@ -4,7 +4,7 @@
 <h2 align="center">Usuarios sin rol con id:{{idr}}</h2>
 <div class="row">
 	<div class="span20">
-		<form action="{{ url_for('asigUsrRol', idr=idr) }}" method="post" name="asignar_rol">
+		<form action="{{ url_for('asigUsrComite', idc=idc) }}" method="post" name="asignar_user">
 			<table class="table table-striped">
 			    <tr>
 					<th>Check</th>
@@ -29,8 +29,11 @@
 		    	<input type="submit" value="Guardar" class="btn btn-success"></input>
 		    </p>
 		</form>
-		<p align=center class="btn btn-success"><a href="/usuario"><button>Cancelar</button></a></p>
+		
 	 </div>
 </div>
+<p align="center">
+	<a class="btn btn-success btn-large" data-toggle="modal">Cancelar</a>
+</p> 
 
 {% endblock %}

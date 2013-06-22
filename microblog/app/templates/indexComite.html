@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<script type="text/javascript">
+	function ocultarModal() {
+		$("#modalCF").hide();
+		$("#formulario-carga")[0].reset();
+	}
+	
+	function modificar(id, nombre, posicion, descripcion, cantidadItems, cantidadLB, estado, idProy){
+		/*función para modificar los datos del proyecto**/
+		$("#formulario-carga").attr('action','{{ url_for('modificarFase') }}');
+		$("#formulario-carga").append('<input type="hidden" value='+id+' name="idFase">');
+		$("#formulario-carga").append('<input type="hidden" value='+idProy+' name="idProy">');
+		/*Se rellenan los campos**/
+		$("#idFase").val(id);
+		$("#nomFase").val(nombre);
+		$("#posicion").val(posicion);
+		$("#descripcion").val(descripcion);
+		$("#cantidadItems").val(cantidadItems);
+		$("#cantidadLB").val(cantidadLB);
+		$("#estado").val(estado);
+		$("#idProy").val(idProy);
+	}
+	
+	function eliminar(idf, idp){
+		/*Eliminar fase**/
+		$("#botonesEF").empty().append("<a href=\"/fase/eliminar/" + idf + "," +idp+ "\" class=\"btn btn-danger\">Si</a>"
+										+"<a data-dismiss=\"modal\" class=\"btn btn-secondary\">No</a>");
+		$("#modalEF").modal("show")
+	}
+	
+	function mostrarModal(){
+		$('#modalCF').modal('show');
+	}
+</script>
+{% endblock %}

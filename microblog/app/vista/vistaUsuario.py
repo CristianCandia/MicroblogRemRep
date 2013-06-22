@@ -67,17 +67,14 @@ def modificarUsuario():
 def eliminarUsuario(id=None):
     if(id):
         usuario = c_usr.getUsr(id)
-        
         if(usuario):
             resp = c_usr.eliminarUsr(usuario)
-            
             if(resp == 'Exito'):
                 flash('Usuario eliminado.')
             else:
                 flash('Ocurrio un error: '+str(resp))
         else:
             flash('Ocurrio un error durante la eliminacion.')
-    
     return redirect(url_for('usuario'))
 
 @app.route('/rec_pass', methods = ['GET', 'POST'])
@@ -98,19 +95,6 @@ def recuperarPass():
     
     return render_template('rec_pass.html',title = 'Recuperar Pass', form = form)
 @app.route('/usuario/usuario_asignar_roles' , methods=['GET', 'POST'])
-
-@login_required
-def asignarRoles():
-    form = asignar_Roles()
-    resp = None
-    if form.validate_on_submit():
-        resp = c_usr.asignarRoles(form.id_usr.data, form.id_rol.data)
-    if resp == 'Exito':
-        flash('Se ha hecho la asignacion')
-        redirect(url_for('usuario'))
-    if resp != None:
-        flash(resp)
-    return render_template("usr_asignar_roles.html",title = 'Asignar Roles', form = form)
 
 def busquedaPorNombre(nombre):
     ''' Devuelve un listado de los usuarios que coincidan con un nombre '''
@@ -143,10 +127,23 @@ def helloWorld():
 @app.route('/prueba2/',methods=['post','get'])
 #http://www.desarrolloweb.com/articulos/1448.php
 def helloWorld2():
+    print "entro en prueba2"
     form = listarPermisos()
     if form.validate_on_submit():
-        print form.uno.data
-        print form.uno1.data
+        print "entro en submit"
+        print form.u1.data
+        print form.u2.data
+        print form.u3.data
+        print form.u4.data
+        print form.u5.data
+        print form.u6.data
+        print form.u7.data
+        print form.u14.data
+        print form.u15.data
+        print form.u16.data
+        print form.u17.data
+        print form.u18.data
+        print form.u19.data
     else:
         print form.errors
     return render_template('example.html',form=form)
