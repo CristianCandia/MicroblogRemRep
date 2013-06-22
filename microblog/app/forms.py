@@ -113,6 +113,7 @@ class crear_mod_item(Form):
                                                (5,'Revision-Desbloq')])
     observaciones = TextAreaField('observaciones')
 
+class listarPermisos(Form):
     u1 = BooleanField()
     u2 = BooleanField()
     u3 = BooleanField()
