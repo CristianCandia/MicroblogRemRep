@@ -7,13 +7,9 @@ Sygma_System
 
 forms.py
 """
-<<<<<<< HEAD
-from flask.ext.wtf import Form, TextField, PasswordField, DateField, \
-                          IntegerField, BooleanField, SelectField, \
-                          TextAreaField
-=======
-from flask.ext.wtf import Form, TextField, PasswordField, DateField, IntegerField, BooleanField, RadioField
->>>>>>> branch 'master' of ssh://git@github.com/CristianCandia/MicroblogRemRep.git
+
+from flask.ext.wtf import Form, TextField, PasswordField, DateField, IntegerField, BooleanField, RadioField, SelectField, TextAreaField
+
 from flask.ext.wtf import Required, widgets, SelectMultipleField
 
 """:note: Clase de Formulario de Login"""
@@ -85,7 +81,7 @@ class SimpleForm(Form):
     example = MultiCheckboxField('Label', choices=files)
 
 class listarPermisos(Form):
-<<<<<<< HEAD
+
     uno = BooleanField('chkuno')
     uno1 = BooleanField('chkuno1')
     uno2 = BooleanField('chkuno2')
@@ -116,7 +112,7 @@ class crear_mod_item(Form):
                                                (3,'Bloqueado'),(4,'Revision-Bloq'),
                                                (5,'Revision-Desbloq')])
     observaciones = TextAreaField('observaciones')
-=======
+
     u1 = BooleanField()
     u2 = BooleanField()
     u3 = BooleanField()
@@ -145,4 +141,4 @@ class crear_mod_item(Form):
 class comite_CrearForm(Form):
     nomComite = TextField('nomComite', validators = [Required()])
     u1 = RadioField()
->>>>>>> branch 'master' of ssh://git@github.com/CristianCandia/MicroblogRemRep.git
+

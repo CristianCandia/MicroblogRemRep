@@ -11,14 +11,11 @@ from proyecto import Proyecto
 from fase import Fase
 from rol import Rol
 from permiso import Permiso
-<<<<<<< HEAD
 from item import *
 from atributo import *
 from historial import *
 from archivo import *
 from lineabase import *
-=======
-from item import Item, Relacion
 from comite import Comite
 from solicitud import Solicitud
->>>>>>> branch 'master' of ssh://git@github.com/CristianCandia/MicroblogRemRep.git
+
