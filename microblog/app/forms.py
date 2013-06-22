@@ -80,13 +80,6 @@ class SimpleForm(Form):
     files = [(x, x) for x in list_of_files]
     example = MultiCheckboxField('Label', choices=files)
 
-class listarPermisos(Form):
-
-    uno = BooleanField('chkuno')
-    uno1 = BooleanField('chkuno1')
-    uno2 = BooleanField('chkuno2')
-    uno3 = BooleanField('chkuno3')
-    
 class crear_mod_TI(Form):
     id_TI = IntegerField('id_TI')
     codigo = TextField('codigo')
