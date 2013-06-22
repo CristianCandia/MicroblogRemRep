@@ -31,10 +31,11 @@ def index():
             'author': { 'nickname': 'Susan' }, 
             'body': 'The Avengers movie was so cool!' 
         }
-    ]'''
+    ]
     return render_template("index.html",
         title = 'Home',
-        user = user)
+        user = user)'''
+    return redirect('admin')
 
 @app.route('/login', methods = ['GET', 'POST'])
 def login():

@@ -14,6 +14,20 @@ from sqlalchemy.types import String, Integer, Enum
 
 ROLE_USER = 0
 ROLE_ADMIN = 1
+
+
+Herencia_TipoItem = db.Table('herencia_TI',
+                             db.Column('id', db.Integer, primary_key = True),
+                             db.Column('padre', db.Integer, db.ForeignKey('tipo_item.id_TI')),
+                             db.Column('hijo', db.Integer, db.ForeignKey('tipo_item.id_TI')))
+"""
+    Entidad para realizar la herencia entre TIs
+"""
+
+###############################################################################
+###############################################################################
+###############################################################################
+
 class TipoItem(db.Model):
     """
         @note: Clase que representa a la Entidad Tipo de Item.
@@ -25,6 +39,8 @@ class TipoItem(db.Model):
     """
     
     codigo = db.Column(db.String(100))
+    
+    nombre_TI = db.Column(db.String(100))
     """
         Atributo que representa el codigo del tipo de item.
     """
@@ -42,13 +58,27 @@ class TipoItem(db.Model):
     
     fase_id = db.Column(None, db.ForeignKey("fase.id"), nullable=True)
     fase = db.relation('Fase', backref=db.backref('fase'))
+    
+    items = db.relation('Item', backref=db.backref('item'))
     """
         Atributos que relacionan la fase con el tipo de item.
     """
     
-def codigoTI(id_Proyecto, id_Fase, numeroItem):
-    cod = "SS" + str(id_Proyecto) + "_F" + str(id_Fase) + "_I" + str(numeroItem)
-    return cod
+    def __init__(self, codigo, nombre_TI, descripcion, proyecto_id, 
+                 fase_id):
+        """
+            Constructor de la clase TipoItem
+            @param codigo: codigo con el que le registra el sistema al TI
+            @param nombre_TI: nombre que le asigna el usuario
+            @param descripcion: descripcion del TI
+            @param proyecto_id: id del proyecto asociado
+            @param fase_id: id de la fase asociada
+        """
+        self.codigo = codigo
+        self.nombre_TI = nombre_TI
+        self.descripcion = descripcion
+        self.proyecto_id = proyecto_id
+        self.fase_id = fase_id
     
 ###############################################################################
 ###############################################################################

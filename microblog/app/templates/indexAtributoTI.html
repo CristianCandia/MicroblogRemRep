@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+{% block content %}
+<script type="text/javascript">
+function eliminar(idATI, idTI, idf, idp){
+	/*Eliminar Atributo de un TI**/
+	$("#botonesEATI").empty().append("<a href=\"/TI/atributo/eliminar/"+ idATI +","+ idTI + "," + idf + "," +idp+ "\" class=\"btn btn-danger\">Si</a>" +"<a data-dismiss=\"modal\" class=\"btn btn-secondary\">No</a>");
+	$("#modalEATI").modal("show")
+}
+
+function modificar(nombre, valorDefault){
+	$("#nombre").val(nombre);
+	$("#valorDefault").val(valorDefault);
+}
+
+function ocultarModal() {
+	$("#modalCATI").hide();
+	$("#formulario-carga")[0].reset();
+}
+
+function mostrarModal(){
+	$("#modalCATI").modal("show");
+}
+</script>
+
+<!-- Bloque donde se define la lista de fases -->
+<h3>Proyecto: {{proyecto.nombre}}</h3>
+<h1 align="center">Administrar Atributos de Tipos de Item {{TI.nombre_TI}}</h1>
+<div class="row">
+	<div class="span20">
+		<h2>Listado Atributos de Tipos de Item</h2>
+		<table class="table table-striped">
+			<tr>
+				<th>ID</th>
+				<th>Nombre</th>
+	            <th>Tipo</th>
+	            <th>Valor_Defecto</th>
+	        </tr>
+			{% for f in atributos %}
+          	<tr>
+          		<td>{{f.id_Atrib_TI}}</td>
+          		<td>{{f.nombre}}</td>
+	            <td>{{f.tipo}}</td>
+	            <td>{{f.valorDefault}}</td>
+	            <td><a class="btn btn-danger" data-toggle="modal" onclick="eliminar('{{ f.id_Atrib_TI }}', '{{TI.id_TI}}', '{{fase.id}}', '{{proyecto.id}}')" >Eliminar</a></td>
+	            <td><a class="btn" data-toggle="modal" onclick="$('#formulario-carga').attr('action','{{ url_for('modificarAtributoTI', idATI=f.id_Atrib_TI, idTI=f.id_TI,idf=fase.id,idp=proyecto.id) }}');modificar('{{f.nombre}}', '{{f.valorDefault}}');mostrarModal();" >Modificar</a></td>
+	            <td><a class="btn btn-info" href = "">Configurar Fase</a></td>
+          	</tr>
+          {% else %}
+          	<tr>
+          		<td>NO HAY REGISTROS</td>
+          	</tr>
+          {% endfor %}
+		</table>
+	</div>
+</div>
+
+<p align="center">
+	<a class="btn btn-success btn-large" data-toggle="modal" onclick="$('#formulario-carga')[0].reset();$('#formulario-carga').attr('action','{{ url_for('crearAtributoTI', idTI=TI.id_TI,idf=fase.id,idp=proyecto.id) }}');mostrarModal();"> Agregar Nuevo Atributo</a>
+	<br>
+	<br>	
+	<a class="btn btn-medium btn-danger" href="{{ url_for('TI',idp = proyecto.id, idf = fase.id)}}">Atras</a>
+</p> 
+
+<!-- Modal para eliminar un atributo -->
+<div class="modal hide fade" id="modalEATI" style="display: none">
+	<div class="modal-header">
+		<a class="close" data-dismiss="modal">&times</a>
+		<h3>Eliminar Tipo de Item</h3>
+	</div>
+	<div class="modal-body">
+		<p>Aquí no hay marcha atrás, está</p>
+		<p>usted seguro que quiere eliminarlo?</p>
+	</div>
+	<div class="modal-footer" id="botonesEATI">
+		<!-- definido en el script -->
+	</div>
+</div>
+
+<!-- Modal para añadir o modificar un Tipo de Item -->
+<div class="modal hide fade" id="modalCATI" style="display:none">
+	<div class="modal-header">
+		<a class="close" data-dismiss="modal">&times;</a>
+		<h3>Atributo de Tipo de Item {{ TI.nombre_TI }}</h3>
+	</div>
+	<form action="{{ url_for('crearAtributoTI', idTI=TI.id_TI,idf=fase.id,idp=proyecto.id) }}" method="post" class="form-horizontal" id="formulario-carga">
+		<div class="modal-body" >
+			<center>
+				<fieldset>
+					{{form.hidden_tag()}}
+		   			{% if err %}
+					<div>{{error}}</div>
+					{% endif %}
+					<label >Nombre del Atributo:<sup>(*)</sup></label>
+					{{ form.nombre(size=64, type='text', placeholder='Nombre', id='nombre') }}
+					<label>Tipo:</label>
+					{{ form.tipo(placeholder='Automático', id='tipo') }}
+					<label>ValorDefautl:</label>
+					{{ form.valorDefault(size=120, placeholder='ValorDefault', id='valorDefault') }}
+					<br><br>
+					<label><sup>(*)Campos Obligatorios</sup></label>
+				</fieldset>
+			</center>
+		</div>
+		<div class="modal-footer">
+			<a class="btn" data-dismiss="modal" onclick="ocultarModal();">Cerrar</a>
+			<input type="submit" value="Guardar" class="btn btn-success"></input>
+		</div>
+	</form>
+</div>
+{% endblock %}

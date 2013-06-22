@@ -15,7 +15,7 @@ from app.modelo import Fase
 c_fase = ControllerFase()
 c_proy = ControllerProy()
 
-@app.route('/fase/')
+@app.route('/fase/') 
 @app.route('/fase/<idp>')
 @login_required
 def fase(idp = None):

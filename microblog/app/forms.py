@@ -7,7 +7,8 @@ Sygma_System
 
 forms.py
 """
-from flask.ext.wtf import Form, TextField, PasswordField, DateField, IntegerField, BooleanField
+from flask.ext.wtf import Form, TextField, PasswordField, DateField, \
+                          IntegerField, BooleanField, SelectField
 from flask.ext.wtf import Required, widgets, SelectMultipleField
 
 """:note: Clase de Formulario de Login"""
@@ -83,3 +84,17 @@ class listarPermisos(Form):
     uno1 = BooleanField('chkuno1')
     uno2 = BooleanField('chkuno2')
     uno3 = BooleanField('chkuno3')
+    
+class crear_mod_TI(Form):
+    id_TI = IntegerField('id_TI')
+    codigo = TextField('codigo')
+    nombre_TI = TextField('nombre_TI', validators = [Required()])
+    descripcion = TextField('descripcion')
+    
+class crear_mod_atributoTI(Form):
+    id = IntegerField('id')
+    nombre = TextField('nombre', validators = [Required()])
+    tipo = SelectField('tipo', choices = [('INT', 'Integer'), ('CHAR','Caracter'), 
+                                          ('DATE', 'Fecha')],validators = [Required()])
+    valorDefault = TextField('valorDefault', validators = [Required()])
+    

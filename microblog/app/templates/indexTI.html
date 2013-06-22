@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% block content %}
+<script type="text/javascript">
+	function eliminar(idTI, idf, idp){
+		/*Eliminar fase**/
+		$("#botonesETI").empty().append("<a href=\"/TI/eliminar/" + idTI + "," + idf + "," +idp+ "\" class=\"btn btn-danger\">Si</a>"
+										+"<a data-dismiss=\"modal\" class=\"btn btn-secondary\">No</a>");
+		$("#modalETI").modal("show")
+	}
+	
+	function modificarTI(id, nombre, codigo, despcripcion){
+		
+		$("#idTI").val(id);
+		$("#nombreTI").val(nombre);
+		$("#codigo").val(codigo);
+		$("#descripcion").val(descripcion);
+	}
+	
+	function ocultarModal() {
+		$("#modalCTI").hide();
+		$("#formulario-carga")[0].reset();
+	}
+	
+	function mostrarModal(){
+		$("#modalCTI").modal("show");
+	}
+</script>
+
+<h1 align="center">Administrar Tipos de Item</h1>
+<div class="row">
+	<div class="span20">
+		<h2>Listado de Tipos de Item </h2>
+		<table class="table table-striped">
+			<tr>
+				<th>ID</th>
+				<th>Nombre</th>
+	            <th>Código</th>
+	            <th>Descripción</th>
+	        </tr>
+			{% for f in TI %}
+          	<tr>
+          		<td>{{f.id_TI}}</td>
+          		<td>{{f.nombre_TI}}</td>
+	            <td>{{f.codigo}}</td>
+	            <td>{{f.descripcion}}</td>
+	            <td><a class="btn btn-danger" data-toggle="modal" onclick="eliminar('{{ f.id_TI }}','{{ f.fase_id }}','{{ f.proyecto_id }}')" >Eliminar</a></td>
+	            <td><a class="btn" data-toggle="modal" onclick="$('#formulario-carga').attr('action','{{ url_for('modificarTI',idTI=f.id_TI,idf=fase.id,idp=proyecto.id) }}');modificarTI('{{ f.id_TI }}', '{{f.nombre_TI}}' ,'{{f.codigo}}', '{{f.descripcion}}');mostrarModal();" >Modificar</a></td>
+	            <td><a class="btn btn-info" href = "{{url_for('atributoTI',idTI=f.id_TI,idp=proyecto.id,idf=fase.id)}}">Atributos</a></td>
+          	</tr>
+          {% else %}
+          	<tr>
+          		<td>NO HAY REGISTROS</td>
+          	</tr>
+          {% endfor %}
+		</table>
+	</div>
+</div>
+
+<p align="center">
+	<a class="btn btn-success btn-large" data-toggle="modal" onclick="$('#formulario-carga')[0].reset();$('#formulario-carga').attr('action','{{ url_for('crearTI',idf=fase.id,idp=proyecto.id) }}');mostrarModal();"> Agregar Nuevo Tipo de Item a la Fase {{fase.id}}</a>
+	<br>
+	<br>	
+	<a class="btn btn-medium btn-danger" href="{{ url_for('fase',idp = proyecto.id)}}">Atras</a>
+</p> 
+
+<!-- Modal para eliminar un usuario -->
+<div class="modal hide fade" id="modalETI" style="display: none">
+	<div class="modal-header">
+		<a class="close" data-dismiss="modal">&times</a>
+		<h3>Eliminar Tipo de Item</h3>
+	</div>
+	<div class="modal-body">
+		<p>Aquí no hay marcha atrás, está</p>
+		<p>usted seguro que quiere eliminarlo?</p>
+	</div>
+	<div class="modal-footer" id="botonesETI">
+		<!-- definido en el script -->
+	</div>
+</div>
+
+<!-- Modal para añadir o modificar un Tipo de Item -->
+<div class="modal hide fade" id="modalCTI" style="display:none">
+	<div class="modal-header">
+		<a class="close" data-dismiss="modal">&times;</a>
+		<h3>Tipo de Item</h3>
+	</div>
+	<form action="{{ url_for('crearTI',idf=fase.id,idp=proyecto.id) }}" method="post" class="form-horizontal" id="formulario-carga">
+		<div class="modal-body" >
+			<center>
+				<fieldset>
+					{{form.hidden_tag()}}
+		   			{% if err %}
+					<div>{{error}}</div>
+					{% endif %}
+					<label >Nombre del Tipo de Item:<sup>(*)</sup></label>
+					{{ form.nombre_TI(size=64, placeholder='Nombre', id='nombreTI') }}
+					<label>Codigo Asignado:</label>
+					{{ form.codigo(size=64, type='text', readonly='readonly', placeholder='Automático', id='codigo') }}
+					<label>Descripcion:</label>
+					{{ form.descripcion(size=120, placeholder='Descripcion', id='descripcion') }}
+					<br><br>
+					<label><sup>(*)Campos Obligatorios</sup></label>
+				</fieldset>
+			</center>
+		</div>
+		<div class="modal-footer">
+			<a class="btn" data-dismiss="modal" onclick="ocultarModal();">Cerrar</a>
+			<input type="submit" value="Guardar" class="btn btn-success"></input>
+		</div>
+	</form>
+</div>
+{% endblock %}

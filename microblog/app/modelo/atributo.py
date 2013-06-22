@@ -34,6 +34,20 @@ class AtributoPorTI(db.Model):
     valorDefault = Column(String(100))
     
     
+    
+    def __init__(self, idTI, nombre, tipo, valorDefault):
+        """
+            Constructor de la calse AtributoPorTI
+            @param idTI: Id del TI asociado
+            @param nombre: Nombre del Atributo
+            @param tipo: Tipo del Atributo
+            @param valorDefault: Valor por defecto del Atributo
+        """
+        self.id_TI = idTI
+        self.nombre = nombre
+        self.tipo = tipo
+        self.valorDefault = valorDefault
+    
 ###############################################################################
 ###############################################################################
 ###############################################################################

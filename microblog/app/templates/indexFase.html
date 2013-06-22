@@ -72,7 +72,7 @@
 	            <td>{{f.id_proyecto}}</td>
 	            <td><a class="btn btn-danger" data-toggle="modal" onclick="eliminar('{{ f.id }}','{{ f.id_proyecto }}')" >Eliminar</a></td>
 	            <td><a class="btn" data-toggle="modal" onclick="modificar('{{ f.id }}', '{{f.nombre}}' ,'{{f.posicion}}', '{{f.descripcion}}', '{{f.cantidadItems}}', '{{f.cantidadLB}}', '{{f.estado}}', '{{f.id_proyecto}}');mostrarModal();" >Modificar</a></td>
-	            <td><a class="btn btn-info" href = "">Configurar Fase</a></td>
+	            <td><a class="btn btn-info" href = "/TI/{{ Proy.id }},{{ f.id }}">Configurar Fase</a></td>
           	</tr>
           {% else %}
           	<tr>

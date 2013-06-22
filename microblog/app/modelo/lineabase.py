@@ -42,12 +42,12 @@ class ItemsPorLineaBase(db.Model):
     
     """
     
-    id_item = db.Column(db.Integer, db.ForeingKey('item.id_item'))
+    id_item = db.Column(db.Integer, db.ForeignKey('item.id_item'))
     """
     
     """
     
-    id_linea_base = db.Column(db.Integer, db.ForeingKey('linea_base.id'))
+    id_linea_base = db.Column(db.Integer, db.ForeignKey('linea_base.id'))
     """
     
     """

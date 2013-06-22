@@ -1,10 +1,10 @@
-'''
+"""
 @note: Clase que define la vista de Item
 @authors:
     - U{Cristian Candia<mailto:kandia88@gmail.com>}
     - U{Ruth Centurion<mailto:ruthiccr@gmail.com>}
     - U{Fernando Saucedo<mailto:carlifer.fernando@gmail.com>}
-'''
+"""
 from flask import render_template, flash, redirect, session, url_for, request, g
 from flask_login import login_required
 from app import app
