@@ -51,6 +51,7 @@ def proy_listar():
 
 '''Vista para modificar el proyecto'''
 @app.route('/proyecto/modificar/', methods = ['GET', 'POST'])
+@login_required
 def modificarProyecto():
     form2 = proy_CrearForm()
     resp = None
@@ -73,6 +74,7 @@ def modificarProyecto():
 
 @app.route('/proyecto/eliminar/')
 @app.route('/proyecto/eliminar/<id>')
+@login_required
 def eliminarProy(id = None):
     if(id):
         proyecto = c_proy.getProy(id)
@@ -93,12 +95,14 @@ def eliminarProy(id = None):
 '''Vista para configurar el proyecto'''
 @app.route('/proyecto/configurar/', methods = ['GET', 'POST'])
 @app.route('/proyecto/configurar/<idp>')
+@login_required
 def configurarProyecto(idp = None):
     nomProy = c_proy.getNombre(idp)
     return render_template("proy_configurar.html", title = 'Configurar Proyecto', nomProy = nomProy, idp=idp,resp=c_comite.hayComite(idp))
 
 
 @app.route('/proyecto/crear_comite/<idp>', methods = ['GET', 'POST'])
+@login_required
 def crearComite(idp = None):
     resp = None
     if request.method == 'POST':
@@ -139,6 +143,7 @@ def asigUsrComite(idc = None):
 
 
 @app.route('/proyecto/buscar', methods = ['GET', 'POST'])
+@login_required
 def buscarProyecto():
     ''' Devuelve una lista de proyectos que coincidan con el nombre proporcionado '''
     form2 = buscar()

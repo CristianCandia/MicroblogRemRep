@@ -33,6 +33,7 @@ def TI(idp = None, idf = None):
                            form = form)
 @app.route('/TI/crear/', methods = ['GET', 'POST'])
 @app.route('/TI/crear/<idf>,<idp>', methods = ['GET', 'POST'])
+@login_required
 def crearTI(idf = None, idp = None):
     """
         Vista para crear el Tipo de Item
@@ -66,6 +67,7 @@ def crearTI(idf = None, idp = None):
 
 @app.route('/TI/modificar/', methods = ['GET', 'POST'])
 @app.route('/TI/modificar/<idTI>,<idf>,<idp>', methods = ['GET', 'POST'])
+@login_required
 def modificarTI(idTI = None, idf = None, idp = None):
     """
         Vista que modifica un TipoItem.
@@ -88,6 +90,7 @@ def modificarTI(idTI = None, idf = None, idp = None):
 
 @app.route('/TI/eliminar/', methods = ['GET', 'POST'])
 @app.route('/TI/eliminar/<idTI>,<idf>,<idp>', methods = ['GET', 'POST'])
+@login_required
 def eliminarTI(idTI = None, idf = None, idp = None):
     """
         Vista correspondiente a la eliminacion de un Tipo de Item

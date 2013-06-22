@@ -53,6 +53,7 @@ def fase_listar():
 '''Vista para configurar el proyecto'''
 @app.route('/fase/configurar/', methods = ['GET', 'POST'])
 @app.route('/fase/configurar/<idp>/<idf>')
+@login_required
 def configurarFase(idp = None, idf = None):
     nomProy = c_proy.getNombre(idp)
     nomFase = c_fase.getNombre(idf)
@@ -61,6 +62,7 @@ def configurarFase(idp = None, idf = None):
 
 '''Vista para modificar fase'''
 @app.route('/fase/modificar/', methods = ['GET', 'POST'])
+@login_required
 def modificarFase():
     form2 = fase_CrearForm()
     resp = None
@@ -83,6 +85,7 @@ def modificarFase():
 
 @app.route('/fase/eliminar/')
 @app.route('/fase/eliminar/<idf>,<idp>')
+@login_required
 def eliminarFase(idf = None, idp = None):
     if(idf):
         fase = c_fase.getFase(idf)
@@ -99,6 +102,7 @@ def eliminarFase(idf = None, idp = None):
 
 @app.route('/fase/buscar', methods = ['GET', 'POST'])
 @app.route('/fase/buscar/<idp>',methods = ['GET', 'POST'])
+@login_required
 def buscarFase(idp = None):
     ''' Devuelve una lista de fases que coincidan con el nombre proporcionado '''
     form2 = buscar()

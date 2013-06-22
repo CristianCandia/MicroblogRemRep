@@ -1,0 +1,319 @@
+\contentsline {section}{Contents}{1}{section*.1}
+\contentsline {section}{\numberline {1}Module addAdmin}{9}{section.1}
+\contentsline {subsection}{\numberline {1.1}Variables}{9}{subsection.1.1}
+\contentsline {section}{\numberline {2}Module addPermisos}{10}{section.2}
+\contentsline {subsection}{\numberline {2.1}Variables}{10}{subsection.2.1}
+\contentsline {section}{\numberline {3}Package app}{12}{section.3}
+\contentsline {subsection}{\numberline {3.1}Modules}{12}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Variables}{13}{subsection.3.2}
+\contentsline {section}{\numberline {4}Package app.controlador}{14}{section.4}
+\contentsline {subsection}{\numberline {4.1}Modules}{14}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Variables}{14}{subsection.4.2}
+\contentsline {section}{\numberline {5}Module app.controlador.contArchivo}{15}{section.5}
+\contentsline {subsection}{\numberline {5.1}Variables}{15}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Class ControllerAtributo}{15}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Class ControllerAtributoTI}{15}{subsection.5.3}
+\contentsline {subsubsection}{\numberline {5.3.1}Methods}{15}{subsubsection.5.3.1}
+\contentsline {section}{\numberline {6}Module app.controlador.contComite}{17}{section.6}
+\contentsline {subsection}{\numberline {6.1}Variables}{17}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Class ControllerComite}{17}{subsection.6.2}
+\contentsline {subsubsection}{\numberline {6.2.1}Methods}{17}{subsubsection.6.2.1}
+\contentsline {section}{\numberline {7}Module app.controlador.contFase}{18}{section.7}
+\contentsline {subsection}{\numberline {7.1}Variables}{18}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Class ControllerFase}{18}{subsection.7.2}
+\contentsline {subsubsection}{\numberline {7.2.1}Methods}{18}{subsubsection.7.2.1}
+\contentsline {section}{\numberline {8}Module app.controlador.contItem}{19}{section.8}
+\contentsline {subsection}{\numberline {8.1}Variables}{19}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Class ControllerItem}{19}{subsection.8.2}
+\contentsline {subsubsection}{\numberline {8.2.1}Methods}{19}{subsubsection.8.2.1}
+\contentsline {subsection}{\numberline {8.3}Class ControllerTI}{19}{subsection.8.3}
+\contentsline {subsubsection}{\numberline {8.3.1}Methods}{20}{subsubsection.8.3.1}
+\contentsline {section}{\numberline {9}Module app.controlador.contPermiso}{22}{section.9}
+\contentsline {subsection}{\numberline {9.1}Variables}{22}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}Class ControllerPermiso}{22}{subsection.9.2}
+\contentsline {subsubsection}{\numberline {9.2.1}Methods}{22}{subsubsection.9.2.1}
+\contentsline {section}{\numberline {10}Module app.controlador.contProy}{23}{section.10}
+\contentsline {subsection}{\numberline {10.1}Variables}{23}{subsection.10.1}
+\contentsline {subsection}{\numberline {10.2}Class ControllerProy}{23}{subsection.10.2}
+\contentsline {subsubsection}{\numberline {10.2.1}Methods}{23}{subsubsection.10.2.1}
+\contentsline {section}{\numberline {11}Module app.controlador.contRol}{24}{section.11}
+\contentsline {subsection}{\numberline {11.1}Variables}{24}{subsection.11.1}
+\contentsline {subsection}{\numberline {11.2}Class ControllerRol}{24}{subsection.11.2}
+\contentsline {subsubsection}{\numberline {11.2.1}Methods}{24}{subsubsection.11.2.1}
+\contentsline {section}{\numberline {12}Module app.controlador.contUsr}{26}{section.12}
+\contentsline {subsection}{\numberline {12.1}Variables}{26}{subsection.12.1}
+\contentsline {subsection}{\numberline {12.2}Class ControllerUsr}{26}{subsection.12.2}
+\contentsline {subsubsection}{\numberline {12.2.1}Methods}{26}{subsubsection.12.2.1}
+\contentsline {section}{\numberline {13}Module app.db\_downgrade}{27}{section.13}
+\contentsline {subsection}{\numberline {13.1}Variables}{27}{subsection.13.1}
+\contentsline {section}{\numberline {14}Module app.decorators}{28}{section.14}
+\contentsline {subsection}{\numberline {14.1}Functions}{28}{subsection.14.1}
+\contentsline {subsection}{\numberline {14.2}Variables}{28}{subsection.14.2}
+\contentsline {section}{\numberline {15}Module app.email}{29}{section.15}
+\contentsline {subsection}{\numberline {15.1}Functions}{29}{subsection.15.1}
+\contentsline {subsection}{\numberline {15.2}Variables}{29}{subsection.15.2}
+\contentsline {section}{\numberline {16}Module app.forms}{30}{section.16}
+\contentsline {subsection}{\numberline {16.1}Variables}{30}{subsection.16.1}
+\contentsline {subsection}{\numberline {16.2}Class LoginForm}{30}{subsection.16.2}
+\contentsline {subsubsection}{\numberline {16.2.1}Methods}{30}{subsubsection.16.2.1}
+\contentsline {subsubsection}{\numberline {16.2.2}Properties}{31}{subsubsection.16.2.2}
+\contentsline {subsubsection}{\numberline {16.2.3}Class Variables}{31}{subsubsection.16.2.3}
+\contentsline {subsection}{\numberline {16.3}Class rec\_passForm}{32}{subsection.16.3}
+\contentsline {subsubsection}{\numberline {16.3.1}Methods}{32}{subsubsection.16.3.1}
+\contentsline {subsubsection}{\numberline {16.3.2}Properties}{32}{subsubsection.16.3.2}
+\contentsline {subsubsection}{\numberline {16.3.3}Class Variables}{33}{subsubsection.16.3.3}
+\contentsline {subsection}{\numberline {16.4}Class usr\_CrearForm}{33}{subsection.16.4}
+\contentsline {subsubsection}{\numberline {16.4.1}Methods}{33}{subsubsection.16.4.1}
+\contentsline {subsubsection}{\numberline {16.4.2}Properties}{34}{subsubsection.16.4.2}
+\contentsline {subsubsection}{\numberline {16.4.3}Class Variables}{34}{subsubsection.16.4.3}
+\contentsline {subsection}{\numberline {16.5}Class proy\_CrearForm}{35}{subsection.16.5}
+\contentsline {subsubsection}{\numberline {16.5.1}Methods}{35}{subsubsection.16.5.1}
+\contentsline {subsubsection}{\numberline {16.5.2}Properties}{35}{subsubsection.16.5.2}
+\contentsline {subsubsection}{\numberline {16.5.3}Class Variables}{36}{subsubsection.16.5.3}
+\contentsline {subsection}{\numberline {16.6}Class fase\_CrearForm}{37}{subsection.16.6}
+\contentsline {subsubsection}{\numberline {16.6.1}Methods}{37}{subsubsection.16.6.1}
+\contentsline {subsubsection}{\numberline {16.6.2}Properties}{37}{subsubsection.16.6.2}
+\contentsline {subsubsection}{\numberline {16.6.3}Class Variables}{38}{subsubsection.16.6.3}
+\contentsline {subsection}{\numberline {16.7}Class rol\_CrearForm}{39}{subsection.16.7}
+\contentsline {subsubsection}{\numberline {16.7.1}Methods}{39}{subsubsection.16.7.1}
+\contentsline {subsubsection}{\numberline {16.7.2}Properties}{39}{subsubsection.16.7.2}
+\contentsline {subsubsection}{\numberline {16.7.3}Class Variables}{40}{subsubsection.16.7.3}
+\contentsline {subsection}{\numberline {16.8}Class permiso\_CrearForm}{40}{subsection.16.8}
+\contentsline {subsubsection}{\numberline {16.8.1}Methods}{41}{subsubsection.16.8.1}
+\contentsline {subsubsection}{\numberline {16.8.2}Properties}{41}{subsubsection.16.8.2}
+\contentsline {subsubsection}{\numberline {16.8.3}Class Variables}{41}{subsubsection.16.8.3}
+\contentsline {subsection}{\numberline {16.9}Class asignar\_Permisos}{42}{subsection.16.9}
+\contentsline {subsubsection}{\numberline {16.9.1}Methods}{42}{subsubsection.16.9.1}
+\contentsline {subsubsection}{\numberline {16.9.2}Properties}{42}{subsubsection.16.9.2}
+\contentsline {subsubsection}{\numberline {16.9.3}Class Variables}{43}{subsubsection.16.9.3}
+\contentsline {subsection}{\numberline {16.10}Class asignar\_Roles}{43}{subsection.16.10}
+\contentsline {subsubsection}{\numberline {16.10.1}Methods}{43}{subsubsection.16.10.1}
+\contentsline {subsubsection}{\numberline {16.10.2}Properties}{44}{subsubsection.16.10.2}
+\contentsline {subsubsection}{\numberline {16.10.3}Class Variables}{44}{subsubsection.16.10.3}
+\contentsline {subsection}{\numberline {16.11}Class buscar}{45}{subsection.16.11}
+\contentsline {subsubsection}{\numberline {16.11.1}Methods}{45}{subsubsection.16.11.1}
+\contentsline {subsubsection}{\numberline {16.11.2}Properties}{45}{subsubsection.16.11.2}
+\contentsline {subsubsection}{\numberline {16.11.3}Class Variables}{46}{subsubsection.16.11.3}
+\contentsline {subsection}{\numberline {16.12}Class MultiCheckboxField}{46}{subsection.16.12}
+\contentsline {subsubsection}{\numberline {16.12.1}Methods}{46}{subsubsection.16.12.1}
+\contentsline {subsubsection}{\numberline {16.12.2}Properties}{47}{subsubsection.16.12.2}
+\contentsline {subsubsection}{\numberline {16.12.3}Class Variables}{47}{subsubsection.16.12.3}
+\contentsline {subsection}{\numberline {16.13}Class SimpleForm}{47}{subsection.16.13}
+\contentsline {subsubsection}{\numberline {16.13.1}Methods}{48}{subsubsection.16.13.1}
+\contentsline {subsubsection}{\numberline {16.13.2}Properties}{48}{subsubsection.16.13.2}
+\contentsline {subsubsection}{\numberline {16.13.3}Class Variables}{48}{subsubsection.16.13.3}
+\contentsline {subsection}{\numberline {16.14}Class crear\_mod\_TI}{49}{subsection.16.14}
+\contentsline {subsubsection}{\numberline {16.14.1}Methods}{49}{subsubsection.16.14.1}
+\contentsline {subsubsection}{\numberline {16.14.2}Properties}{49}{subsubsection.16.14.2}
+\contentsline {subsubsection}{\numberline {16.14.3}Class Variables}{50}{subsubsection.16.14.3}
+\contentsline {subsection}{\numberline {16.15}Class crear\_mod\_atributoTI}{50}{subsection.16.15}
+\contentsline {subsubsection}{\numberline {16.15.1}Methods}{51}{subsubsection.16.15.1}
+\contentsline {subsubsection}{\numberline {16.15.2}Properties}{51}{subsubsection.16.15.2}
+\contentsline {subsubsection}{\numberline {16.15.3}Class Variables}{51}{subsubsection.16.15.3}
+\contentsline {subsection}{\numberline {16.16}Class crear\_mod\_item}{52}{subsection.16.16}
+\contentsline {subsubsection}{\numberline {16.16.1}Methods}{52}{subsubsection.16.16.1}
+\contentsline {subsubsection}{\numberline {16.16.2}Properties}{52}{subsubsection.16.16.2}
+\contentsline {subsubsection}{\numberline {16.16.3}Class Variables}{53}{subsubsection.16.16.3}
+\contentsline {subsection}{\numberline {16.17}Class listarPermisos}{54}{subsection.16.17}
+\contentsline {subsubsection}{\numberline {16.17.1}Methods}{54}{subsubsection.16.17.1}
+\contentsline {subsubsection}{\numberline {16.17.2}Properties}{54}{subsubsection.16.17.2}
+\contentsline {subsubsection}{\numberline {16.17.3}Class Variables}{55}{subsubsection.16.17.3}
+\contentsline {subsection}{\numberline {16.18}Class comite\_CrearForm}{56}{subsection.16.18}
+\contentsline {subsubsection}{\numberline {16.18.1}Methods}{56}{subsubsection.16.18.1}
+\contentsline {subsubsection}{\numberline {16.18.2}Properties}{57}{subsubsection.16.18.2}
+\contentsline {subsubsection}{\numberline {16.18.3}Class Variables}{57}{subsubsection.16.18.3}
+\contentsline {section}{\numberline {17}Package app.modelo}{58}{section.17}
+\contentsline {subsection}{\numberline {17.1}Modules}{58}{subsection.17.1}
+\contentsline {subsection}{\numberline {17.2}Variables}{58}{subsection.17.2}
+\contentsline {section}{\numberline {18}Module app.modelo.archivo}{60}{section.18}
+\contentsline {subsection}{\numberline {18.1}Variables}{60}{subsection.18.1}
+\contentsline {subsection}{\numberline {18.2}Class Archivo}{60}{subsection.18.2}
+\contentsline {subsubsection}{\numberline {18.2.1}Methods}{61}{subsubsection.18.2.1}
+\contentsline {subsubsection}{\numberline {18.2.2}Properties}{61}{subsubsection.18.2.2}
+\contentsline {subsubsection}{\numberline {18.2.3}Class Variables}{61}{subsubsection.18.2.3}
+\contentsline {section}{\numberline {19}Module app.modelo.atributo}{63}{section.19}
+\contentsline {subsection}{\numberline {19.1}Variables}{63}{subsection.19.1}
+\contentsline {subsection}{\numberline {19.2}Class AtributoPorTI}{63}{subsection.19.2}
+\contentsline {subsubsection}{\numberline {19.2.1}Methods}{64}{subsubsection.19.2.1}
+\contentsline {subsubsection}{\numberline {19.2.2}Properties}{64}{subsubsection.19.2.2}
+\contentsline {subsubsection}{\numberline {19.2.3}Class Variables}{64}{subsubsection.19.2.3}
+\contentsline {subsection}{\numberline {19.3}Class AtributoPorItem}{65}{subsection.19.3}
+\contentsline {subsubsection}{\numberline {19.3.1}Methods}{65}{subsubsection.19.3.1}
+\contentsline {subsubsection}{\numberline {19.3.2}Properties}{65}{subsubsection.19.3.2}
+\contentsline {subsubsection}{\numberline {19.3.3}Class Variables}{65}{subsubsection.19.3.3}
+\contentsline {section}{\numberline {20}Module app.modelo.comite}{67}{section.20}
+\contentsline {subsection}{\numberline {20.1}Variables}{67}{subsection.20.1}
+\contentsline {subsection}{\numberline {20.2}Class Comite}{67}{subsection.20.2}
+\contentsline {subsubsection}{\numberline {20.2.1}Methods}{67}{subsubsection.20.2.1}
+\contentsline {subsubsection}{\numberline {20.2.2}Properties}{68}{subsubsection.20.2.2}
+\contentsline {subsubsection}{\numberline {20.2.3}Class Variables}{68}{subsubsection.20.2.3}
+\contentsline {section}{\numberline {21}Module app.modelo.fase}{70}{section.21}
+\contentsline {subsection}{\numberline {21.1}Variables}{70}{subsection.21.1}
+\contentsline {subsection}{\numberline {21.2}Class Fase}{70}{subsection.21.2}
+\contentsline {subsubsection}{\numberline {21.2.1}Methods}{70}{subsubsection.21.2.1}
+\contentsline {subsubsection}{\numberline {21.2.2}Properties}{71}{subsubsection.21.2.2}
+\contentsline {subsubsection}{\numberline {21.2.3}Class Variables}{71}{subsubsection.21.2.3}
+\contentsline {section}{\numberline {22}Module app.modelo.historial}{73}{section.22}
+\contentsline {subsection}{\numberline {22.1}Variables}{73}{subsection.22.1}
+\contentsline {subsection}{\numberline {22.2}Class HistorialItem}{73}{subsection.22.2}
+\contentsline {subsubsection}{\numberline {22.2.1}Methods}{74}{subsubsection.22.2.1}
+\contentsline {subsubsection}{\numberline {22.2.2}Properties}{74}{subsubsection.22.2.2}
+\contentsline {subsubsection}{\numberline {22.2.3}Class Variables}{74}{subsubsection.22.2.3}
+\contentsline {subsection}{\numberline {22.3}Class HistorialLineaBase}{75}{subsection.22.3}
+\contentsline {subsubsection}{\numberline {22.3.1}Methods}{75}{subsubsection.22.3.1}
+\contentsline {subsubsection}{\numberline {22.3.2}Properties}{75}{subsubsection.22.3.2}
+\contentsline {subsubsection}{\numberline {22.3.3}Class Variables}{76}{subsubsection.22.3.3}
+\contentsline {section}{\numberline {23}Module app.modelo.item}{77}{section.23}
+\contentsline {subsection}{\numberline {23.1}Variables}{77}{subsection.23.1}
+\contentsline {subsection}{\numberline {23.2}Class TipoItem}{77}{subsection.23.2}
+\contentsline {subsubsection}{\numberline {23.2.1}Methods}{78}{subsubsection.23.2.1}
+\contentsline {subsubsection}{\numberline {23.2.2}Properties}{78}{subsubsection.23.2.2}
+\contentsline {subsubsection}{\numberline {23.2.3}Class Variables}{78}{subsubsection.23.2.3}
+\contentsline {subsection}{\numberline {23.3}Class Item}{79}{subsection.23.3}
+\contentsline {subsubsection}{\numberline {23.3.1}Methods}{80}{subsubsection.23.3.1}
+\contentsline {subsubsection}{\numberline {23.3.2}Properties}{80}{subsubsection.23.3.2}
+\contentsline {subsubsection}{\numberline {23.3.3}Class Variables}{80}{subsubsection.23.3.3}
+\contentsline {section}{\numberline {24}Module app.modelo.lineabase}{83}{section.24}
+\contentsline {subsection}{\numberline {24.1}Variables}{83}{subsection.24.1}
+\contentsline {subsection}{\numberline {24.2}Class LineaBase}{83}{subsection.24.2}
+\contentsline {subsubsection}{\numberline {24.2.1}Methods}{84}{subsubsection.24.2.1}
+\contentsline {subsubsection}{\numberline {24.2.2}Properties}{84}{subsubsection.24.2.2}
+\contentsline {subsubsection}{\numberline {24.2.3}Class Variables}{84}{subsubsection.24.2.3}
+\contentsline {subsection}{\numberline {24.3}Class ItemsPorLineaBase}{85}{subsection.24.3}
+\contentsline {subsubsection}{\numberline {24.3.1}Methods}{85}{subsubsection.24.3.1}
+\contentsline {subsubsection}{\numberline {24.3.2}Properties}{86}{subsubsection.24.3.2}
+\contentsline {subsubsection}{\numberline {24.3.3}Class Variables}{86}{subsubsection.24.3.3}
+\contentsline {section}{\numberline {25}Module app.modelo.permiso}{87}{section.25}
+\contentsline {subsection}{\numberline {25.1}Variables}{87}{subsection.25.1}
+\contentsline {subsection}{\numberline {25.2}Class Permiso}{87}{subsection.25.2}
+\contentsline {subsubsection}{\numberline {25.2.1}Methods}{87}{subsubsection.25.2.1}
+\contentsline {subsubsection}{\numberline {25.2.2}Properties}{88}{subsubsection.25.2.2}
+\contentsline {subsubsection}{\numberline {25.2.3}Class Variables}{88}{subsubsection.25.2.3}
+\contentsline {section}{\numberline {26}Module app.modelo.proyecto}{90}{section.26}
+\contentsline {subsection}{\numberline {26.1}Variables}{90}{subsection.26.1}
+\contentsline {subsection}{\numberline {26.2}Class Proyecto}{90}{subsection.26.2}
+\contentsline {subsubsection}{\numberline {26.2.1}Methods}{90}{subsubsection.26.2.1}
+\contentsline {subsubsection}{\numberline {26.2.2}Properties}{91}{subsubsection.26.2.2}
+\contentsline {subsubsection}{\numberline {26.2.3}Class Variables}{91}{subsubsection.26.2.3}
+\contentsline {section}{\numberline {27}Module app.modelo.rol}{93}{section.27}
+\contentsline {subsection}{\numberline {27.1}Variables}{93}{subsection.27.1}
+\contentsline {subsection}{\numberline {27.2}Class Rol}{93}{subsection.27.2}
+\contentsline {subsubsection}{\numberline {27.2.1}Methods}{93}{subsubsection.27.2.1}
+\contentsline {subsubsection}{\numberline {27.2.2}Properties}{94}{subsubsection.27.2.2}
+\contentsline {subsubsection}{\numberline {27.2.3}Class Variables}{94}{subsubsection.27.2.3}
+\contentsline {section}{\numberline {28}Module app.modelo.solicitud}{96}{section.28}
+\contentsline {subsection}{\numberline {28.1}Variables}{96}{subsection.28.1}
+\contentsline {subsection}{\numberline {28.2}Class Solicitud}{96}{subsection.28.2}
+\contentsline {subsubsection}{\numberline {28.2.1}Methods}{96}{subsubsection.28.2.1}
+\contentsline {subsubsection}{\numberline {28.2.2}Properties}{97}{subsubsection.28.2.2}
+\contentsline {subsubsection}{\numberline {28.2.3}Class Variables}{97}{subsubsection.28.2.3}
+\contentsline {section}{\numberline {29}Module app.modelo.usuario}{99}{section.29}
+\contentsline {subsection}{\numberline {29.1}Variables}{99}{subsection.29.1}
+\contentsline {subsection}{\numberline {29.2}Class User2}{99}{subsection.29.2}
+\contentsline {subsubsection}{\numberline {29.2.1}Methods}{99}{subsubsection.29.2.1}
+\contentsline {subsubsection}{\numberline {29.2.2}Properties}{100}{subsubsection.29.2.2}
+\contentsline {subsubsection}{\numberline {29.2.3}Class Variables}{100}{subsubsection.29.2.3}
+\contentsline {section}{\numberline {30}Module app.modelo.voto}{102}{section.30}
+\contentsline {subsection}{\numberline {30.1}Variables}{102}{subsection.30.1}
+\contentsline {subsection}{\numberline {30.2}Class Voto}{102}{subsection.30.2}
+\contentsline {subsubsection}{\numberline {30.2.1}Methods}{102}{subsubsection.30.2.1}
+\contentsline {subsubsection}{\numberline {30.2.2}Properties}{103}{subsubsection.30.2.2}
+\contentsline {subsubsection}{\numberline {30.2.3}Class Variables}{103}{subsubsection.30.2.3}
+\contentsline {section}{\numberline {31}Module app.models}{104}{section.31}
+\contentsline {subsection}{\numberline {31.1}Variables}{104}{subsection.31.1}
+\contentsline {section}{\numberline {32}Package app.static}{105}{section.32}
+\contentsline {subsection}{\numberline {32.1}Variables}{105}{subsection.32.1}
+\contentsline {section}{\numberline {33}Package app.test}{106}{section.33}
+\contentsline {subsection}{\numberline {33.1}Modules}{106}{subsection.33.1}
+\contentsline {subsection}{\numberline {33.2}Variables}{106}{subsection.33.2}
+\contentsline {section}{\numberline {34}Module app.test.testVarios2}{107}{section.34}
+\contentsline {subsection}{\numberline {34.1}Variables}{107}{subsection.34.1}
+\contentsline {subsection}{\numberline {34.2}Class TestUser2}{107}{subsection.34.2}
+\contentsline {subsubsection}{\numberline {34.2.1}Methods}{107}{subsubsection.34.2.1}
+\contentsline {section}{\numberline {35}Module app.testVarios}{108}{section.35}
+\contentsline {subsection}{\numberline {35.1}Variables}{108}{subsection.35.1}
+\contentsline {subsection}{\numberline {35.2}Class TestUser2}{108}{subsection.35.2}
+\contentsline {subsubsection}{\numberline {35.2.1}Methods}{108}{subsubsection.35.2.1}
+\contentsline {subsubsection}{\numberline {35.2.2}Properties}{109}{subsubsection.35.2.2}
+\contentsline {subsubsection}{\numberline {35.2.3}Class Variables}{109}{subsubsection.35.2.3}
+\contentsline {section}{\numberline {36}Module app.views}{110}{section.36}
+\contentsline {subsection}{\numberline {36.1}Functions}{110}{subsection.36.1}
+\contentsline {subsection}{\numberline {36.2}Variables}{110}{subsection.36.2}
+\contentsline {section}{\numberline {37}Package app.vista}{112}{section.37}
+\contentsline {subsection}{\numberline {37.1}Modules}{112}{subsection.37.1}
+\contentsline {subsection}{\numberline {37.2}Variables}{112}{subsection.37.2}
+\contentsline {section}{\numberline {38}Module app.vista.vistaAtributoTI}{114}{section.38}
+\contentsline {subsection}{\numberline {38.1}Functions}{114}{subsection.38.1}
+\contentsline {subsection}{\numberline {38.2}Variables}{114}{subsection.38.2}
+\contentsline {section}{\numberline {39}Module app.vista.vistaFase}{116}{section.39}
+\contentsline {subsection}{\numberline {39.1}Functions}{116}{subsection.39.1}
+\contentsline {subsection}{\numberline {39.2}Variables}{116}{subsection.39.2}
+\contentsline {section}{\numberline {40}Module app.vista.vistaItem}{117}{section.40}
+\contentsline {subsection}{\numberline {40.1}Functions}{117}{subsection.40.1}
+\contentsline {subsection}{\numberline {40.2}Variables}{117}{subsection.40.2}
+\contentsline {section}{\numberline {41}Module app.vista.vistaPermiso}{118}{section.41}
+\contentsline {subsection}{\numberline {41.1}Functions}{118}{subsection.41.1}
+\contentsline {subsection}{\numberline {41.2}Variables}{118}{subsection.41.2}
+\contentsline {section}{\numberline {42}Module app.vista.vistaProyecto}{119}{section.42}
+\contentsline {subsection}{\numberline {42.1}Functions}{119}{subsection.42.1}
+\contentsline {subsection}{\numberline {42.2}Variables}{119}{subsection.42.2}
+\contentsline {section}{\numberline {43}Module app.vista.vistaRol}{120}{section.43}
+\contentsline {subsection}{\numberline {43.1}Functions}{120}{subsection.43.1}
+\contentsline {subsection}{\numberline {43.2}Variables}{120}{subsection.43.2}
+\contentsline {section}{\numberline {44}Module app.vista.vistaTI}{121}{section.44}
+\contentsline {subsection}{\numberline {44.1}Functions}{121}{subsection.44.1}
+\contentsline {subsection}{\numberline {44.2}Variables}{121}{subsection.44.2}
+\contentsline {section}{\numberline {45}Module app.vista.vistaUsuario}{122}{section.45}
+\contentsline {subsection}{\numberline {45.1}Functions}{122}{subsection.45.1}
+\contentsline {subsection}{\numberline {45.2}Variables}{122}{subsection.45.2}
+\contentsline {section}{\numberline {46}Module asignarRol}{123}{section.46}
+\contentsline {subsection}{\numberline {46.1}Variables}{123}{subsection.46.1}
+\contentsline {section}{\numberline {47}Module config}{124}{section.47}
+\contentsline {subsection}{\numberline {47.1}Variables}{124}{subsection.47.1}
+\contentsline {section}{\numberline {48}Module db\_create}{125}{section.48}
+\contentsline {section}{\numberline {49}Module db\_migrate}{126}{section.49}
+\contentsline {subsection}{\numberline {49.1}Variables}{126}{subsection.49.1}
+\contentsline {section}{\numberline {50}Package db\_repository}{127}{section.50}
+\contentsline {subsection}{\numberline {50.1}Modules}{127}{subsection.50.1}
+\contentsline {subsection}{\numberline {50.2}Variables}{127}{subsection.50.2}
+\contentsline {section}{\numberline {51}Module db\_repository.manage}{128}{section.51}
+\contentsline {subsection}{\numberline {51.1}Variables}{128}{subsection.51.1}
+\contentsline {section}{\numberline {52}Package db\_repository.versions}{129}{section.52}
+\contentsline {subsection}{\numberline {52.1}Variables}{129}{subsection.52.1}
+\contentsline {section}{\numberline {53}Module db\_upgrade}{130}{section.53}
+\contentsline {subsection}{\numberline {53.1}Variables}{130}{subsection.53.1}
+\contentsline {section}{\numberline {54}Module deletePermisos}{131}{section.54}
+\contentsline {subsection}{\numberline {54.1}Variables}{131}{subsection.54.1}
+\contentsline {section}{\numberline {55}Module deleteRol}{132}{section.55}
+\contentsline {subsection}{\numberline {55.1}Variables}{132}{subsection.55.1}
+\contentsline {section}{\numberline {56}Module deleteUsr}{133}{section.56}
+\contentsline {subsection}{\numberline {56.1}Variables}{133}{subsection.56.1}
+\contentsline {section}{\numberline {57}Module run}{134}{section.57}
+\contentsline {section}{\numberline {58}Script script-microblog\_wsgi}{135}{section.58}
+\contentsline {subsection}{\numberline {58.1}Variables}{135}{subsection.58.1}
+\contentsline {section}{\numberline {59}Script script-microblog\_wsgi\_}{136}{section.59}
+\contentsline {section}{\numberline {60}Script script-microdoc\_txt}{137}{section.60}
+\contentsline {section}{\numberline {61}Script script-microdoc\_txt\_}{138}{section.61}
+\contentsline {section}{\numberline {62}Script script-ss\_wsgi\_}{139}{section.62}
+\contentsline {section}{\numberline {63}Module test}{140}{section.63}
+\contentsline {subsection}{\numberline {63.1}Variables}{140}{subsection.63.1}
+\contentsline {subsection}{\numberline {63.2}Class UsuarioTestCase}{140}{subsection.63.2}
+\contentsline {subsubsection}{\numberline {63.2.1}Methods}{140}{subsubsection.63.2.1}
+\contentsline {subsubsection}{\numberline {63.2.2}Properties}{141}{subsubsection.63.2.2}
+\contentsline {subsubsection}{\numberline {63.2.3}Class Variables}{141}{subsubsection.63.2.3}
+\contentsline {section}{\numberline {64}Module testVarios1}{142}{section.64}
+\contentsline {subsection}{\numberline {64.1}Variables}{142}{subsection.64.1}
+\contentsline {subsection}{\numberline {64.2}Class TestUser2}{142}{subsection.64.2}
+\contentsline {subsubsection}{\numberline {64.2.1}Methods}{142}{subsubsection.64.2.1}
+\contentsline {subsubsection}{\numberline {64.2.2}Properties}{143}{subsubsection.64.2.2}
+\contentsline {subsubsection}{\numberline {64.2.3}Class Variables}{143}{subsubsection.64.2.3}
+\contentsline {section}{\numberline {65}Package testes}{144}{section.65}
+\contentsline {subsection}{\numberline {65.1}Modules}{144}{subsection.65.1}
+\contentsline {subsection}{\numberline {65.2}Variables}{144}{subsection.65.2}
+\contentsline {section}{\numberline {66}Module testes.testVarios4}{145}{section.66}
+\contentsline {subsection}{\numberline {66.1}Variables}{145}{subsection.66.1}
+\contentsline {subsection}{\numberline {66.2}Class TestUser2}{145}{subsection.66.2}
+\contentsline {subsubsection}{\numberline {66.2.1}Methods}{145}{subsubsection.66.2.1}
+\contentsline {subsubsection}{\numberline {66.2.2}Properties}{146}{subsubsection.66.2.2}
+\contentsline {subsubsection}{\numberline {66.2.3}Class Variables}{146}{subsubsection.66.2.3}
+\contentsline {section}{Index}{147}{section*.2}

@@ -64,6 +64,7 @@ def modificarUsuario():
 
 @app.route('/usuario/eliminar/')
 @app.route('/usuario/eliminar/<id>')
+@login_required
 def eliminarUsuario(id=None):
     if(id):
         usuario = c_usr.getUsr(id)
@@ -78,6 +79,7 @@ def eliminarUsuario(id=None):
     return redirect(url_for('usuario'))
 
 @app.route('/rec_pass', methods = ['GET', 'POST'])
+@login_required
 def recuperarPass():
     form = rec_passForm()
     if(form.validate_on_submit()):
@@ -94,8 +96,10 @@ def recuperarPass():
             flash('El usuario '+str(form.nomUsr.data)+'no existe en el sistema')
     
     return render_template('rec_pass.html',title = 'Recuperar Pass', form = form)
-@app.route('/usuario/usuario_asignar_roles' , methods=['GET', 'POST'])
 
+
+@app.route('/usuario/usuario_asignar_roles' , methods=['GET', 'POST'])
+@login_required
 def busquedaPorNombre(nombre):
     ''' Devuelve un listado de los usuarios que coincidan con un nombre '''
     lista = None
@@ -107,6 +111,7 @@ def busquedaPorNombre(nombre):
     return lista
 
 @app.route('/usuario/buscar', methods = ['GET', 'POST'])
+@login_required
 def buscarUsuario():
     ''' Devuelve una lista de usuarios que coincidan con el nombre proporcionado '''
     form2 = buscar()
@@ -114,6 +119,7 @@ def buscarUsuario():
     return render_template('indexUser.html', usuarios = usuarios2, form = usr_CrearForm(), form2=form2)
 
 @app.route('/prueba/',methods=['post','get'])
+@login_required
 def helloWorld():
     form = SimpleForm()
     if form.validate_on_submit():
@@ -125,6 +131,7 @@ def helloWorld():
     return render_template('example.html',form=form)
 
 @app.route('/prueba2/',methods=['post','get'])
+@login_required
 #http://www.desarrolloweb.com/articulos/1448.php
 def helloWorld2():
     print "entro en prueba2"

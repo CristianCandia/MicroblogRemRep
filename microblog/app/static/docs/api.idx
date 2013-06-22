@@ -1,0 +1,399 @@
+\indexentry{addAdmin \textit{(module)}|(hyperpage}{9}
+\indexentry{addAdmin \textit{(module)}|)}{9}
+\indexentry{addPermisos \textit{(module)}|(hyperpage}{10}
+\indexentry{addPermisos \textit{(module)}|)}{11}
+\indexentry{app \textit{(package)}|(hyperpage}{12}
+\indexentry{app \textit{(package)}|)}{13}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}|(hyperpage}{14}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}|)}{14}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contArchivo \textit{(module)}|(hyperpage}{15}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contArchivo \textit{(module)}!app.controlador.contArchivo.ControllerAtributo \textit{(class)}|(hyperpage}{15}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contArchivo \textit{(module)}!app.controlador.contArchivo.ControllerAtributo \textit{(class)}|)}{15}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contArchivo \textit{(module)}!app.controlador.contArchivo.ControllerAtributoTI \textit{(class)}|(hyperpage}{15}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contArchivo \textit{(module)}!app.controlador.contArchivo.ControllerAtributoTI \textit{(class)}!app.controlador.contArchivo.ControllerAtributoTI.regAtributoTI \textit{(method)}|hyperpage}{15}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contArchivo \textit{(module)}!app.controlador.contArchivo.ControllerAtributoTI \textit{(class)}!app.controlador.contArchivo.ControllerAtributoTI.getAtributoTIId \textit{(method)}|hyperpage}{15}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contArchivo \textit{(module)}!app.controlador.contArchivo.ControllerAtributoTI \textit{(class)}!app.controlador.contArchivo.ControllerAtributoTI.getAtributoTIIdA \textit{(method)}|hyperpage}{15}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contArchivo \textit{(module)}!app.controlador.contArchivo.ControllerAtributoTI \textit{(class)}!app.controlador.contArchivo.ControllerAtributoTI.modAtributoTI \textit{(method)}|hyperpage}{16}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contArchivo \textit{(module)}!app.controlador.contArchivo.ControllerAtributoTI \textit{(class)}!app.controlador.contArchivo.ControllerAtributoTI.delAtributoTI \textit{(method)}|hyperpage}{16}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contArchivo \textit{(module)}!app.controlador.contArchivo.ControllerAtributoTI \textit{(class)}|)}{16}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contArchivo \textit{(module)}|)}{16}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contComite \textit{(module)}|(hyperpage}{17}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contComite \textit{(module)}!app.controlador.contComite.ControllerComite \textit{(class)}|(hyperpage}{17}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contComite \textit{(module)}!app.controlador.contComite.ControllerComite \textit{(class)}!app.controlador.contComite.ControllerComite.asignarComite \textit{(method)}|hyperpage}{17}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contComite \textit{(module)}!app.controlador.contComite.ControllerComite \textit{(class)}!app.controlador.contComite.ControllerComite.asignarComiteAListaDeUsr \textit{(method)}|hyperpage}{17}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contComite \textit{(module)}!app.controlador.contComite.ControllerComite \textit{(class)}!app.controlador.contComite.ControllerComite.getComite \textit{(method)}|hyperpage}{17}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contComite \textit{(module)}!app.controlador.contComite.ControllerComite \textit{(class)}!app.controlador.contComite.ControllerComite.getComiteXIdp \textit{(method)}|hyperpage}{17}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contComite \textit{(module)}!app.controlador.contComite.ControllerComite \textit{(class)}!app.controlador.contComite.ControllerComite.getComites \textit{(method)}|hyperpage}{17}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contComite \textit{(module)}!app.controlador.contComite.ControllerComite \textit{(class)}!app.controlador.contComite.ControllerComite.hayComite \textit{(method)}|hyperpage}{17}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contComite \textit{(module)}!app.controlador.contComite.ControllerComite \textit{(class)}!app.controlador.contComite.ControllerComite.regComite \textit{(method)}|hyperpage}{17}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contComite \textit{(module)}!app.controlador.contComite.ControllerComite \textit{(class)}!app.controlador.contComite.ControllerComite.usrSinComiteIdc \textit{(method)}|hyperpage}{17}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contComite \textit{(module)}!app.controlador.contComite.ControllerComite \textit{(class)}|)}{17}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contComite \textit{(module)}|)}{17}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contFase \textit{(module)}|(hyperpage}{18}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contFase \textit{(module)}!app.controlador.contFase.ControllerFase \textit{(class)}|(hyperpage}{18}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contFase \textit{(module)}!app.controlador.contFase.ControllerFase \textit{(class)}!app.controlador.contFase.ControllerFase.regFase \textit{(method)}|hyperpage}{18}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contFase \textit{(module)}!app.controlador.contFase.ControllerFase \textit{(class)}!app.controlador.contFase.ControllerFase.getFase \textit{(method)}|hyperpage}{18}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contFase \textit{(module)}!app.controlador.contFase.ControllerFase \textit{(class)}!app.controlador.contFase.ControllerFase.getNombre \textit{(method)}|hyperpage}{18}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contFase \textit{(module)}!app.controlador.contFase.ControllerFase \textit{(class)}!app.controlador.contFase.ControllerFase.traerFases \textit{(method)}|hyperpage}{18}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contFase \textit{(module)}!app.controlador.contFase.ControllerFase \textit{(class)}!app.controlador.contFase.ControllerFase.modFase \textit{(method)}|hyperpage}{18}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contFase \textit{(module)}!app.controlador.contFase.ControllerFase \textit{(class)}!app.controlador.contFase.ControllerFase.eliminarFase \textit{(method)}|hyperpage}{18}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contFase \textit{(module)}!app.controlador.contFase.ControllerFase \textit{(class)}!app.controlador.contFase.ControllerFase.buscarPorNombreFaseProyecto \textit{(method)}|hyperpage}{18}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contFase \textit{(module)}!app.controlador.contFase.ControllerFase \textit{(class)}|)}{18}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contFase \textit{(module)}|)}{18}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contItem \textit{(module)}|(hyperpage}{19}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contItem \textit{(module)}!app.controlador.contItem.ControllerItem \textit{(class)}|(hyperpage}{19}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contItem \textit{(module)}!app.controlador.contItem.ControllerItem \textit{(class)}!app.controlador.contItem.ControllerItem.regItem \textit{(method)}|hyperpage}{19}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contItem \textit{(module)}!app.controlador.contItem.ControllerItem \textit{(class)}!app.controlador.contItem.ControllerItem.getItemFase \textit{(method)}|hyperpage}{19}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contItem \textit{(module)}!app.controlador.contItem.ControllerItem \textit{(class)}!app.controlador.contItem.ControllerItem.getItemAll \textit{(method)}|hyperpage}{19}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contItem \textit{(module)}!app.controlador.contItem.ControllerItem \textit{(class)}!app.controlador.contItem.ControllerItem.codigoItem \textit{(method)}|hyperpage}{19}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contItem \textit{(module)}!app.controlador.contItem.ControllerItem \textit{(class)}|)}{19}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contItem \textit{(module)}!app.controlador.contItem.ControllerTI \textit{(class)}|(hyperpage}{19}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contItem \textit{(module)}!app.controlador.contItem.ControllerTI \textit{(class)}!app.controlador.contItem.ControllerTI.getTIFase \textit{(method)}|hyperpage}{20}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contItem \textit{(module)}!app.controlador.contItem.ControllerTI \textit{(class)}!app.controlador.contItem.ControllerTI.getTIAll \textit{(method)}|hyperpage}{20}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contItem \textit{(module)}!app.controlador.contItem.ControllerTI \textit{(class)}!app.controlador.contItem.ControllerTI.getTIId \textit{(method)}|hyperpage}{20}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contItem \textit{(module)}!app.controlador.contItem.ControllerTI \textit{(class)}!app.controlador.contItem.ControllerTI.codigoTI \textit{(method)}|hyperpage}{20}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contItem \textit{(module)}!app.controlador.contItem.ControllerTI \textit{(class)}!app.controlador.contItem.ControllerTI.regTI \textit{(method)}|hyperpage}{20}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contItem \textit{(module)}!app.controlador.contItem.ControllerTI \textit{(class)}!app.controlador.contItem.ControllerTI.delTI \textit{(method)}|hyperpage}{20}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contItem \textit{(module)}!app.controlador.contItem.ControllerTI \textit{(class)}!app.controlador.contItem.ControllerTI.modTI \textit{(method)}|hyperpage}{20}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contItem \textit{(module)}!app.controlador.contItem.ControllerTI \textit{(class)}|)}{21}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contItem \textit{(module)}|)}{21}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contPermiso \textit{(module)}|(hyperpage}{22}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contPermiso \textit{(module)}!app.controlador.contPermiso.ControllerPermiso \textit{(class)}|(hyperpage}{22}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contPermiso \textit{(module)}!app.controlador.contPermiso.ControllerPermiso \textit{(class)}!app.controlador.contPermiso.ControllerPermiso.getPermiso \textit{(method)}|hyperpage}{22}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contPermiso \textit{(module)}!app.controlador.contPermiso.ControllerPermiso \textit{(class)}!app.controlador.contPermiso.ControllerPermiso.getPermisos \textit{(method)}|hyperpage}{22}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contPermiso \textit{(module)}!app.controlador.contPermiso.ControllerPermiso \textit{(class)}!app.controlador.contPermiso.ControllerPermiso.regPermiso \textit{(method)}|hyperpage}{22}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contPermiso \textit{(module)}!app.controlador.contPermiso.ControllerPermiso \textit{(class)}|)}{22}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contPermiso \textit{(module)}|)}{22}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contProy \textit{(module)}|(hyperpage}{23}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contProy \textit{(module)}!app.controlador.contProy.ControllerProy \textit{(class)}|(hyperpage}{23}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contProy \textit{(module)}!app.controlador.contProy.ControllerProy \textit{(class)}!app.controlador.contProy.ControllerProy.regProyecto \textit{(method)}|hyperpage}{23}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contProy \textit{(module)}!app.controlador.contProy.ControllerProy \textit{(class)}!app.controlador.contProy.ControllerProy.getFases \textit{(method)}|hyperpage}{23}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contProy \textit{(module)}!app.controlador.contProy.ControllerProy \textit{(class)}!app.controlador.contProy.ControllerProy.getNombre \textit{(method)}|hyperpage}{23}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contProy \textit{(module)}!app.controlador.contProy.ControllerProy \textit{(class)}!app.controlador.contProy.ControllerProy.getProy \textit{(method)}|hyperpage}{23}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contProy \textit{(module)}!app.controlador.contProy.ControllerProy \textit{(class)}!app.controlador.contProy.ControllerProy.getProyNombre \textit{(method)}|hyperpage}{23}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contProy \textit{(module)}!app.controlador.contProy.ControllerProy \textit{(class)}!app.controlador.contProy.ControllerProy.traerProyectos \textit{(method)}|hyperpage}{23}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contProy \textit{(module)}!app.controlador.contProy.ControllerProy \textit{(class)}!app.controlador.contProy.ControllerProy.modProyecto \textit{(method)}|hyperpage}{23}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contProy \textit{(module)}!app.controlador.contProy.ControllerProy \textit{(class)}!app.controlador.contProy.ControllerProy.eliminarProyecto \textit{(method)}|hyperpage}{23}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contProy \textit{(module)}!app.controlador.contProy.ControllerProy \textit{(class)}!app.controlador.contProy.ControllerProy.buscarPorNombreProyecto \textit{(method)}|hyperpage}{23}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contProy \textit{(module)}!app.controlador.contProy.ControllerProy \textit{(class)}|)}{23}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contProy \textit{(module)}|)}{23}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contRol \textit{(module)}|(hyperpage}{24}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contRol \textit{(module)}!app.controlador.contRol.ControllerRol \textit{(class)}|(hyperpage}{24}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contRol \textit{(module)}!app.controlador.contRol.ControllerRol \textit{(class)}!app.controlador.contRol.ControllerRol.regRol \textit{(method)}|hyperpage}{24}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contRol \textit{(module)}!app.controlador.contRol.ControllerRol \textit{(class)}!app.controlador.contRol.ControllerRol.traerRoles \textit{(method)}|hyperpage}{24}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contRol \textit{(module)}!app.controlador.contRol.ControllerRol \textit{(class)}!app.controlador.contRol.ControllerRol.getRolIdf \textit{(method)}|hyperpage}{24}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contRol \textit{(module)}!app.controlador.contRol.ControllerRol \textit{(class)}!app.controlador.contRol.ControllerRol.getIdfaseDeRol \textit{(method)}|hyperpage}{24}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contRol \textit{(module)}!app.controlador.contRol.ControllerRol \textit{(class)}!app.controlador.contRol.ControllerRol.cargarPermisos \textit{(method)}|hyperpage}{24}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contRol \textit{(module)}!app.controlador.contRol.ControllerRol \textit{(class)}!app.controlador.contRol.ControllerRol.getPermisos\_X\_Rol \textit{(method)}|hyperpage}{24}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contRol \textit{(module)}!app.controlador.contRol.ControllerRol \textit{(class)}!app.controlador.contRol.ControllerRol.getlistaPermisos \textit{(method)}|hyperpage}{24}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contRol \textit{(module)}!app.controlador.contRol.ControllerRol \textit{(class)}!app.controlador.contRol.ControllerRol.getRol \textit{(method)}|hyperpage}{24}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contRol \textit{(module)}!app.controlador.contRol.ControllerRol \textit{(class)}!app.controlador.contRol.ControllerRol.eliminarRol \textit{(method)}|hyperpage}{24}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contRol \textit{(module)}!app.controlador.contRol.ControllerRol \textit{(class)}!app.controlador.contRol.ControllerRol.asignarDesasginarPer \textit{(method)}|hyperpage}{24}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contRol \textit{(module)}!app.controlador.contRol.ControllerRol \textit{(class)}!app.controlador.contRol.ControllerRol.asignarPermisos \textit{(method)}|hyperpage}{24}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contRol \textit{(module)}!app.controlador.contRol.ControllerRol \textit{(class)}!app.controlador.contRol.ControllerRol.usrSinRolIdr \textit{(method)}|hyperpage}{24}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contRol \textit{(module)}!app.controlador.contRol.ControllerRol \textit{(class)}!app.controlador.contRol.ControllerRol.desasignarPermisos \textit{(method)}|hyperpage}{24}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contRol \textit{(module)}!app.controlador.contRol.ControllerRol \textit{(class)}!app.controlador.contRol.ControllerRol.modRol \textit{(method)}|hyperpage}{24}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contRol \textit{(module)}!app.controlador.contRol.ControllerRol \textit{(class)}!app.controlador.contRol.ControllerRol.buscarPorNombreRol \textit{(method)}|hyperpage}{24}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contRol \textit{(module)}!app.controlador.contRol.ControllerRol \textit{(class)}|)}{25}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contRol \textit{(module)}|)}{25}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contUsr \textit{(module)}|(hyperpage}{26}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contUsr \textit{(module)}!app.controlador.contUsr.ControllerUsr \textit{(class)}|(hyperpage}{26}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contUsr \textit{(module)}!app.controlador.contUsr.ControllerUsr \textit{(class)}!app.controlador.contUsr.ControllerUsr.regUsuario \textit{(method)}|hyperpage}{26}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contUsr \textit{(module)}!app.controlador.contUsr.ControllerUsr \textit{(class)}!app.controlador.contUsr.ControllerUsr.getUsr \textit{(method)}|hyperpage}{26}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contUsr \textit{(module)}!app.controlador.contUsr.ControllerUsr \textit{(class)}!app.controlador.contUsr.ControllerUsr.getUsrName \textit{(method)}|hyperpage}{26}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contUsr \textit{(module)}!app.controlador.contUsr.ControllerUsr \textit{(class)}!app.controlador.contUsr.ControllerUsr.getUsrFull \textit{(method)}|hyperpage}{26}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contUsr \textit{(module)}!app.controlador.contUsr.ControllerUsr \textit{(class)}!app.controlador.contUsr.ControllerUsr.getRoles \textit{(method)}|hyperpage}{26}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contUsr \textit{(module)}!app.controlador.contUsr.ControllerUsr \textit{(class)}!app.controlador.contUsr.ControllerUsr.asignarRolAListaDeUsr \textit{(method)}|hyperpage}{26}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contUsr \textit{(module)}!app.controlador.contUsr.ControllerUsr \textit{(class)}!app.controlador.contUsr.ControllerUsr.asignarRoles \textit{(method)}|hyperpage}{26}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contUsr \textit{(module)}!app.controlador.contUsr.ControllerUsr \textit{(class)}!app.controlador.contUsr.ControllerUsr.modUsuario \textit{(method)}|hyperpage}{26}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contUsr \textit{(module)}!app.controlador.contUsr.ControllerUsr \textit{(class)}!app.controlador.contUsr.ControllerUsr.eliminarUsr \textit{(method)}|hyperpage}{26}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contUsr \textit{(module)}!app.controlador.contUsr.ControllerUsr \textit{(class)}!app.controlador.contUsr.ControllerUsr.getPermisos \textit{(method)}|hyperpage}{26}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contUsr \textit{(module)}!app.controlador.contUsr.ControllerUsr \textit{(class)}!app.controlador.contUsr.ControllerUsr.buscarPorNombreUsuario \textit{(method)}|hyperpage}{26}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contUsr \textit{(module)}!app.controlador.contUsr.ControllerUsr \textit{(class)}|)}{26}
+\indexentry{app \textit{(package)}!app.controlador \textit{(package)}!app.controlador.contUsr \textit{(module)}|)}{26}
+\indexentry{app \textit{(package)}!app.db\_downgrade \textit{(module)}|(hyperpage}{27}
+\indexentry{app \textit{(package)}!app.db\_downgrade \textit{(module)}|)}{27}
+\indexentry{app \textit{(package)}!app.decorators \textit{(module)}|(hyperpage}{28}
+\indexentry{app \textit{(package)}!app.decorators \textit{(module)}!app.decorators.async \textit{(function)}|hyperpage}{28}
+\indexentry{app \textit{(package)}!app.decorators \textit{(module)}|)}{28}
+\indexentry{app \textit{(package)}!app.email \textit{(module)}|(hyperpage}{29}
+\indexentry{app \textit{(package)}!app.email \textit{(module)}!app.email.send\_email \textit{(function)}|hyperpage}{29}
+\indexentry{app \textit{(package)}!app.email \textit{(module)}|)}{29}
+\indexentry{app \textit{(package)}!app.forms \textit{(module)}|(hyperpage}{30}
+\indexentry{app \textit{(package)}!app.forms \textit{(module)}!app.forms.LoginForm \textit{(class)}|(hyperpage}{30}
+\indexentry{app \textit{(package)}!app.forms \textit{(module)}!app.forms.LoginForm \textit{(class)}|)}{31}
+\indexentry{app \textit{(package)}!app.forms \textit{(module)}!app.forms.rec\_passForm \textit{(class)}|(hyperpage}{31}
+\indexentry{app \textit{(package)}!app.forms \textit{(module)}!app.forms.rec\_passForm \textit{(class)}|)}{33}
+\indexentry{app \textit{(package)}!app.forms \textit{(module)}!app.forms.usr\_CrearForm \textit{(class)}|(hyperpage}{33}
+\indexentry{app \textit{(package)}!app.forms \textit{(module)}!app.forms.usr\_CrearForm \textit{(class)}|)}{34}
+\indexentry{app \textit{(package)}!app.forms \textit{(module)}!app.forms.proy\_CrearForm \textit{(class)}|(hyperpage}{34}
+\indexentry{app \textit{(package)}!app.forms \textit{(module)}!app.forms.proy\_CrearForm \textit{(class)}|)}{36}
+\indexentry{app \textit{(package)}!app.forms \textit{(module)}!app.forms.fase\_CrearForm \textit{(class)}|(hyperpage}{36}
+\indexentry{app \textit{(package)}!app.forms \textit{(module)}!app.forms.fase\_CrearForm \textit{(class)}|)}{38}
+\indexentry{app \textit{(package)}!app.forms \textit{(module)}!app.forms.rol\_CrearForm \textit{(class)}|(hyperpage}{38}
+\indexentry{app \textit{(package)}!app.forms \textit{(module)}!app.forms.rol\_CrearForm \textit{(class)}|)}{40}
+\indexentry{app \textit{(package)}!app.forms \textit{(module)}!app.forms.permiso\_CrearForm \textit{(class)}|(hyperpage}{40}
+\indexentry{app \textit{(package)}!app.forms \textit{(module)}!app.forms.permiso\_CrearForm \textit{(class)}|)}{41}
+\indexentry{app \textit{(package)}!app.forms \textit{(module)}!app.forms.asignar\_Permisos \textit{(class)}|(hyperpage}{41}
+\indexentry{app \textit{(package)}!app.forms \textit{(module)}!app.forms.asignar\_Permisos \textit{(class)}|)}{43}
+\indexentry{app \textit{(package)}!app.forms \textit{(module)}!app.forms.asignar\_Roles \textit{(class)}|(hyperpage}{43}
+\indexentry{app \textit{(package)}!app.forms \textit{(module)}!app.forms.asignar\_Roles \textit{(class)}|)}{44}
+\indexentry{app \textit{(package)}!app.forms \textit{(module)}!app.forms.buscar \textit{(class)}|(hyperpage}{44}
+\indexentry{app \textit{(package)}!app.forms \textit{(module)}!app.forms.buscar \textit{(class)}|)}{46}
+\indexentry{app \textit{(package)}!app.forms \textit{(module)}!app.forms.MultiCheckboxField \textit{(class)}|(hyperpage}{46}
+\indexentry{app \textit{(package)}!app.forms \textit{(module)}!app.forms.MultiCheckboxField \textit{(class)}|)}{47}
+\indexentry{app \textit{(package)}!app.forms \textit{(module)}!app.forms.SimpleForm \textit{(class)}|(hyperpage}{47}
+\indexentry{app \textit{(package)}!app.forms \textit{(module)}!app.forms.SimpleForm \textit{(class)}|)}{48}
+\indexentry{app \textit{(package)}!app.forms \textit{(module)}!app.forms.crear\_mod\_TI \textit{(class)}|(hyperpage}{48}
+\indexentry{app \textit{(package)}!app.forms \textit{(module)}!app.forms.crear\_mod\_TI \textit{(class)}|)}{50}
+\indexentry{app \textit{(package)}!app.forms \textit{(module)}!app.forms.crear\_mod\_atributoTI \textit{(class)}|(hyperpage}{50}
+\indexentry{app \textit{(package)}!app.forms \textit{(module)}!app.forms.crear\_mod\_atributoTI \textit{(class)}|)}{52}
+\indexentry{app \textit{(package)}!app.forms \textit{(module)}!app.forms.crear\_mod\_item \textit{(class)}|(hyperpage}{52}
+\indexentry{app \textit{(package)}!app.forms \textit{(module)}!app.forms.crear\_mod\_item \textit{(class)}|)}{53}
+\indexentry{app \textit{(package)}!app.forms \textit{(module)}!app.forms.listarPermisos \textit{(class)}|(hyperpage}{53}
+\indexentry{app \textit{(package)}!app.forms \textit{(module)}!app.forms.listarPermisos \textit{(class)}|)}{56}
+\indexentry{app \textit{(package)}!app.forms \textit{(module)}!app.forms.comite\_CrearForm \textit{(class)}|(hyperpage}{56}
+\indexentry{app \textit{(package)}!app.forms \textit{(module)}!app.forms.comite\_CrearForm \textit{(class)}|)}{57}
+\indexentry{app \textit{(package)}!app.forms \textit{(module)}|)}{57}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}|(hyperpage}{58}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}|)}{59}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.archivo \textit{(module)}|(hyperpage}{60}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.archivo \textit{(module)}!app.modelo.archivo.Archivo \textit{(class)}|(hyperpage}{60}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.archivo \textit{(module)}!app.modelo.archivo.Archivo \textit{(class)}|)}{62}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.archivo \textit{(module)}|)}{62}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.atributo \textit{(module)}|(hyperpage}{63}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.atributo \textit{(module)}!app.modelo.atributo.AtributoPorTI \textit{(class)}|(hyperpage}{63}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.atributo \textit{(module)}!app.modelo.atributo.AtributoPorTI \textit{(class)}|)}{65}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.atributo \textit{(module)}!app.modelo.atributo.AtributoPorItem \textit{(class)}|(hyperpage}{65}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.atributo \textit{(module)}!app.modelo.atributo.AtributoPorItem \textit{(class)}|)}{66}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.atributo \textit{(module)}|)}{66}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.comite \textit{(module)}|(hyperpage}{67}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.comite \textit{(module)}!app.modelo.comite.Comite \textit{(class)}|(hyperpage}{67}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.comite \textit{(module)}!app.modelo.comite.Comite \textit{(class)}!app.modelo.comite.Comite.add\_comite \textit{(method)}|hyperpage}{67}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.comite \textit{(module)}!app.modelo.comite.Comite \textit{(class)}!app.modelo.comite.Comite.delete\_comite \textit{(method)}|hyperpage}{67}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.comite \textit{(module)}!app.modelo.comite.Comite \textit{(class)}!app.modelo.comite.Comite.get\_id \textit{(method)}|hyperpage}{67}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.comite \textit{(module)}!app.modelo.comite.Comite \textit{(class)}|)}{69}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.comite \textit{(module)}|)}{69}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.fase \textit{(module)}|(hyperpage}{70}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.fase \textit{(module)}!app.modelo.fase.Fase \textit{(class)}|(hyperpage}{70}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.fase \textit{(module)}!app.modelo.fase.Fase \textit{(class)}!app.modelo.fase.Fase.add\_fase \textit{(method)}|hyperpage}{70}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.fase \textit{(module)}!app.modelo.fase.Fase \textit{(class)}!app.modelo.fase.Fase.delete\_fase \textit{(method)}|hyperpage}{70}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.fase \textit{(module)}!app.modelo.fase.Fase \textit{(class)}|)}{72}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.fase \textit{(module)}|)}{72}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.historial \textit{(module)}|(hyperpage}{73}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.historial \textit{(module)}!app.modelo.historial.HistorialItem \textit{(class)}|(hyperpage}{73}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.historial \textit{(module)}!app.modelo.historial.HistorialItem \textit{(class)}|)}{75}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.historial \textit{(module)}!app.modelo.historial.HistorialLineaBase \textit{(class)}|(hyperpage}{75}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.historial \textit{(module)}!app.modelo.historial.HistorialLineaBase \textit{(class)}|)}{76}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.historial \textit{(module)}|)}{76}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.item \textit{(module)}|(hyperpage}{77}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.item \textit{(module)}!app.modelo.item.TipoItem \textit{(class)}|(hyperpage}{77}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.item \textit{(module)}!app.modelo.item.TipoItem \textit{(class)}|)}{79}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.item \textit{(module)}!app.modelo.item.Item \textit{(class)}|(hyperpage}{79}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.item \textit{(module)}!app.modelo.item.Item \textit{(class)}|)}{82}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.item \textit{(module)}|)}{82}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.lineabase \textit{(module)}|(hyperpage}{83}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.lineabase \textit{(module)}!app.modelo.lineabase.LineaBase \textit{(class)}|(hyperpage}{83}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.lineabase \textit{(module)}!app.modelo.lineabase.LineaBase \textit{(class)}|)}{85}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.lineabase \textit{(module)}!app.modelo.lineabase.ItemsPorLineaBase \textit{(class)}|(hyperpage}{85}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.lineabase \textit{(module)}!app.modelo.lineabase.ItemsPorLineaBase \textit{(class)}|)}{86}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.lineabase \textit{(module)}|)}{86}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.permiso \textit{(module)}|(hyperpage}{87}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.permiso \textit{(module)}!app.modelo.permiso.Permiso \textit{(class)}|(hyperpage}{87}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.permiso \textit{(module)}!app.modelo.permiso.Permiso \textit{(class)}!app.modelo.permiso.Permiso.add\_permiso \textit{(method)}|hyperpage}{87}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.permiso \textit{(module)}!app.modelo.permiso.Permiso \textit{(class)}|)}{89}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.permiso \textit{(module)}|)}{89}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.proyecto \textit{(module)}|(hyperpage}{90}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.proyecto \textit{(module)}!app.modelo.proyecto.Proyecto \textit{(class)}|(hyperpage}{90}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.proyecto \textit{(module)}!app.modelo.proyecto.Proyecto \textit{(class)}!app.modelo.proyecto.Proyecto.add\_proy \textit{(method)}|hyperpage}{90}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.proyecto \textit{(module)}!app.modelo.proyecto.Proyecto \textit{(class)}!app.modelo.proyecto.Proyecto.delete\_proyecto \textit{(method)}|hyperpage}{90}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.proyecto \textit{(module)}!app.modelo.proyecto.Proyecto \textit{(class)}|)}{92}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.proyecto \textit{(module)}|)}{92}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.rol \textit{(module)}|(hyperpage}{93}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.rol \textit{(module)}!app.modelo.rol.Rol \textit{(class)}|(hyperpage}{93}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.rol \textit{(module)}!app.modelo.rol.Rol \textit{(class)}!app.modelo.rol.Rol.add\_rol \textit{(method)}|hyperpage}{93}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.rol \textit{(module)}!app.modelo.rol.Rol \textit{(class)}!app.modelo.rol.Rol.delete\_rol \textit{(method)}|hyperpage}{93}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.rol \textit{(module)}!app.modelo.rol.Rol \textit{(class)}|)}{95}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.rol \textit{(module)}|)}{95}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.solicitud \textit{(module)}|(hyperpage}{96}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.solicitud \textit{(module)}!app.modelo.solicitud.Solicitud \textit{(class)}|(hyperpage}{96}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.solicitud \textit{(module)}!app.modelo.solicitud.Solicitud \textit{(class)}!app.modelo.solicitud.Solicitud.add\_solicitud \textit{(method)}|hyperpage}{96}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.solicitud \textit{(module)}!app.modelo.solicitud.Solicitud \textit{(class)}!app.modelo.solicitud.Solicitud.delete\_solicitud \textit{(method)}|hyperpage}{96}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.solicitud \textit{(module)}!app.modelo.solicitud.Solicitud \textit{(class)}|)}{98}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.solicitud \textit{(module)}|)}{98}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.usuario \textit{(module)}|(hyperpage}{99}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.usuario \textit{(module)}!app.modelo.usuario.User2 \textit{(class)}|(hyperpage}{99}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.usuario \textit{(module)}!app.modelo.usuario.User2 \textit{(class)}!app.modelo.usuario.User2.add\_usr \textit{(method)}|hyperpage}{99}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.usuario \textit{(module)}!app.modelo.usuario.User2 \textit{(class)}!app.modelo.usuario.User2.delete\_usr \textit{(method)}|hyperpage}{99}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.usuario \textit{(module)}!app.modelo.usuario.User2 \textit{(class)}!app.modelo.usuario.User2.is\_authenticated \textit{(method)}|hyperpage}{99}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.usuario \textit{(module)}!app.modelo.usuario.User2 \textit{(class)}!app.modelo.usuario.User2.is\_active \textit{(method)}|hyperpage}{99}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.usuario \textit{(module)}!app.modelo.usuario.User2 \textit{(class)}!app.modelo.usuario.User2.is\_anonymous \textit{(method)}|hyperpage}{99}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.usuario \textit{(module)}!app.modelo.usuario.User2 \textit{(class)}!app.modelo.usuario.User2.get\_id \textit{(method)}|hyperpage}{99}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.usuario \textit{(module)}!app.modelo.usuario.User2 \textit{(class)}|)}{101}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.usuario \textit{(module)}|)}{101}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.voto \textit{(module)}|(hyperpage}{102}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.voto \textit{(module)}!app.modelo.voto.Voto \textit{(class)}|(hyperpage}{102}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.voto \textit{(module)}!app.modelo.voto.Voto \textit{(class)}!app.modelo.voto.Voto.add\_voto \textit{(method)}|hyperpage}{102}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.voto \textit{(module)}!app.modelo.voto.Voto \textit{(class)}|)}{103}
+\indexentry{app \textit{(package)}!app.modelo \textit{(package)}!app.modelo.voto \textit{(module)}|)}{103}
+\indexentry{app \textit{(package)}!app.models \textit{(module)}|(hyperpage}{104}
+\indexentry{app \textit{(package)}!app.models \textit{(module)}|)}{104}
+\indexentry{app \textit{(package)}!app.static \textit{(package)}|(hyperpage}{105}
+\indexentry{app \textit{(package)}!app.static \textit{(package)}|)}{105}
+\indexentry{app \textit{(package)}!app.test \textit{(package)}|(hyperpage}{106}
+\indexentry{app \textit{(package)}!app.test \textit{(package)}|)}{106}
+\indexentry{app \textit{(package)}!app.test \textit{(package)}!app.test.testVarios2 \textit{(module)}|(hyperpage}{107}
+\indexentry{app \textit{(package)}!app.test \textit{(package)}!app.test.testVarios2 \textit{(module)}!app.test.testVarios2.TestUser2 \textit{(class)}|(hyperpage}{107}
+\indexentry{app \textit{(package)}!app.test \textit{(package)}!app.test.testVarios2 \textit{(module)}!app.test.testVarios2.TestUser2 \textit{(class)}!app.test.testVarios2.TestUser2.setUp \textit{(method)}|hyperpage}{107}
+\indexentry{app \textit{(package)}!app.test \textit{(package)}!app.test.testVarios2 \textit{(module)}!app.test.testVarios2.TestUser2 \textit{(class)}!app.test.testVarios2.TestUser2.testGuardar \textit{(method)}|hyperpage}{107}
+\indexentry{app \textit{(package)}!app.test \textit{(package)}!app.test.testVarios2 \textit{(module)}!app.test.testVarios2.TestUser2 \textit{(class)}!app.test.testVarios2.TestUser2.tearDown \textit{(method)}|hyperpage}{107}
+\indexentry{app \textit{(package)}!app.test \textit{(package)}!app.test.testVarios2 \textit{(module)}!app.test.testVarios2.TestUser2 \textit{(class)}|)}{107}
+\indexentry{app \textit{(package)}!app.test \textit{(package)}!app.test.testVarios2 \textit{(module)}|)}{107}
+\indexentry{app \textit{(package)}!app.testVarios \textit{(module)}|(hyperpage}{108}
+\indexentry{app \textit{(package)}!app.testVarios \textit{(module)}!app.testVarios.TestUser2 \textit{(class)}|(hyperpage}{108}
+\indexentry{app \textit{(package)}!app.testVarios \textit{(module)}!app.testVarios.TestUser2 \textit{(class)}!app.testVarios.TestUser2.test\_test1 \textit{(method)}|hyperpage}{108}
+\indexentry{app \textit{(package)}!app.testVarios \textit{(module)}!app.testVarios.TestUser2 \textit{(class)}!app.testVarios.TestUser2.test\_test2 \textit{(method)}|hyperpage}{108}
+\indexentry{app \textit{(package)}!app.testVarios \textit{(module)}!app.testVarios.TestUser2 \textit{(class)}!app.testVarios.TestUser2.test\_test3 \textit{(method)}|hyperpage}{108}
+\indexentry{app \textit{(package)}!app.testVarios \textit{(module)}!app.testVarios.TestUser2 \textit{(class)}!app.testVarios.TestUser2.test\_test4 \textit{(method)}|hyperpage}{108}
+\indexentry{app \textit{(package)}!app.testVarios \textit{(module)}!app.testVarios.TestUser2 \textit{(class)}|)}{109}
+\indexentry{app \textit{(package)}!app.testVarios \textit{(module)}|)}{109}
+\indexentry{app \textit{(package)}!app.views \textit{(module)}|(hyperpage}{110}
+\indexentry{app \textit{(package)}!app.views \textit{(module)}!app.views.index \textit{(function)}|hyperpage}{110}
+\indexentry{app \textit{(package)}!app.views \textit{(module)}!app.views.login \textit{(function)}|hyperpage}{110}
+\indexentry{app \textit{(package)}!app.views \textit{(module)}!app.views.before\_request \textit{(function)}|hyperpage}{110}
+\indexentry{app \textit{(package)}!app.views \textit{(module)}!app.views.admin \textit{(function)}|hyperpage}{110}
+\indexentry{app \textit{(package)}!app.views \textit{(module)}!app.views.logout \textit{(function)}|hyperpage}{110}
+\indexentry{app \textit{(package)}!app.views \textit{(module)}!app.views.listadoUsuarios \textit{(function)}|hyperpage}{110}
+\indexentry{app \textit{(package)}!app.views \textit{(module)}!app.views.usuario \textit{(function)}|hyperpage}{110}
+\indexentry{app \textit{(package)}!app.views \textit{(module)}!app.views.usr\_crear \textit{(function)}|hyperpage}{110}
+\indexentry{app \textit{(package)}!app.views \textit{(module)}!app.views.usr\_modificar \textit{(function)}|hyperpage}{110}
+\indexentry{app \textit{(package)}!app.views \textit{(module)}!app.views.usr\_eliminar \textit{(function)}|hyperpage}{110}
+\indexentry{app \textit{(package)}!app.views \textit{(module)}!app.views.buscar\_str \textit{(function)}|hyperpage}{110}
+\indexentry{app \textit{(package)}!app.views \textit{(module)}!app.views.usr\_listar \textit{(function)}|hyperpage}{110}
+\indexentry{app \textit{(package)}!app.views \textit{(module)}|)}{111}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}|(hyperpage}{112}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}|)}{113}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaAtributoTI \textit{(module)}|(hyperpage}{114}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaAtributoTI \textit{(module)}!app.vista.vistaAtributoTI.atributoTI \textit{(function)}|hyperpage}{114}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaAtributoTI \textit{(module)}!app.vista.vistaAtributoTI.crearAtributoTI \textit{(function)}|hyperpage}{114}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaAtributoTI \textit{(module)}!app.vista.vistaAtributoTI.modificarAtributoTI \textit{(function)}|hyperpage}{114}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaAtributoTI \textit{(module)}!app.vista.vistaAtributoTI.eliminarTI \textit{(function)}|hyperpage}{114}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaAtributoTI \textit{(module)}|)}{115}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaFase \textit{(module)}|(hyperpage}{116}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaFase \textit{(module)}!app.vista.vistaFase.fase \textit{(function)}|hyperpage}{116}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaFase \textit{(module)}!app.vista.vistaFase.crearFase \textit{(function)}|hyperpage}{116}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaFase \textit{(module)}!app.vista.vistaFase.fase\_listar \textit{(function)}|hyperpage}{116}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaFase \textit{(module)}!app.vista.vistaFase.configurarFase \textit{(function)}|hyperpage}{116}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaFase \textit{(module)}!app.vista.vistaFase.modificarFase \textit{(function)}|hyperpage}{116}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaFase \textit{(module)}!app.vista.vistaFase.eliminarFase \textit{(function)}|hyperpage}{116}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaFase \textit{(module)}!app.vista.vistaFase.buscarFase \textit{(function)}|hyperpage}{116}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaFase \textit{(module)}|)}{116}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaItem \textit{(module)}|(hyperpage}{117}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaItem \textit{(module)}!app.vista.vistaItem.listadoItemFase \textit{(function)}|hyperpage}{117}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaItem \textit{(module)}!app.vista.vistaItem.itemFase \textit{(function)}|hyperpage}{117}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaItem \textit{(module)}!app.vista.vistaItem.listadoFases \textit{(function)}|hyperpage}{117}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaItem \textit{(module)}!app.vista.vistaItem.listadoProyectos \textit{(function)}|hyperpage}{117}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaItem \textit{(module)}!app.vista.vistaItem.itemProy \textit{(function)}|hyperpage}{117}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaItem \textit{(module)}!app.vista.vistaItem.nuevoItem \textit{(function)}|hyperpage}{117}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaItem \textit{(module)}|)}{117}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaPermiso \textit{(module)}|(hyperpage}{118}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaPermiso \textit{(module)}!app.vista.vistaPermiso.permiso \textit{(function)}|hyperpage}{118}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaPermiso \textit{(module)}!app.vista.vistaPermiso.crearPermiso \textit{(function)}|hyperpage}{118}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaPermiso \textit{(module)}!app.vista.vistaPermiso.permiso\_listar \textit{(function)}|hyperpage}{118}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaPermiso \textit{(module)}|)}{118}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaProyecto \textit{(module)}|(hyperpage}{119}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaProyecto \textit{(module)}!app.vista.vistaProyecto.proy2 \textit{(function)}|hyperpage}{119}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaProyecto \textit{(module)}!app.vista.vistaProyecto.proyecto \textit{(function)}|hyperpage}{119}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaProyecto \textit{(module)}!app.vista.vistaProyecto.crearProyecto \textit{(function)}|hyperpage}{119}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaProyecto \textit{(module)}!app.vista.vistaProyecto.proy\_listar \textit{(function)}|hyperpage}{119}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaProyecto \textit{(module)}!app.vista.vistaProyecto.modificarProyecto \textit{(function)}|hyperpage}{119}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaProyecto \textit{(module)}!app.vista.vistaProyecto.eliminarProy \textit{(function)}|hyperpage}{119}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaProyecto \textit{(module)}!app.vista.vistaProyecto.configurarProyecto \textit{(function)}|hyperpage}{119}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaProyecto \textit{(module)}!app.vista.vistaProyecto.crearComite \textit{(function)}|hyperpage}{119}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaProyecto \textit{(module)}!app.vista.vistaProyecto.asignarMiembros \textit{(function)}|hyperpage}{119}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaProyecto \textit{(module)}!app.vista.vistaProyecto.asigUsrComite \textit{(function)}|hyperpage}{119}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaProyecto \textit{(module)}!app.vista.vistaProyecto.buscarProyecto \textit{(function)}|hyperpage}{119}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaProyecto \textit{(module)}|)}{119}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaRol \textit{(module)}|(hyperpage}{120}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaRol \textit{(module)}!app.vista.vistaRol.rol\_proyFase \textit{(function)}|hyperpage}{120}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaRol \textit{(module)}!app.vista.vistaRol.rol \textit{(function)}|hyperpage}{120}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaRol \textit{(module)}!app.vista.vistaRol.crearRol \textit{(function)}|hyperpage}{120}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaRol \textit{(module)}!app.vista.vistaRol.rol\_listar \textit{(function)}|hyperpage}{120}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaRol \textit{(module)}!app.vista.vistaRol.asignarRoles \textit{(function)}|hyperpage}{120}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaRol \textit{(module)}!app.vista.vistaRol.asigUsrRol \textit{(function)}|hyperpage}{120}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaRol \textit{(module)}!app.vista.vistaRol.asignarPermisos2 \textit{(function)}|hyperpage}{120}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaRol \textit{(module)}!app.vista.vistaRol.modificarRol \textit{(function)}|hyperpage}{120}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaRol \textit{(module)}!app.vista.vistaRol.buscarRol \textit{(function)}|hyperpage}{120}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaRol \textit{(module)}!app.vista.vistaRol.eliminarRol \textit{(function)}|hyperpage}{120}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaRol \textit{(module)}|)}{120}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaTI \textit{(module)}|(hyperpage}{121}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaTI \textit{(module)}!app.vista.vistaTI.TI \textit{(function)}|hyperpage}{121}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaTI \textit{(module)}!app.vista.vistaTI.crearTI \textit{(function)}|hyperpage}{121}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaTI \textit{(module)}!app.vista.vistaTI.modificarTI \textit{(function)}|hyperpage}{121}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaTI \textit{(module)}!app.vista.vistaTI.eliminarTI \textit{(function)}|hyperpage}{121}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaTI \textit{(module)}|)}{121}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaUsuario \textit{(module)}|(hyperpage}{122}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaUsuario \textit{(module)}!app.vista.vistaUsuario.crearUsuario \textit{(function)}|hyperpage}{122}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaUsuario \textit{(module)}!app.vista.vistaUsuario.modificarUsuario \textit{(function)}|hyperpage}{122}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaUsuario \textit{(module)}!app.vista.vistaUsuario.eliminarUsuario \textit{(function)}|hyperpage}{122}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaUsuario \textit{(module)}!app.vista.vistaUsuario.recuperarPass \textit{(function)}|hyperpage}{122}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaUsuario \textit{(module)}!app.vista.vistaUsuario.busquedaPorNombre \textit{(function)}|hyperpage}{122}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaUsuario \textit{(module)}!app.vista.vistaUsuario.buscarUsuario \textit{(function)}|hyperpage}{122}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaUsuario \textit{(module)}!app.vista.vistaUsuario.helloWorld \textit{(function)}|hyperpage}{122}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaUsuario \textit{(module)}!app.vista.vistaUsuario.helloWorld2 \textit{(function)}|hyperpage}{122}
+\indexentry{app \textit{(package)}!app.vista \textit{(package)}!app.vista.vistaUsuario \textit{(module)}|)}{122}
+\indexentry{asignarRol \textit{(module)}|(hyperpage}{123}
+\indexentry{asignarRol \textit{(module)}|)}{123}
+\indexentry{config \textit{(module)}|(hyperpage}{124}
+\indexentry{config \textit{(module)}|)}{124}
+\indexentry{db\_create \textit{(module)}|(hyperpage}{125}
+\indexentry{db\_create \textit{(module)}|)}{125}
+\indexentry{db\_migrate \textit{(module)}|(hyperpage}{126}
+\indexentry{db\_migrate \textit{(module)}|)}{126}
+\indexentry{db\_repository \textit{(package)}|(hyperpage}{127}
+\indexentry{db\_repository \textit{(package)}|)}{127}
+\indexentry{db\_repository \textit{(package)}!db\_repository.manage \textit{(module)}|(hyperpage}{128}
+\indexentry{db\_repository \textit{(package)}!db\_repository.manage \textit{(module)}|)}{128}
+\indexentry{db\_repository \textit{(package)}!db\_repository.versions \textit{(package)}|(hyperpage}{129}
+\indexentry{db\_repository \textit{(package)}!db\_repository.versions \textit{(package)}|)}{129}
+\indexentry{db\_upgrade \textit{(module)}|(hyperpage}{130}
+\indexentry{db\_upgrade \textit{(module)}|)}{130}
+\indexentry{deletePermisos \textit{(module)}|(hyperpage}{131}
+\indexentry{deletePermisos \textit{(module)}|)}{131}
+\indexentry{deleteRol \textit{(module)}|(hyperpage}{132}
+\indexentry{deleteRol \textit{(module)}|)}{132}
+\indexentry{deleteUsr \textit{(module)}|(hyperpage}{133}
+\indexentry{deleteUsr \textit{(module)}|)}{133}
+\indexentry{run \textit{(module)}|(hyperpage}{134}
+\indexentry{run \textit{(module)}|)}{134}
+\indexentry{script-microblog\_wsgi \textit{(script)}|(hyperpage}{135}
+\indexentry{script-microblog\_wsgi \textit{(script)}|)}{135}
+\indexentry{script-microblog\_wsgi\_ \textit{(script)}|(hyperpage}{136}
+\indexentry{script-microblog\_wsgi\_ \textit{(script)}|)}{136}
+\indexentry{script-microdoc\_txt \textit{(script)}|(hyperpage}{137}
+\indexentry{script-microdoc\_txt \textit{(script)}|)}{137}
+\indexentry{script-microdoc\_txt\_ \textit{(script)}|(hyperpage}{138}
+\indexentry{script-microdoc\_txt\_ \textit{(script)}|)}{138}
+\indexentry{script-ss\_wsgi\_ \textit{(script)}|(hyperpage}{139}
+\indexentry{script-ss\_wsgi\_ \textit{(script)}|)}{139}
+\indexentry{test \textit{(module)}|(hyperpage}{140}
+\indexentry{test \textit{(module)}!test.UsuarioTestCase \textit{(class)}|(hyperpage}{140}
+\indexentry{test \textit{(module)}!test.UsuarioTestCase \textit{(class)}!test.UsuarioTestCase.login \textit{(method)}|hyperpage}{140}
+\indexentry{test \textit{(module)}!test.UsuarioTestCase \textit{(class)}!test.UsuarioTestCase.test\_login \textit{(method)}|hyperpage}{140}
+\indexentry{test \textit{(module)}!test.UsuarioTestCase \textit{(class)}|)}{141}
+\indexentry{test \textit{(module)}|)}{141}
+\indexentry{testVarios1 \textit{(module)}|(hyperpage}{142}
+\indexentry{testVarios1 \textit{(module)}!testVarios1.TestUser2 \textit{(class)}|(hyperpage}{142}
+\indexentry{testVarios1 \textit{(module)}!testVarios1.TestUser2 \textit{(class)}!testVarios1.TestUser2.testGuardar \textit{(method)}|hyperpage}{142}
+\indexentry{testVarios1 \textit{(module)}!testVarios1.TestUser2 \textit{(class)}!testVarios1.TestUser2.testModificarUsuario \textit{(method)}|hyperpage}{142}
+\indexentry{testVarios1 \textit{(module)}!testVarios1.TestUser2 \textit{(class)}!testVarios1.TestUser2.testCrearProyecto \textit{(method)}|hyperpage}{142}
+\indexentry{testVarios1 \textit{(module)}!testVarios1.TestUser2 \textit{(class)}!testVarios1.TestUser2.testModificarProyecto \textit{(method)}|hyperpage}{142}
+\indexentry{testVarios1 \textit{(module)}!testVarios1.TestUser2 \textit{(class)}|)}{143}
+\indexentry{testVarios1 \textit{(module)}|)}{143}
+\indexentry{testes \textit{(package)}|(hyperpage}{144}
+\indexentry{testes \textit{(package)}|)}{144}
+\indexentry{testes \textit{(package)}!testes.testVarios4 \textit{(module)}|(hyperpage}{145}
+\indexentry{testes \textit{(package)}!testes.testVarios4 \textit{(module)}!testes.testVarios4.TestUser2 \textit{(class)}|(hyperpage}{145}
+\indexentry{testes \textit{(package)}!testes.testVarios4 \textit{(module)}!testes.testVarios4.TestUser2 \textit{(class)}!testes.testVarios4.TestUser2.testGuardar \textit{(method)}|hyperpage}{145}
+\indexentry{testes \textit{(package)}!testes.testVarios4 \textit{(module)}!testes.testVarios4.TestUser2 \textit{(class)}|)}{146}
+\indexentry{testes \textit{(package)}!testes.testVarios4 \textit{(module)}|)}{146}

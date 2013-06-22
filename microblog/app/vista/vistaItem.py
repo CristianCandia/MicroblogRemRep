@@ -15,9 +15,11 @@ c_proyecto = ControllerProy()
 c_fases = ControllerFase()
 
 @app.route('/item_fase/<id>/nuevo', methods = ['GET', 'POST'])
+@login_required
 def nuevoItem(id=None):
     pass
 
+@login_required
 def listadoItemFase(id):
     '''Devuelve un listado de todos los items de la fase pasada como parametro'''
     lista = None
@@ -32,6 +34,7 @@ def listadoItemFase(id):
 
 @app.route('/item/fase/', methods = ['GET', 'POST'])
 @app.route('/item/fase/<id>', methods = ['GET', 'POST'])
+@login_required
 def itemFase(id = None):
     items = listadoItemFase(request.form['id_fase'])
     print str(items)
@@ -40,6 +43,7 @@ def itemFase(id = None):
     return render_template('indexItem.html', item = items, fase = fase, proyecto = proyecto)
     
 
+@login_required
 def listadoFases():
     '''Devuelve un listado de todos los items de la fase pasada como parametro'''
     lista = None
@@ -50,6 +54,7 @@ def listadoFases():
         flash('Se produjo un error, no podemos devolverle una lista')
     return lista
 
+@login_required
 def listadoProyectos():
     '''Devuelve un listado de todos los items de la fase pasada como parametro'''
     lista = None
@@ -61,6 +66,7 @@ def listadoProyectos():
     return lista
 
 @app.route('/item/proy/')
+@login_required
 def itemProy():
     proyectos = listadoProyectos()
     fases = listadoFases()
@@ -68,5 +74,6 @@ def itemProy():
     return render_template('MPI.html', proyecto = proyectos, fase = fases)
 
 @app.route('/item/nuevo', methods = ['GET', 'POST'])
+@login_required
 def nuevoItem():
     pass

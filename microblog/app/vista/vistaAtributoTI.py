@@ -69,6 +69,7 @@ def crearAtributoTI(idTI = None, idp = None, idf = None):
 
 @app.route('/TI/atributo/modificar/', methods = ['GET', 'POST'])
 @app.route('/TI/atributo/modificar/<idATI><idTI>,<idf>,<idp>', methods = ['GET', 'POST'])
+@login_required
 def modificarAtributoTI(idATI = None, idTI = None, idf = None, idp = None):
     """
         Vista que modifica un Atributo de un TipoItem.
@@ -91,6 +92,7 @@ def modificarAtributoTI(idATI = None, idTI = None, idf = None, idp = None):
 
 @app.route('/TI/atributo/eliminar/', methods = ['GET', 'POST'])
 @app.route('/TI/atributo/eliminar/<idATI>,<idTI>,<idf>,<idp>', methods = ['GET', 'POST'])
+@login_required
 def eliminarTI(idATI = None, idTI = None, idf = None, idp = None):
     """
         Vista correspondiente a la eliminacion de un Atributo de un Tipo de Item

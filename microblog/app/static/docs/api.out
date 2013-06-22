@@ -1,0 +1,319 @@
+\BOOKMARK [1][-]{section*.1}{Contents}{}% 1
+\BOOKMARK [1][-]{section.1}{Module addAdmin}{}% 2
+\BOOKMARK [2][-]{subsection.1.1}{Variables}{section.1}% 3
+\BOOKMARK [1][-]{section.2}{Module addPermisos}{}% 4
+\BOOKMARK [2][-]{subsection.2.1}{Variables}{section.2}% 5
+\BOOKMARK [1][-]{section.3}{Package app}{}% 6
+\BOOKMARK [2][-]{subsection.3.1}{Modules}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.2}{Variables}{section.3}% 8
+\BOOKMARK [1][-]{section.4}{Package app.controlador}{}% 9
+\BOOKMARK [2][-]{subsection.4.1}{Modules}{section.4}% 10
+\BOOKMARK [2][-]{subsection.4.2}{Variables}{section.4}% 11
+\BOOKMARK [1][-]{section.5}{Module app.controlador.contArchivo}{}% 12
+\BOOKMARK [2][-]{subsection.5.1}{Variables}{section.5}% 13
+\BOOKMARK [2][-]{subsection.5.2}{Class ControllerAtributo}{section.5}% 14
+\BOOKMARK [2][-]{subsection.5.3}{Class ControllerAtributoTI}{section.5}% 15
+\BOOKMARK [3][-]{subsubsection.5.3.1}{Methods}{subsection.5.3}% 16
+\BOOKMARK [1][-]{section.6}{Module app.controlador.contComite}{}% 17
+\BOOKMARK [2][-]{subsection.6.1}{Variables}{section.6}% 18
+\BOOKMARK [2][-]{subsection.6.2}{Class ControllerComite}{section.6}% 19
+\BOOKMARK [3][-]{subsubsection.6.2.1}{Methods}{subsection.6.2}% 20
+\BOOKMARK [1][-]{section.7}{Module app.controlador.contFase}{}% 21
+\BOOKMARK [2][-]{subsection.7.1}{Variables}{section.7}% 22
+\BOOKMARK [2][-]{subsection.7.2}{Class ControllerFase}{section.7}% 23
+\BOOKMARK [3][-]{subsubsection.7.2.1}{Methods}{subsection.7.2}% 24
+\BOOKMARK [1][-]{section.8}{Module app.controlador.contItem}{}% 25
+\BOOKMARK [2][-]{subsection.8.1}{Variables}{section.8}% 26
+\BOOKMARK [2][-]{subsection.8.2}{Class ControllerItem}{section.8}% 27
+\BOOKMARK [3][-]{subsubsection.8.2.1}{Methods}{subsection.8.2}% 28
+\BOOKMARK [2][-]{subsection.8.3}{Class ControllerTI}{section.8}% 29
+\BOOKMARK [3][-]{subsubsection.8.3.1}{Methods}{subsection.8.3}% 30
+\BOOKMARK [1][-]{section.9}{Module app.controlador.contPermiso}{}% 31
+\BOOKMARK [2][-]{subsection.9.1}{Variables}{section.9}% 32
+\BOOKMARK [2][-]{subsection.9.2}{Class ControllerPermiso}{section.9}% 33
+\BOOKMARK [3][-]{subsubsection.9.2.1}{Methods}{subsection.9.2}% 34
+\BOOKMARK [1][-]{section.10}{Module app.controlador.contProy}{}% 35
+\BOOKMARK [2][-]{subsection.10.1}{Variables}{section.10}% 36
+\BOOKMARK [2][-]{subsection.10.2}{Class ControllerProy}{section.10}% 37
+\BOOKMARK [3][-]{subsubsection.10.2.1}{Methods}{subsection.10.2}% 38
+\BOOKMARK [1][-]{section.11}{Module app.controlador.contRol}{}% 39
+\BOOKMARK [2][-]{subsection.11.1}{Variables}{section.11}% 40
+\BOOKMARK [2][-]{subsection.11.2}{Class ControllerRol}{section.11}% 41
+\BOOKMARK [3][-]{subsubsection.11.2.1}{Methods}{subsection.11.2}% 42
+\BOOKMARK [1][-]{section.12}{Module app.controlador.contUsr}{}% 43
+\BOOKMARK [2][-]{subsection.12.1}{Variables}{section.12}% 44
+\BOOKMARK [2][-]{subsection.12.2}{Class ControllerUsr}{section.12}% 45
+\BOOKMARK [3][-]{subsubsection.12.2.1}{Methods}{subsection.12.2}% 46
+\BOOKMARK [1][-]{section.13}{Module app.db\137downgrade}{}% 47
+\BOOKMARK [2][-]{subsection.13.1}{Variables}{section.13}% 48
+\BOOKMARK [1][-]{section.14}{Module app.decorators}{}% 49
+\BOOKMARK [2][-]{subsection.14.1}{Functions}{section.14}% 50
+\BOOKMARK [2][-]{subsection.14.2}{Variables}{section.14}% 51
+\BOOKMARK [1][-]{section.15}{Module app.email}{}% 52
+\BOOKMARK [2][-]{subsection.15.1}{Functions}{section.15}% 53
+\BOOKMARK [2][-]{subsection.15.2}{Variables}{section.15}% 54
+\BOOKMARK [1][-]{section.16}{Module app.forms}{}% 55
+\BOOKMARK [2][-]{subsection.16.1}{Variables}{section.16}% 56
+\BOOKMARK [2][-]{subsection.16.2}{Class LoginForm}{section.16}% 57
+\BOOKMARK [3][-]{subsubsection.16.2.1}{Methods}{subsection.16.2}% 58
+\BOOKMARK [3][-]{subsubsection.16.2.2}{Properties}{subsection.16.2}% 59
+\BOOKMARK [3][-]{subsubsection.16.2.3}{Class Variables}{subsection.16.2}% 60
+\BOOKMARK [2][-]{subsection.16.3}{Class rec\137passForm}{section.16}% 61
+\BOOKMARK [3][-]{subsubsection.16.3.1}{Methods}{subsection.16.3}% 62
+\BOOKMARK [3][-]{subsubsection.16.3.2}{Properties}{subsection.16.3}% 63
+\BOOKMARK [3][-]{subsubsection.16.3.3}{Class Variables}{subsection.16.3}% 64
+\BOOKMARK [2][-]{subsection.16.4}{Class usr\137CrearForm}{section.16}% 65
+\BOOKMARK [3][-]{subsubsection.16.4.1}{Methods}{subsection.16.4}% 66
+\BOOKMARK [3][-]{subsubsection.16.4.2}{Properties}{subsection.16.4}% 67
+\BOOKMARK [3][-]{subsubsection.16.4.3}{Class Variables}{subsection.16.4}% 68
+\BOOKMARK [2][-]{subsection.16.5}{Class proy\137CrearForm}{section.16}% 69
+\BOOKMARK [3][-]{subsubsection.16.5.1}{Methods}{subsection.16.5}% 70
+\BOOKMARK [3][-]{subsubsection.16.5.2}{Properties}{subsection.16.5}% 71
+\BOOKMARK [3][-]{subsubsection.16.5.3}{Class Variables}{subsection.16.5}% 72
+\BOOKMARK [2][-]{subsection.16.6}{Class fase\137CrearForm}{section.16}% 73
+\BOOKMARK [3][-]{subsubsection.16.6.1}{Methods}{subsection.16.6}% 74
+\BOOKMARK [3][-]{subsubsection.16.6.2}{Properties}{subsection.16.6}% 75
+\BOOKMARK [3][-]{subsubsection.16.6.3}{Class Variables}{subsection.16.6}% 76
+\BOOKMARK [2][-]{subsection.16.7}{Class rol\137CrearForm}{section.16}% 77
+\BOOKMARK [3][-]{subsubsection.16.7.1}{Methods}{subsection.16.7}% 78
+\BOOKMARK [3][-]{subsubsection.16.7.2}{Properties}{subsection.16.7}% 79
+\BOOKMARK [3][-]{subsubsection.16.7.3}{Class Variables}{subsection.16.7}% 80
+\BOOKMARK [2][-]{subsection.16.8}{Class permiso\137CrearForm}{section.16}% 81
+\BOOKMARK [3][-]{subsubsection.16.8.1}{Methods}{subsection.16.8}% 82
+\BOOKMARK [3][-]{subsubsection.16.8.2}{Properties}{subsection.16.8}% 83
+\BOOKMARK [3][-]{subsubsection.16.8.3}{Class Variables}{subsection.16.8}% 84
+\BOOKMARK [2][-]{subsection.16.9}{Class asignar\137Permisos}{section.16}% 85
+\BOOKMARK [3][-]{subsubsection.16.9.1}{Methods}{subsection.16.9}% 86
+\BOOKMARK [3][-]{subsubsection.16.9.2}{Properties}{subsection.16.9}% 87
+\BOOKMARK [3][-]{subsubsection.16.9.3}{Class Variables}{subsection.16.9}% 88
+\BOOKMARK [2][-]{subsection.16.10}{Class asignar\137Roles}{section.16}% 89
+\BOOKMARK [3][-]{subsubsection.16.10.1}{Methods}{subsection.16.10}% 90
+\BOOKMARK [3][-]{subsubsection.16.10.2}{Properties}{subsection.16.10}% 91
+\BOOKMARK [3][-]{subsubsection.16.10.3}{Class Variables}{subsection.16.10}% 92
+\BOOKMARK [2][-]{subsection.16.11}{Class buscar}{section.16}% 93
+\BOOKMARK [3][-]{subsubsection.16.11.1}{Methods}{subsection.16.11}% 94
+\BOOKMARK [3][-]{subsubsection.16.11.2}{Properties}{subsection.16.11}% 95
+\BOOKMARK [3][-]{subsubsection.16.11.3}{Class Variables}{subsection.16.11}% 96
+\BOOKMARK [2][-]{subsection.16.12}{Class MultiCheckboxField}{section.16}% 97
+\BOOKMARK [3][-]{subsubsection.16.12.1}{Methods}{subsection.16.12}% 98
+\BOOKMARK [3][-]{subsubsection.16.12.2}{Properties}{subsection.16.12}% 99
+\BOOKMARK [3][-]{subsubsection.16.12.3}{Class Variables}{subsection.16.12}% 100
+\BOOKMARK [2][-]{subsection.16.13}{Class SimpleForm}{section.16}% 101
+\BOOKMARK [3][-]{subsubsection.16.13.1}{Methods}{subsection.16.13}% 102
+\BOOKMARK [3][-]{subsubsection.16.13.2}{Properties}{subsection.16.13}% 103
+\BOOKMARK [3][-]{subsubsection.16.13.3}{Class Variables}{subsection.16.13}% 104
+\BOOKMARK [2][-]{subsection.16.14}{Class crear\137mod\137TI}{section.16}% 105
+\BOOKMARK [3][-]{subsubsection.16.14.1}{Methods}{subsection.16.14}% 106
+\BOOKMARK [3][-]{subsubsection.16.14.2}{Properties}{subsection.16.14}% 107
+\BOOKMARK [3][-]{subsubsection.16.14.3}{Class Variables}{subsection.16.14}% 108
+\BOOKMARK [2][-]{subsection.16.15}{Class crear\137mod\137atributoTI}{section.16}% 109
+\BOOKMARK [3][-]{subsubsection.16.15.1}{Methods}{subsection.16.15}% 110
+\BOOKMARK [3][-]{subsubsection.16.15.2}{Properties}{subsection.16.15}% 111
+\BOOKMARK [3][-]{subsubsection.16.15.3}{Class Variables}{subsection.16.15}% 112
+\BOOKMARK [2][-]{subsection.16.16}{Class crear\137mod\137item}{section.16}% 113
+\BOOKMARK [3][-]{subsubsection.16.16.1}{Methods}{subsection.16.16}% 114
+\BOOKMARK [3][-]{subsubsection.16.16.2}{Properties}{subsection.16.16}% 115
+\BOOKMARK [3][-]{subsubsection.16.16.3}{Class Variables}{subsection.16.16}% 116
+\BOOKMARK [2][-]{subsection.16.17}{Class listarPermisos}{section.16}% 117
+\BOOKMARK [3][-]{subsubsection.16.17.1}{Methods}{subsection.16.17}% 118
+\BOOKMARK [3][-]{subsubsection.16.17.2}{Properties}{subsection.16.17}% 119
+\BOOKMARK [3][-]{subsubsection.16.17.3}{Class Variables}{subsection.16.17}% 120
+\BOOKMARK [2][-]{subsection.16.18}{Class comite\137CrearForm}{section.16}% 121
+\BOOKMARK [3][-]{subsubsection.16.18.1}{Methods}{subsection.16.18}% 122
+\BOOKMARK [3][-]{subsubsection.16.18.2}{Properties}{subsection.16.18}% 123
+\BOOKMARK [3][-]{subsubsection.16.18.3}{Class Variables}{subsection.16.18}% 124
+\BOOKMARK [1][-]{section.17}{Package app.modelo}{}% 125
+\BOOKMARK [2][-]{subsection.17.1}{Modules}{section.17}% 126
+\BOOKMARK [2][-]{subsection.17.2}{Variables}{section.17}% 127
+\BOOKMARK [1][-]{section.18}{Module app.modelo.archivo}{}% 128
+\BOOKMARK [2][-]{subsection.18.1}{Variables}{section.18}% 129
+\BOOKMARK [2][-]{subsection.18.2}{Class Archivo}{section.18}% 130
+\BOOKMARK [3][-]{subsubsection.18.2.1}{Methods}{subsection.18.2}% 131
+\BOOKMARK [3][-]{subsubsection.18.2.2}{Properties}{subsection.18.2}% 132
+\BOOKMARK [3][-]{subsubsection.18.2.3}{Class Variables}{subsection.18.2}% 133
+\BOOKMARK [1][-]{section.19}{Module app.modelo.atributo}{}% 134
+\BOOKMARK [2][-]{subsection.19.1}{Variables}{section.19}% 135
+\BOOKMARK [2][-]{subsection.19.2}{Class AtributoPorTI}{section.19}% 136
+\BOOKMARK [3][-]{subsubsection.19.2.1}{Methods}{subsection.19.2}% 137
+\BOOKMARK [3][-]{subsubsection.19.2.2}{Properties}{subsection.19.2}% 138
+\BOOKMARK [3][-]{subsubsection.19.2.3}{Class Variables}{subsection.19.2}% 139
+\BOOKMARK [2][-]{subsection.19.3}{Class AtributoPorItem}{section.19}% 140
+\BOOKMARK [3][-]{subsubsection.19.3.1}{Methods}{subsection.19.3}% 141
+\BOOKMARK [3][-]{subsubsection.19.3.2}{Properties}{subsection.19.3}% 142
+\BOOKMARK [3][-]{subsubsection.19.3.3}{Class Variables}{subsection.19.3}% 143
+\BOOKMARK [1][-]{section.20}{Module app.modelo.comite}{}% 144
+\BOOKMARK [2][-]{subsection.20.1}{Variables}{section.20}% 145
+\BOOKMARK [2][-]{subsection.20.2}{Class Comite}{section.20}% 146
+\BOOKMARK [3][-]{subsubsection.20.2.1}{Methods}{subsection.20.2}% 147
+\BOOKMARK [3][-]{subsubsection.20.2.2}{Properties}{subsection.20.2}% 148
+\BOOKMARK [3][-]{subsubsection.20.2.3}{Class Variables}{subsection.20.2}% 149
+\BOOKMARK [1][-]{section.21}{Module app.modelo.fase}{}% 150
+\BOOKMARK [2][-]{subsection.21.1}{Variables}{section.21}% 151
+\BOOKMARK [2][-]{subsection.21.2}{Class Fase}{section.21}% 152
+\BOOKMARK [3][-]{subsubsection.21.2.1}{Methods}{subsection.21.2}% 153
+\BOOKMARK [3][-]{subsubsection.21.2.2}{Properties}{subsection.21.2}% 154
+\BOOKMARK [3][-]{subsubsection.21.2.3}{Class Variables}{subsection.21.2}% 155
+\BOOKMARK [1][-]{section.22}{Module app.modelo.historial}{}% 156
+\BOOKMARK [2][-]{subsection.22.1}{Variables}{section.22}% 157
+\BOOKMARK [2][-]{subsection.22.2}{Class HistorialItem}{section.22}% 158
+\BOOKMARK [3][-]{subsubsection.22.2.1}{Methods}{subsection.22.2}% 159
+\BOOKMARK [3][-]{subsubsection.22.2.2}{Properties}{subsection.22.2}% 160
+\BOOKMARK [3][-]{subsubsection.22.2.3}{Class Variables}{subsection.22.2}% 161
+\BOOKMARK [2][-]{subsection.22.3}{Class HistorialLineaBase}{section.22}% 162
+\BOOKMARK [3][-]{subsubsection.22.3.1}{Methods}{subsection.22.3}% 163
+\BOOKMARK [3][-]{subsubsection.22.3.2}{Properties}{subsection.22.3}% 164
+\BOOKMARK [3][-]{subsubsection.22.3.3}{Class Variables}{subsection.22.3}% 165
+\BOOKMARK [1][-]{section.23}{Module app.modelo.item}{}% 166
+\BOOKMARK [2][-]{subsection.23.1}{Variables}{section.23}% 167
+\BOOKMARK [2][-]{subsection.23.2}{Class TipoItem}{section.23}% 168
+\BOOKMARK [3][-]{subsubsection.23.2.1}{Methods}{subsection.23.2}% 169
+\BOOKMARK [3][-]{subsubsection.23.2.2}{Properties}{subsection.23.2}% 170
+\BOOKMARK [3][-]{subsubsection.23.2.3}{Class Variables}{subsection.23.2}% 171
+\BOOKMARK [2][-]{subsection.23.3}{Class Item}{section.23}% 172
+\BOOKMARK [3][-]{subsubsection.23.3.1}{Methods}{subsection.23.3}% 173
+\BOOKMARK [3][-]{subsubsection.23.3.2}{Properties}{subsection.23.3}% 174
+\BOOKMARK [3][-]{subsubsection.23.3.3}{Class Variables}{subsection.23.3}% 175
+\BOOKMARK [1][-]{section.24}{Module app.modelo.lineabase}{}% 176
+\BOOKMARK [2][-]{subsection.24.1}{Variables}{section.24}% 177
+\BOOKMARK [2][-]{subsection.24.2}{Class LineaBase}{section.24}% 178
+\BOOKMARK [3][-]{subsubsection.24.2.1}{Methods}{subsection.24.2}% 179
+\BOOKMARK [3][-]{subsubsection.24.2.2}{Properties}{subsection.24.2}% 180
+\BOOKMARK [3][-]{subsubsection.24.2.3}{Class Variables}{subsection.24.2}% 181
+\BOOKMARK [2][-]{subsection.24.3}{Class ItemsPorLineaBase}{section.24}% 182
+\BOOKMARK [3][-]{subsubsection.24.3.1}{Methods}{subsection.24.3}% 183
+\BOOKMARK [3][-]{subsubsection.24.3.2}{Properties}{subsection.24.3}% 184
+\BOOKMARK [3][-]{subsubsection.24.3.3}{Class Variables}{subsection.24.3}% 185
+\BOOKMARK [1][-]{section.25}{Module app.modelo.permiso}{}% 186
+\BOOKMARK [2][-]{subsection.25.1}{Variables}{section.25}% 187
+\BOOKMARK [2][-]{subsection.25.2}{Class Permiso}{section.25}% 188
+\BOOKMARK [3][-]{subsubsection.25.2.1}{Methods}{subsection.25.2}% 189
+\BOOKMARK [3][-]{subsubsection.25.2.2}{Properties}{subsection.25.2}% 190
+\BOOKMARK [3][-]{subsubsection.25.2.3}{Class Variables}{subsection.25.2}% 191
+\BOOKMARK [1][-]{section.26}{Module app.modelo.proyecto}{}% 192
+\BOOKMARK [2][-]{subsection.26.1}{Variables}{section.26}% 193
+\BOOKMARK [2][-]{subsection.26.2}{Class Proyecto}{section.26}% 194
+\BOOKMARK [3][-]{subsubsection.26.2.1}{Methods}{subsection.26.2}% 195
+\BOOKMARK [3][-]{subsubsection.26.2.2}{Properties}{subsection.26.2}% 196
+\BOOKMARK [3][-]{subsubsection.26.2.3}{Class Variables}{subsection.26.2}% 197
+\BOOKMARK [1][-]{section.27}{Module app.modelo.rol}{}% 198
+\BOOKMARK [2][-]{subsection.27.1}{Variables}{section.27}% 199
+\BOOKMARK [2][-]{subsection.27.2}{Class Rol}{section.27}% 200
+\BOOKMARK [3][-]{subsubsection.27.2.1}{Methods}{subsection.27.2}% 201
+\BOOKMARK [3][-]{subsubsection.27.2.2}{Properties}{subsection.27.2}% 202
+\BOOKMARK [3][-]{subsubsection.27.2.3}{Class Variables}{subsection.27.2}% 203
+\BOOKMARK [1][-]{section.28}{Module app.modelo.solicitud}{}% 204
+\BOOKMARK [2][-]{subsection.28.1}{Variables}{section.28}% 205
+\BOOKMARK [2][-]{subsection.28.2}{Class Solicitud}{section.28}% 206
+\BOOKMARK [3][-]{subsubsection.28.2.1}{Methods}{subsection.28.2}% 207
+\BOOKMARK [3][-]{subsubsection.28.2.2}{Properties}{subsection.28.2}% 208
+\BOOKMARK [3][-]{subsubsection.28.2.3}{Class Variables}{subsection.28.2}% 209
+\BOOKMARK [1][-]{section.29}{Module app.modelo.usuario}{}% 210
+\BOOKMARK [2][-]{subsection.29.1}{Variables}{section.29}% 211
+\BOOKMARK [2][-]{subsection.29.2}{Class User2}{section.29}% 212
+\BOOKMARK [3][-]{subsubsection.29.2.1}{Methods}{subsection.29.2}% 213
+\BOOKMARK [3][-]{subsubsection.29.2.2}{Properties}{subsection.29.2}% 214
+\BOOKMARK [3][-]{subsubsection.29.2.3}{Class Variables}{subsection.29.2}% 215
+\BOOKMARK [1][-]{section.30}{Module app.modelo.voto}{}% 216
+\BOOKMARK [2][-]{subsection.30.1}{Variables}{section.30}% 217
+\BOOKMARK [2][-]{subsection.30.2}{Class Voto}{section.30}% 218
+\BOOKMARK [3][-]{subsubsection.30.2.1}{Methods}{subsection.30.2}% 219
+\BOOKMARK [3][-]{subsubsection.30.2.2}{Properties}{subsection.30.2}% 220
+\BOOKMARK [3][-]{subsubsection.30.2.3}{Class Variables}{subsection.30.2}% 221
+\BOOKMARK [1][-]{section.31}{Module app.models}{}% 222
+\BOOKMARK [2][-]{subsection.31.1}{Variables}{section.31}% 223
+\BOOKMARK [1][-]{section.32}{Package app.static}{}% 224
+\BOOKMARK [2][-]{subsection.32.1}{Variables}{section.32}% 225
+\BOOKMARK [1][-]{section.33}{Package app.test}{}% 226
+\BOOKMARK [2][-]{subsection.33.1}{Modules}{section.33}% 227
+\BOOKMARK [2][-]{subsection.33.2}{Variables}{section.33}% 228
+\BOOKMARK [1][-]{section.34}{Module app.test.testVarios2}{}% 229
+\BOOKMARK [2][-]{subsection.34.1}{Variables}{section.34}% 230
+\BOOKMARK [2][-]{subsection.34.2}{Class TestUser2}{section.34}% 231
+\BOOKMARK [3][-]{subsubsection.34.2.1}{Methods}{subsection.34.2}% 232
+\BOOKMARK [1][-]{section.35}{Module app.testVarios}{}% 233
+\BOOKMARK [2][-]{subsection.35.1}{Variables}{section.35}% 234
+\BOOKMARK [2][-]{subsection.35.2}{Class TestUser2}{section.35}% 235
+\BOOKMARK [3][-]{subsubsection.35.2.1}{Methods}{subsection.35.2}% 236
+\BOOKMARK [3][-]{subsubsection.35.2.2}{Properties}{subsection.35.2}% 237
+\BOOKMARK [3][-]{subsubsection.35.2.3}{Class Variables}{subsection.35.2}% 238
+\BOOKMARK [1][-]{section.36}{Module app.views}{}% 239
+\BOOKMARK [2][-]{subsection.36.1}{Functions}{section.36}% 240
+\BOOKMARK [2][-]{subsection.36.2}{Variables}{section.36}% 241
+\BOOKMARK [1][-]{section.37}{Package app.vista}{}% 242
+\BOOKMARK [2][-]{subsection.37.1}{Modules}{section.37}% 243
+\BOOKMARK [2][-]{subsection.37.2}{Variables}{section.37}% 244
+\BOOKMARK [1][-]{section.38}{Module app.vista.vistaAtributoTI}{}% 245
+\BOOKMARK [2][-]{subsection.38.1}{Functions}{section.38}% 246
+\BOOKMARK [2][-]{subsection.38.2}{Variables}{section.38}% 247
+\BOOKMARK [1][-]{section.39}{Module app.vista.vistaFase}{}% 248
+\BOOKMARK [2][-]{subsection.39.1}{Functions}{section.39}% 249
+\BOOKMARK [2][-]{subsection.39.2}{Variables}{section.39}% 250
+\BOOKMARK [1][-]{section.40}{Module app.vista.vistaItem}{}% 251
+\BOOKMARK [2][-]{subsection.40.1}{Functions}{section.40}% 252
+\BOOKMARK [2][-]{subsection.40.2}{Variables}{section.40}% 253
+\BOOKMARK [1][-]{section.41}{Module app.vista.vistaPermiso}{}% 254
+\BOOKMARK [2][-]{subsection.41.1}{Functions}{section.41}% 255
+\BOOKMARK [2][-]{subsection.41.2}{Variables}{section.41}% 256
+\BOOKMARK [1][-]{section.42}{Module app.vista.vistaProyecto}{}% 257
+\BOOKMARK [2][-]{subsection.42.1}{Functions}{section.42}% 258
+\BOOKMARK [2][-]{subsection.42.2}{Variables}{section.42}% 259
+\BOOKMARK [1][-]{section.43}{Module app.vista.vistaRol}{}% 260
+\BOOKMARK [2][-]{subsection.43.1}{Functions}{section.43}% 261
+\BOOKMARK [2][-]{subsection.43.2}{Variables}{section.43}% 262
+\BOOKMARK [1][-]{section.44}{Module app.vista.vistaTI}{}% 263
+\BOOKMARK [2][-]{subsection.44.1}{Functions}{section.44}% 264
+\BOOKMARK [2][-]{subsection.44.2}{Variables}{section.44}% 265
+\BOOKMARK [1][-]{section.45}{Module app.vista.vistaUsuario}{}% 266
+\BOOKMARK [2][-]{subsection.45.1}{Functions}{section.45}% 267
+\BOOKMARK [2][-]{subsection.45.2}{Variables}{section.45}% 268
+\BOOKMARK [1][-]{section.46}{Module asignarRol}{}% 269
+\BOOKMARK [2][-]{subsection.46.1}{Variables}{section.46}% 270
+\BOOKMARK [1][-]{section.47}{Module config}{}% 271
+\BOOKMARK [2][-]{subsection.47.1}{Variables}{section.47}% 272
+\BOOKMARK [1][-]{section.48}{Module db\137create}{}% 273
+\BOOKMARK [1][-]{section.49}{Module db\137migrate}{}% 274
+\BOOKMARK [2][-]{subsection.49.1}{Variables}{section.49}% 275
+\BOOKMARK [1][-]{section.50}{Package db\137repository}{}% 276
+\BOOKMARK [2][-]{subsection.50.1}{Modules}{section.50}% 277
+\BOOKMARK [2][-]{subsection.50.2}{Variables}{section.50}% 278
+\BOOKMARK [1][-]{section.51}{Module db\137repository.manage}{}% 279
+\BOOKMARK [2][-]{subsection.51.1}{Variables}{section.51}% 280
+\BOOKMARK [1][-]{section.52}{Package db\137repository.versions}{}% 281
+\BOOKMARK [2][-]{subsection.52.1}{Variables}{section.52}% 282
+\BOOKMARK [1][-]{section.53}{Module db\137upgrade}{}% 283
+\BOOKMARK [2][-]{subsection.53.1}{Variables}{section.53}% 284
+\BOOKMARK [1][-]{section.54}{Module deletePermisos}{}% 285
+\BOOKMARK [2][-]{subsection.54.1}{Variables}{section.54}% 286
+\BOOKMARK [1][-]{section.55}{Module deleteRol}{}% 287
+\BOOKMARK [2][-]{subsection.55.1}{Variables}{section.55}% 288
+\BOOKMARK [1][-]{section.56}{Module deleteUsr}{}% 289
+\BOOKMARK [2][-]{subsection.56.1}{Variables}{section.56}% 290
+\BOOKMARK [1][-]{section.57}{Module run}{}% 291
+\BOOKMARK [1][-]{section.58}{Script script-microblog\137wsgi}{}% 292
+\BOOKMARK [2][-]{subsection.58.1}{Variables}{section.58}% 293
+\BOOKMARK [1][-]{section.59}{Script script-microblog\137wsgi\137}{}% 294
+\BOOKMARK [1][-]{section.60}{Script script-microdoc\137txt}{}% 295
+\BOOKMARK [1][-]{section.61}{Script script-microdoc\137txt\137}{}% 296
+\BOOKMARK [1][-]{section.62}{Script script-ss\137wsgi\137}{}% 297
+\BOOKMARK [1][-]{section.63}{Module test}{}% 298
+\BOOKMARK [2][-]{subsection.63.1}{Variables}{section.63}% 299
+\BOOKMARK [2][-]{subsection.63.2}{Class UsuarioTestCase}{section.63}% 300
+\BOOKMARK [3][-]{subsubsection.63.2.1}{Methods}{subsection.63.2}% 301
+\BOOKMARK [3][-]{subsubsection.63.2.2}{Properties}{subsection.63.2}% 302
+\BOOKMARK [3][-]{subsubsection.63.2.3}{Class Variables}{subsection.63.2}% 303
+\BOOKMARK [1][-]{section.64}{Module testVarios1}{}% 304
+\BOOKMARK [2][-]{subsection.64.1}{Variables}{section.64}% 305
+\BOOKMARK [2][-]{subsection.64.2}{Class TestUser2}{section.64}% 306
+\BOOKMARK [3][-]{subsubsection.64.2.1}{Methods}{subsection.64.2}% 307
+\BOOKMARK [3][-]{subsubsection.64.2.2}{Properties}{subsection.64.2}% 308
+\BOOKMARK [3][-]{subsubsection.64.2.3}{Class Variables}{subsection.64.2}% 309
+\BOOKMARK [1][-]{section.65}{Package testes}{}% 310
+\BOOKMARK [2][-]{subsection.65.1}{Modules}{section.65}% 311
+\BOOKMARK [2][-]{subsection.65.2}{Variables}{section.65}% 312
+\BOOKMARK [1][-]{section.66}{Module testes.testVarios4}{}% 313
+\BOOKMARK [2][-]{subsection.66.1}{Variables}{section.66}% 314
+\BOOKMARK [2][-]{subsection.66.2}{Class TestUser2}{section.66}% 315
+\BOOKMARK [3][-]{subsubsection.66.2.1}{Methods}{subsection.66.2}% 316
+\BOOKMARK [3][-]{subsubsection.66.2.2}{Properties}{subsection.66.2}% 317
+\BOOKMARK [3][-]{subsubsection.66.2.3}{Class Variables}{subsection.66.2}% 318
+\BOOKMARK [1][-]{section*.2}{Index}{}% 319
