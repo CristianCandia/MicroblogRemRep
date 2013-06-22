@@ -7,7 +7,7 @@ Sygma_System
 
 forms.py
 """
-from flask.ext.wtf import Form, TextField, PasswordField, DateField, IntegerField, BooleanField
+from flask.ext.wtf import Form, TextField, PasswordField, DateField, IntegerField, BooleanField, RadioField
 from flask.ext.wtf import Required, widgets, SelectMultipleField
 
 """:note: Clase de Formulario de Login"""
@@ -103,3 +103,7 @@ class listarPermisos(Form):
     u22 = BooleanField()
     u23 = BooleanField()
     u24 = BooleanField()
+
+class comite_CrearForm(Form):
+    nomComite = TextField('nomComite', validators = [Required()])
+    u1 = RadioField()

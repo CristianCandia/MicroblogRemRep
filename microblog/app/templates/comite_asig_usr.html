@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- Bloque donde se define la lista de usuarios sin rol -->
+<h2 align="center">Usuarios sin rol con id:{{idr}}</h2>
+<div class="row">
+	<div class="span20">
+		<form action="{{ url_for('asigUsrComite', idc=idc) }}" method="post" name="asignar_user">
+			<table class="table table-striped">
+			    <tr>
+					<th>Check</th>
+					<th>ID</th>
+					<th>Nombre</th>
+					<th>Apellido</th>
+				</tr>
+			    {% for u in usr %}
+					<tr>
+						<td><input type="checkbox" id = "{{u.id}}" name = "listado"  value ="{{u.id}}"></td>
+						<td>{{u.id}}</td>
+				        <td>{{u.nombre}}</td>
+				        <td>{{u.apellido}}</td>
+					</tr>
+				{% else %}
+		          	<tr>
+		          		<td>NO HAY REGISTROS</td>
+		          	</tr>
+	          	{% endfor %}
+        	</table>
+		    <p align=center>
+		    	<input type="submit" value="Guardar" class="btn btn-success"></input>
+		    </p>
+		</form>
+		
+	 </div>
+</div>
+<p align="center">
+	<a class="btn btn-success btn-large" data-toggle="modal">Cancelar</a>
+</p> 
+
+{% endblock %}

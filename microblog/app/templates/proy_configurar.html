@@ -1,8 +1,50 @@
 {% extends "base.html" %}
 {% block content %}
+<script type="text/javascript">
+	function ocultarModal() {
+		$("#modalCC").hide();
+		$("#formulario-carga")[0].reset();
+	}
+		
+	function mostrarModal(){
+		$('#modalCC').modal('show');
+	}
+</script>
+
 <h1 align="center">Proyecto: <a href = "/proyecto2">{{nomProy}}</h1>
 <p align="center">
 	<a href = "/fase/{{idp}}" class="btn btn-success">Fases</a>
 	<a href="{{ url_for('itemProy') }}" class="btn btn-success">Items</a>
+	{% if resp == 0 %}
+		<a class="btn btn-success btn-large" data-toggle="modal" onclick="$('#formulario-carga')[0].reset();mostrarModal();">Comite de cambios</a>
+	{% else %}
+		<a href="{{ url_for('asignarMiembros',idp=idp) }}" class="btn btn-success">Configurar Comite</a>
+	{% endif %}
 </p>
+
+
+<!-- Modal para añadir o modificar un proyecto -->
+<div class="modal hide fade" id="modalCC" style="display: none">
+	<div class="modal-header">
+		<a class="close" data-dismiss="modal">&times;</a>
+		<h3>Comite de cambio</h3>
+	</div>
+	<form action="{{ url_for('crearComite', idp=idp) }}" method="post" class="form-horizontal" id="formulario-carga">
+		<div class="modal-body" >
+			<center>
+				<fieldset>
+					<label>Nombre del comite:</label>
+						<input type="textbox" id="txt1" name="nomComite"  placeholder="Nombre" size="64">
+					<label>Cantidad de miembros:</label>
+						<input type="radio" id = "radio1" name = "u1"  value ="3">3 miembros<br>
+						<input type="radio" id = "radio2" name = "u1"  value ="5">5 miembros<br>
+				</fieldset>
+			</center>
+		</div>
+		<div class="modal-footer">
+			<a class="btn" data-dismiss="modal" onclick="ocultarModal();">Cerrar</a>
+			<input type="submit" value="Guardar" class="btn btn-success"></input>
+		</div>
+	</form>
+</div>
 {% endblock %}

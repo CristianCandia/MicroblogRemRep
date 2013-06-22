@@ -79,7 +79,7 @@ def asignarRoles(idr = None, idf = None):
     usr = c_rol.usrSinRolIdr(idr)
     return render_template("usr_asignar_roles.html",usr=usr,idr=idr)
 
-@app.route('/rol/asigUerRol/<idr>', methods = ['GET', 'POST'])
+@app.route('/rol/asigUsrRol/<idr>', methods = ['GET', 'POST'])
 @login_required 
 def asigUsrRol(idr = None):
     if request.method == 'POST':
