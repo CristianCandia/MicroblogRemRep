@@ -5,8 +5,20 @@
         - U{Cristian Candia<mailto:kandia88@gmail.com>}
         - U{Ruth Centurion<mailto:ruthiccr@gmail.com>}
         - U{Fernando Saucedo<mailto:carlifer.fernando@gmail.com>}
+""""""
+@note: Clase que define la vista de Item
+@authors:
+    - U{Cristian Candia<mailto:kandia88@gmail.com>}
+    - U{Ruth Centurion<mailto:ruthiccr@gmail.com>}
+    - U{Fernando Saucedo<mailto:carlifer.fernando@gmail.com>}
 """
-
+"""
+@note: Clase que define la vista de Item
+@authors:
+    - U{Cristian Candia<mailto:kandia88@gmail.com>}
+    - U{Ruth Centurion<mailto:ruthiccr@gmail.com>}
+    - U{Fernando Saucedo<mailto:carlifer.fernando@gmail.com>}
+"""
 from app.modelo import AtributoPorTI, AtributoPorItem
 from app import db
 
