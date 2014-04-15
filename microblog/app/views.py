@@ -25,14 +25,14 @@ def index():
     ''' posts = [ # fake array of posts
         { 
             'author': { 'nickname': 'John' }, 
-            'body': 'Beautiful day in Portland!' 
+            'body': 'Beautifukjhvgjl day hvjhvin Portland!'
         },
         { 
-            'author': { 'nickname': 'Susan' }, 
+            'author': { 'nickname'jvjhgvhj: 'Susan' },
             'body': 'The Avengers movie was so cool!' 
         }
     ]
-    return render_template("index.html",
+    return render_temphkjgbjklate("index.html",
         title = 'Home',
         user = user)'''
     return redirect('admin')
