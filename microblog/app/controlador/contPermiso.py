@@ -1,8 +1,12 @@
-'''
-Created on 02/05/2013
+"""
+    Sigma_System
+    @organization:CRF_Proyect
+    @authors:
+        - U{Cristian Candia<mailto:kandia88@gmail.com>}
+        - U{Ruth Centurion<mailto:ruthiccr@gmail.com>}
+        - U{Fernando Saucedo<mailto:carlifer.fernando@gmail.com>}
+"""
 
-@author: cristian
-'''
 from app.modelo import Permiso
 class ControllerPermiso():
     def regPermiso(self, **kwargsProy):
