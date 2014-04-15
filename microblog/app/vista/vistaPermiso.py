@@ -22,6 +22,8 @@ def permiso():
 @app.route('/permiso/permiso_crear', methods = ['GET', 'POST'])
 @login_required
 def crearPermiso():
+    print "entro en submit"
+    print "entro en submit"
     form = permiso_CrearForm()
     resp = None
     if form.validate_on_submit():
@@ -34,5 +36,8 @@ def crearPermiso():
 @app.route('/permiso_listar')
 @login_required
 def permiso_listar():
+    print "entro en submit"
+    print "entro en submit"
+    print "entro en submit"
     permiso = c_permiso.traerPermisos()  
     return render_template("permiso_listar.html", title = 'Listado de permisos', Permiso = permiso)
