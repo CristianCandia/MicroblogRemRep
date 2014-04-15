@@ -1,8 +1,13 @@
-'''
-Created on 05/05/2013
+"""
+    Sigma_System
+    @organization:CRF_Proyect
+    @authors:
 
-@author: cristian
-'''
+        - U{Cristian Candia<mailto:kandia88@gmail.com>}
+        - U{Ruth Centurion<mailto:ruthiccr@gmail.com>}
+        - U{Fernando Saucedo<mailto:carlifer.fernando@gmail.com>}
+
+"""
 
 import unittest
 
