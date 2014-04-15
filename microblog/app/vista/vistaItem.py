@@ -17,6 +17,11 @@ c_fases = ControllerFase()
 @app.route('/item_fase/<id>/nuevo', methods = ['GET', 'POST'])
 @login_required
 def nuevoItem(id=None):
+    print "entro en submit"
+    print "entro en submit"
+    print "entro en submit"
+    print "entro en submit"
+    print "entro en submit"
     pass
 
 @login_required
