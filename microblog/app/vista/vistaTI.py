@@ -95,6 +95,9 @@ def eliminarTI(idTI = None, idf = None, idp = None):
     """
         Vista correspondiente a la eliminacion de un Tipo de Item
     """
+    print "entro en submit"
+    print "entro en submit"
+    print "entro en submit"
     resp = None
     TI = c_TI.getTIId(idTI)
     if (TI == []):

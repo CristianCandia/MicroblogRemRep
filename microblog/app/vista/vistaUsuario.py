@@ -136,6 +136,10 @@ def helloWorld2():
     form = listarPermisos()
     if form.validate_on_submit():
         print "entro en submit"
+        print "entro en submit"
+        print "entro en submit"
+        print "entro en submit"
+        print "entro en submit"
         print form.u1.data
         print form.u2.data
         print form.u3.data
