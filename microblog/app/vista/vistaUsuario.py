@@ -132,7 +132,7 @@ def helloWorld():
 @login_required
 #http://www.desarrolloweb.com/articulos/1448.php
 def helloWorld2():
-    print "entro en prueba2"
+    print "entro  en prueba2"
     form = listarPermisos()
     if form.validate_on_submit():
         print "entro en submit"
