@@ -128,7 +128,7 @@ def helloWorld():
         print form.errors
     return render_template('example.html',form=form)
 
-@app.route('/prueba2/',methods=['post','get'])
+@app.route('/prueba2/', methods=['post', 'get'])
 @login_required
 #http://www.desarrolloweb.com/articulos/1448.php
 def helloWorld2():
