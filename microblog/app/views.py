@@ -1,8 +1,11 @@
-'''
-Created on 14/04/2013
-
-@author: cristian
-'''
+"""
+    Sigma_System
+    @organization:CRF_Proyect
+    @authors:
+        - U{Cristian Candia<mailto:kandia88@gmail.com>}
+        - U{Ruth Centurion<mailto:ruthiccr@gmail.com>}
+        - U{Fernando Saucedo<mailto:carlifer.fernando@gmail.com>}
+"""
 from flask import render_template, flash, redirect, session, url_for, request, g
 from forms import LoginForm, usr_CrearForm, buscar
 from flask.ext.login import login_user, logout_user, current_user, login_required
