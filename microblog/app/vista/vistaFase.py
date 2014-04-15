@@ -46,7 +46,12 @@ def crearFase(idp = None):
 @app.route('/fase_listar')
 @login_required
 def fase_listar():
-    fase = c_fase.traerFases()  
+    fase = c_fase.traerFases()
+    print "entro en submit"
+    print "entro en submit"
+    print "entro en submit"
+    print "entro en submit"
+    print "entro en submit"
     return render_template("fase_listar.html", title = 'Listado de fases', Fase = fase)
 
 
