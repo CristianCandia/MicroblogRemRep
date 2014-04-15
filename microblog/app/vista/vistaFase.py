@@ -62,6 +62,7 @@ def fase_listar():
 def configurarFase(idp = None, idf = None):
     nomProy = c_proy.getNombre(idp)
     nomFase = c_fase.getNombre(idf)
+    print "entro en submit"
     return render_template("fase_configurar.html", title = 'Configurar Fase', nomProy = nomProy,nomFase=nomFase, idp=idp,idf=idf)
 
 
