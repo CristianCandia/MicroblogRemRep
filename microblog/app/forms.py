@@ -19,7 +19,7 @@ from flask.ext.wtf import Form, TextField, PasswordField, DateField, IntegerFiel
 
 from flask.ext.wtf import Required, widgets, SelectMultipleField
 
-""":note: Clase de Formulario de Login """
+""":note: Clase de Formulario de Log in"""
 class LoginForm(Form):
     nomUsr = TextField('openid', validators = [Required()])
     passWord = PasswordField('password', validators = [Required()])
