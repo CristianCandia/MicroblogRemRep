@@ -1,6 +1,5 @@
 '''
 Created on 26/04/2013
-
 @author: cristian
 '''
 
@@ -36,7 +35,6 @@ def crearUsuario():
     
     return redirect(url_for('usuario'))
 
-'''Vista para modificar el usuario'''
 '''Vista para modificar el usuario'''
 @app.route('/usuario/modificar/', methods = ['GET', 'POST'])
 @login_required
@@ -116,9 +114,9 @@ def buscarUsuario():
     ''' Devuelve una lista de usuarios que coincidan con el nombre proporcionado '''
     form2 = buscar()
     usuarios2 = c_usr.buscarPorNombreUsuario(form2.nombreBuscado. data)
-    return render_template('indexUser.html', usuarios = usuarios2, form = usr_CrearForm(), form2=form2)
+    return render_template('indexUser.html', usuarios=usuarios2, form=usr_CrearForm(), form2=form2)
 
-@app.route('/prueba/',methods=['post','get'])
+@app.route('/prueba/',methods=['post', 'get'])
 @login_required
 def helloWorld():
     form = SimpleForm()
