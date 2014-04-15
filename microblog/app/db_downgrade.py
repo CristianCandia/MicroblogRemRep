@@ -1,8 +1,11 @@
-'''
-Created on 19/04/2013
-
-@author: cristian
-'''
+"""
+    Sigma_System
+    @organization:CRF_Proyect
+    @authors:
+        - U{Cristian Candia<mailto:kandia88@gmail.com>}
+        - U{Ruth Centurion<mailto:ruthiccr@gmail.com>}
+        - U{Fernando Saucedo<mailto:carlifer.fernando@gmail.com>}
+"""
 #!usr/bin/python
 from migrate.versioning import api
 from config import SQLALCHEMY_DATABASE_URI
