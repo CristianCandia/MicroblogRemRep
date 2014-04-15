@@ -6,20 +6,12 @@
         - U{Ruth Centurion<mailto:ruthiccr@gmail.com>}
         - U{Fernando Saucedo<mailto:carlifer.fernando@gmail.com>}
 """
-"""
-    Sigma_System
-    @organization:CRF_Proyect
-    @authors:
-        - U{Cristian Candia<mailto:kandia88@gmail.com>}
-        - U{Ruth Centurion<mailto:ruthiccr@gmail.com>}
-        - U{Fernando Saucedo<mailto:carlifer.fernando@gmail.com>}
-"""
 
 from flask.ext.wtf import Form, TextField, PasswordField, DateField, IntegerField, BooleanField, RadioField, SelectField, TextAreaField
 
 from flask.ext.wtf import Required, widgets, SelectMultipleField
 
-""":note: Clase de Formulario de Log in"""
+""":note: Clase de Formulario de Login"""
 class LoginForm(Form):
     nomUsr = TextField('openid', validators = [Required()])
     passWord = PasswordField('password', validators = [Required()])
