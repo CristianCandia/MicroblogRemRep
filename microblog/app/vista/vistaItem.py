@@ -22,6 +22,9 @@ def nuevoItem(id=None):
     print "entro en submit"
     print "entro en submit"
     print "entro en submit"
+    print "entro en submit"
+    print "entro en submit"
+    print "entro en submit"
     pass
 
 @login_required
