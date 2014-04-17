@@ -7,6 +7,7 @@
         - U{Fernando Saucedo<mailto:carlifer.fernando@gmail.com>}
 """
 
+
 from app.modelo import Rol
 from app.modelo import Fase
 from app.modelo import User2
