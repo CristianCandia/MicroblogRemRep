@@ -1,8 +1,11 @@
-'''
-Created on 03/05/2013
-
-@author: cristian
-'''
+"""
+    Sigma_System
+    @organization:CRF_Proyect
+    @authors:
+        - U{Cristian Candia<mailto:kandia88@gmail.com>}
+        - U{Ruth Centurion<mailto:ruthiccr@gmail.com>}
+        - U{Fernando Saucedo<mailto:carlifer.fernando@gmail.com>}
+"""
 from flask import render_template, flash, redirect, session, url_for, request, g
 
 """Se importa el metodo fase_CrearForm para manipular el formulario"""
