@@ -7,7 +7,6 @@
         - U{Fernando Saucedo<mailto:carlifer.fernando@gmail.com>}
 """
 
-
 from flask import Flask
 from flask.ext.sqlalchemy import SQLAlchemy #estoy en master
 from flask import Flask 
